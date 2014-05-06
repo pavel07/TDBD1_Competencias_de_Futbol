@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AACC7630-276A-F350-D7C4-864C036D3E84" name="Equipo">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-05 09:59:09 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_equipo" id="55F76198-42EB-DEEE-7C81-14136BB14010">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-05 09:59:27 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="nombre" id="7E4B0666-04C8-E9EA-301E-39D1A742506F">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-05 10:00:05 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+</Attribute>
+<Attribute name="fecha_fundacion" id="F994E25A-32EC-2D7B-F945-952B8977C52D">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-05 10:00:36 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+</Attribute>
+<Attribute name="numero_copas_ganadas" id="112093F9-3088-FA11-C331-2E7B09E08948">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-05 10:03:53 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="logotipo" id="B711E613-0CBE-5E8F-9AF3-2E45F9E68EA8">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-05 10:04:31 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT010</logicalDatatype>
+</Attribute>
+<Attribute name="id_pais" id="7CB4A522-8582-7BCB-020C-ADE1FF16B9F7">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-05 10:08:29 UTC</createdTime>
+<generatorID>79DF27DC-921C-C0EC-517E-F27B8348A99E</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>433163E9-2616-A89F-BCDD-A9C3C79BFFF9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_ciudad" id="B196A555-06BC-7CDC-1765-142DD4A7621C">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-05 10:10:04 UTC</createdTime>
+<generatorID>D53B7D74-B7F1-219C-D622-9524E99B213F</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>BBB7E0D3-927D-FAF9-C38C-C31DD12DADCF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_entrenador" id="6D44B327-CA17-7F21-10DB-688A8EE91E3B">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-06 00:30:46 UTC</createdTime>
+<generatorID>FB06A566-D3E5-86C8-4A5C-B8E11C8BE00C</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>4AE7C599-1E77-F693-0772-BAA6FD8635D8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1D90F721-CBF3-591D-94B3-7031A4FFD4BC" name="Equipo PK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-05 10:00:02 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>55F76198-42EB-DEEE-7C81-14136BB14010</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

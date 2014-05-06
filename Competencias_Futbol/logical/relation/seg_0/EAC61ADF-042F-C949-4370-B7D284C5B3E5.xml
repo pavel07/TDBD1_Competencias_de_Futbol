@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Equipo_tiene" directorySegmentName="seg_0" id="EAC61ADF-042F-C949-4370-B7D284C5B3E5">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-06 01:15:43 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>AACC7630-276A-F350-D7C4-864C036D3E84</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7C84EFE3-B70E-663C-9CFA-8A3255381FBB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

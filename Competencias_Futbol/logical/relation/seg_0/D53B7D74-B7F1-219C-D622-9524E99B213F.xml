@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Ciudad_tiene" directorySegmentName="seg_0" id="D53B7D74-B7F1-219C-D622-9524E99B213F">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-05 10:10:04 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<sourcePk>770A8EA2-9954-9639-1AF2-E19BEB61F09D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F2F72042-F51E-2C85-B75C-AD9536BF2456</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AACC7630-276A-F350-D7C4-864C036D3E84</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

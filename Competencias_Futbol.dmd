@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Competencias_Futbol" id="EBCCF86C-073D-A61E-E7E4-8975B9DF2586" version="3.5">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-04 21:22:03 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>EBCCF86C-073D-A61E-E7E4-8975B9DF2586</designId>
+</OSDM_Design>

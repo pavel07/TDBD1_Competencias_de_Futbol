@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Equipo_es_entrenado_por" directorySegmentName="seg_0" id="FB06A566-D3E5-86C8-4A5C-B8E11C8BE00C">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-06 00:30:30 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<sourcePk>1D90F721-CBF3-591D-94B3-7031A4FFD4BC</sourcePk>
+<targetPk>242CF4D9-343D-B745-E908-33103888CB66</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>AACC7630-276A-F350-D7C4-864C036D3E84</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>4960BBAA-E036-C6A3-7DE4-965DD2939BCF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

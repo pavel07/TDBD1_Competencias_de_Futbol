@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Competencia_se_juegan" directorySegmentName="seg_0" id="0F044E9C-A18E-CF4C-922F-F7AC50A6A9BB">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-06 02:05:54 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<targetPk>EE77D541-AA4D-1A97-2159-AD73B8C15D8E</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>57B0807F-5CB0-1DE9-89AD-32FEC42B67E0</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>65D6170D-873D-80AB-3C47-F9D220092AC1</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

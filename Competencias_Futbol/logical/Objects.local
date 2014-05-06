@@ -1,0 +1,39 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="57B0807F-5CB0-1DE9-89AD-32FEC42B67E0" name="Calendario_Partidos" seqName="seg_0"/>
+   <object objectType="Entity" objectID="F2F72042-F51E-2C85-B75C-AD9536BF2456" name="Ciudades" seqName="seg_0"/>
+   <object objectType="Entity" objectID="33DA8784-EB9E-E06B-951F-451A5E896C8C" name="Club_Deportivo" seqName="seg_0"/>
+   <object objectType="Entity" objectID="65D6170D-873D-80AB-3C47-F9D220092AC1" name="Competencias" seqName="seg_0"/>
+   <object objectType="Entity" objectID="4960BBAA-E036-C6A3-7DE4-965DD2939BCF" name="Entrenador" seqName="seg_0"/>
+   <object objectType="Entity" objectID="AACC7630-276A-F350-D7C4-864C036D3E84" name="Equipo" seqName="seg_0"/>
+   <object objectType="Entity" objectID="0DF13CF8-9536-5575-C7AE-0FDD046E8FD0" name="Estadio" seqName="seg_0"/>
+   <object objectType="Entity" objectID="AD736D6A-EE5B-85AC-C18F-DF887A26A204" name="Habilidades" seqName="seg_0"/>
+   <object objectType="Entity" objectID="40647678-8C0D-B742-0062-A8CB452F7164" name="Jugador" seqName="seg_0"/>
+   <object objectType="Entity" objectID="A823573F-6E30-514D-3E06-953C04277835" name="Miembro" seqName="seg_0"/>
+   <object objectType="Entity" objectID="3C159ADC-2D98-6ABB-9025-87F14A256568" name="Pais" seqName="seg_0"/>
+   <object objectType="Entity" objectID="7C84EFE3-B70E-663C-9CFA-8A3255381FBB" name="Posiciones" seqName="seg_0"/>
+   <object objectType="Entity" objectID="01EF16BA-EE09-0C74-061E-DDE57D8A35EE" name="Seleccion" seqName="seg_0"/>
+   <object objectType="Entity" objectID="205A3BFB-71EF-E6E4-DF70-229151A34019" name="Ubicacion" seqName="seg_0"/>
+   <object objectType="Relation" objectID="D53B7D74-B7F1-219C-D622-9524E99B213F" name="Ciudad_tiene" seqName="seg_0"/>
+   <object objectType="Relation" objectID="32957598-366E-E1C4-4B05-92278EA97451" name="Club_tiene" seqName="seg_0"/>
+   <object objectType="Relation" objectID="4D2322EC-34DD-E561-038A-1CFD4728EE73" name="Competencia_participan" seqName="seg_0"/>
+   <object objectType="Relation" objectID="651A5CE4-C6BA-8E8A-D018-C7760EF16B0C" name="Competencia_se_juega_en" seqName="seg_0"/>
+   <object objectType="Relation" objectID="0F044E9C-A18E-CF4C-922F-F7AC50A6A9BB" name="Competencia_se_juegan" seqName="seg_0"/>
+   <object objectType="Relation" objectID="8F9385FA-0B95-020A-018D-84032E033817" name="Competencia_se_realiza_en" seqName="seg_0"/>
+   <object objectType="Relation" objectID="C175B744-B360-9994-4E4B-CFFD58B5D0DC" name="En_Partido_juega" seqName="seg_0"/>
+   <object objectType="Relation" objectID="FB06A566-D3E5-86C8-4A5C-B8E11C8BE00C" name="Equipo_es_entrenado_por" seqName="seg_0"/>
+   <object objectType="Relation" objectID="EAC61ADF-042F-C949-4370-B7D284C5B3E5" name="Equipo_tiene" seqName="seg_0"/>
+   <object objectType="Relation" objectID="7FD5EF44-8C16-4600-23FD-3726D5CDC222" name="Estadio_se_encuentra" seqName="seg_0"/>
+   <object objectType="Relation" objectID="DBBF5C65-69C4-91F4-D91B-6E8C7AFBE6C5" name="Jugador_juega_en_posicion" seqName="seg_0"/>
+   <object objectType="Relation" objectID="79DF27DC-921C-C0EC-517E-F27B8348A99E" name="Pais_Tiene" seqName="seg_0"/>
+   <object objectType="Relation" objectID="DADDC29B-3B55-3AE8-5126-AC6F298986BB" name="Pais_tienev1" seqName="seg_0"/>
+   <object objectType="Relation" objectID="0BA9D356-D04D-D71E-659B-B546D018460C" name="Partido_se_juega" seqName="seg_0"/>
+   <object objectType="Relation" objectID="FC628A53-F766-C510-F126-7F9E484ECBE0" name="Posicion_tiene" seqName="seg_0"/>
+   <object objectType="Relation" objectID="9EA3891B-51EA-91A0-8CEA-125B5A4478BF" name="Seleccion_tiene" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="57F4335E-C365-9CBC-3D84-B19277B959CE" name="Hierarchy_1" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="B48EF1CC-FA1F-F868-F3AE-73626792D200" name="Hierarchy_2" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="FAF89009-3D85-1619-F827-2EC49154CA00" name="Hierarchy_3" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="3F89DD60-E0EB-4A47-4866-38AB261A2ECA" name="Hierarchy_4" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="644644F8-FBF5-2132-70C7-0ED0DCA08012" name="Hierarchy_5" seqName="seg_0"/>
+   <object objectType="Hierarchy relation" objectID="F47A7C9D-72B0-5452-7931-371565955447" name="Hierarchy_6" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>
