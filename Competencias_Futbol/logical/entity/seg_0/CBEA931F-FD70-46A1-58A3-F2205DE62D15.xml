@@ -16,6 +16,32 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_calendario" id="81B694A8-B2BB-AD6E-9D4A-7C74BD31E11A">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 02:14:02 UTC</createdTime>
+<generatorID>B1CF7A80-2740-B4DC-E9CE-33E919E4E4D4</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>96D83F8A-970F-BB3E-382D-9A648474DBD3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_equipo" id="8917BC74-97BE-BEC2-4471-A6BB82266096">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 18:21:24 UTC</createdTime>
+<generatorID>CF53B56D-CA00-7567-F46F-B73D18A6D168</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>55F76198-42EB-DEEE-7C81-14136BB14010</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
 <Attribute name="Goles_Primer_Tiempo" id="8C4B633F-E53B-AF29-49BB-34845469115F">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-07 02:05:02 UTC</createdTime>
@@ -90,32 +116,6 @@
 <item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-</Attribute>
-<Attribute name="id_calendario" id="81B694A8-B2BB-AD6E-9D4A-7C74BD31E11A">
-<createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-07 02:14:02 UTC</createdTime>
-<generatorID>B1CF7A80-2740-B4DC-E9CE-33E919E4E4D4</generatorID>
-<ownerDesignName>Competencias_Futbol</ownerDesignName>
-<engineerTo>
-<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
-</engineerTo>
-<referedAttribute>96D83F8A-970F-BB3E-382D-9A648474DBD3</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-</Attribute>
-<Attribute name="id_equipo" id="0796843A-74C9-4212-C9EF-AE26CA7205B4">
-<createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-07 02:19:51 UTC</createdTime>
-<generatorID>CF53B56D-CA00-7567-F46F-B73D18A6D168</generatorID>
-<ownerDesignName>Competencias_Futbol</ownerDesignName>
-<engineerTo>
-<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
-</engineerTo>
-<referedAttribute>55F76198-42EB-DEEE-7C81-14136BB14010</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

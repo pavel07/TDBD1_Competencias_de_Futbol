@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E0B367C0-F054-17D4-8D69-B2428B3AF9DD" name="Tabla_Posiciones">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 17:59:49 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_competencia" id="7B7796EC-D508-F344-D1BC-31F37679A05E">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 22:01:56 UTC</createdTime>
+<generatorID>FED21AB7-E3C4-3E87-F33F-D77C21092680</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>15566B1C-42C2-17F8-C210-7DB41AAEFBE3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_equipo" id="2B02B391-C0EE-EBE4-4B5F-351599C7BC79">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 22:05:05 UTC</createdTime>
+<generatorID>67F6EF87-AEEF-7CD0-7101-679F4C1CC967</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>55F76198-42EB-DEEE-7C81-14136BB14010</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="puntos" id="421AC0F2-8A81-067B-806E-6B0E16620FD7">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 18:00:00 UTC</createdTime>
+<comment>Tambien podria ser un atributo derivado creando relacion con la entidad Resultados y calculando los puntos de acuerdo a los partidos ganados y empatados por cada equipo.</comment>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FE99F016-3D24-8FCB-83DB-BE57CC999EA9" name="Tabla_Posiciones PK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 21:01:35 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7B7796EC-D508-F344-D1BC-31F37679A05E</attributeRef>
+<attributeRef>2B02B391-C0EE-EBE4-4B5F-351599C7BC79</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

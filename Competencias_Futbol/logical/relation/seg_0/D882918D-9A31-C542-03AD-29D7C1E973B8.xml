@@ -1,20 +1,20 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Equipo_tienev1" directorySegmentName="seg_0" id="CF53B56D-CA00-7567-F46F-B73D18A6D168">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Jugador_desempena" directorySegmentName="seg_0" id="D882918D-9A31-C542-03AD-29D7C1E973B8">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-07 02:19:51 UTC</createdTime>
+<createdTime>2014-05-07 16:57:53 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <engineerTo>
 <item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
 </engineerTo>
-<sourcePk>1D90F721-CBF3-591D-94B3-7031A4FFD4BC</sourcePk>
+<sourcePk>242CF4D9-343D-B745-E908-33103888CB66</sourcePk>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>AACC7630-276A-F350-D7C4-864C036D3E84</sourceEntity>
+<sourceEntity>40647678-8C0D-B742-0062-A8CB452F7164</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>CBEA931F-FD70-46A1-58A3-F2205DE62D15</targetEntity>
+<targetEntity>907E9336-07C9-2F4C-677D-232C74515509</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>

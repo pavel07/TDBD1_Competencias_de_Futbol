@@ -28,6 +28,32 @@
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 </Attribute>
+<Attribute name="id_competencia" id="AA9F4039-F755-C531-99E3-E5920B136E22">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-06 06:02:35 UTC</createdTime>
+<generatorID>0F044E9C-A18E-CF4C-922F-F7AC50A6A9BB</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>15566B1C-42C2-17F8-C210-7DB41AAEFBE3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_estadio" id="DB76FFCF-C88A-682F-2342-967E90196D81">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-06 05:58:55 UTC</createdTime>
+<generatorID>0BA9D356-D04D-D71E-659B-B546D018460C</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>ADF50BF6-0989-0513-49BA-E2FAE3C710C8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
 <Attribute name="fecha_partido" id="AEED8540-C292-8728-4BC0-94D64E300DA5">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-06 02:01:22 UTC</createdTime>
@@ -54,28 +80,16 @@
 <use>1</use>
 <logicalDatatype>LOGDT020</logicalDatatype>
 </Attribute>
-<Attribute name="id_estadio" id="DB76FFCF-C88A-682F-2342-967E90196D81">
+<Attribute name="estado" id="F4254C2B-C946-9C30-8449-68AA2B6AED63">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-06 05:58:55 UTC</createdTime>
-<generatorID>0BA9D356-D04D-D71E-659B-B546D018460C</generatorID>
+<createdTime>2014-05-07 18:13:53 UTC</createdTime>
+<comment>El estado se identificara por un numero:&lt;br/&gt;1=En Juego&lt;br/&gt;0=Finalizado&lt;br/&gt;2=Pendiente Iniciar</comment>
+<generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <engineerTo>
 <item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
 </engineerTo>
-<referedAttribute>ADF50BF6-0989-0513-49BA-E2FAE3C710C8</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-</Attribute>
-<Attribute name="id_competencia" id="AA9F4039-F755-C531-99E3-E5920B136E22">
-<createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-06 06:02:35 UTC</createdTime>
-<generatorID>0F044E9C-A18E-CF4C-922F-F7AC50A6A9BB</generatorID>
-<ownerDesignName>Competencias_Futbol</ownerDesignName>
-<engineerTo>
-<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
-</engineerTo>
-<referedAttribute>15566B1C-42C2-17F8-C210-7DB41AAEFBE3</referedAttribute>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

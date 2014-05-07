@@ -68,6 +68,20 @@
 <use>1</use>
 <logicalDatatype>LOGDT008</logicalDatatype>
 </Attribute>
+<Attribute name="estado" id="28579E44-E170-E3BE-E173-71CD510C56E2">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 17:47:10 UTC</createdTime>
+<comment>El estado se identificara por un numero:&lt;br/&gt;1=Activo&lt;br/&gt;0=Cerrado&lt;br/&gt;2=Pendiente Iniciar</comment>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="EE77D541-AA4D-1A97-2159-AD73B8C15D8E" name="Competencias PK">
