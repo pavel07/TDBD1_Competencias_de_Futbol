@@ -12,8 +12,10 @@
    <object objectType="Entity" objectID="A823573F-6E30-514D-3E06-953C04277835" name="Miembro" seqName="seg_0"/>
    <object objectType="Entity" objectID="3C159ADC-2D98-6ABB-9025-87F14A256568" name="Pais" seqName="seg_0"/>
    <object objectType="Entity" objectID="7C84EFE3-B70E-663C-9CFA-8A3255381FBB" name="Posiciones" seqName="seg_0"/>
+   <object objectType="Entity" objectID="CBEA931F-FD70-46A1-58A3-F2205DE62D15" name="Resultado_Partido" seqName="seg_0"/>
    <object objectType="Entity" objectID="01EF16BA-EE09-0C74-061E-DDE57D8A35EE" name="Seleccion" seqName="seg_0"/>
    <object objectType="Entity" objectID="205A3BFB-71EF-E6E4-DF70-229151A34019" name="Ubicacion" seqName="seg_0"/>
+   <object objectType="Relation" objectID="3F977523-9B7A-6D3D-2A0A-FCBF3F52D518" name="Ciudad_se_ubica" seqName="seg_0"/>
    <object objectType="Relation" objectID="D53B7D74-B7F1-219C-D622-9524E99B213F" name="Ciudad_tiene" seqName="seg_0"/>
    <object objectType="Relation" objectID="32957598-366E-E1C4-4B05-92278EA97451" name="Club_tiene" seqName="seg_0"/>
    <object objectType="Relation" objectID="4D2322EC-34DD-E561-038A-1CFD4728EE73" name="Competencia_participan" seqName="seg_0"/>
@@ -23,11 +25,14 @@
    <object objectType="Relation" objectID="C175B744-B360-9994-4E4B-CFFD58B5D0DC" name="En_Partido_juega" seqName="seg_0"/>
    <object objectType="Relation" objectID="FB06A566-D3E5-86C8-4A5C-B8E11C8BE00C" name="Equipo_es_entrenado_por" seqName="seg_0"/>
    <object objectType="Relation" objectID="EAC61ADF-042F-C949-4370-B7D284C5B3E5" name="Equipo_tiene" seqName="seg_0"/>
+   <object objectType="Relation" objectID="CF53B56D-CA00-7567-F46F-B73D18A6D168" name="Equipo_tienev1" seqName="seg_0"/>
    <object objectType="Relation" objectID="7FD5EF44-8C16-4600-23FD-3726D5CDC222" name="Estadio_se_encuentra" seqName="seg_0"/>
    <object objectType="Relation" objectID="DBBF5C65-69C4-91F4-D91B-6E8C7AFBE6C5" name="Jugador_juega_en_posicion" seqName="seg_0"/>
    <object objectType="Relation" objectID="79DF27DC-921C-C0EC-517E-F27B8348A99E" name="Pais_Tiene" seqName="seg_0"/>
+   <object objectType="Relation" objectID="A8A04C7E-68B4-10A0-1674-3015DE01AEBB" name="Pais_se_ubica" seqName="seg_0"/>
    <object objectType="Relation" objectID="DADDC29B-3B55-3AE8-5126-AC6F298986BB" name="Pais_tienev1" seqName="seg_0"/>
    <object objectType="Relation" objectID="0BA9D356-D04D-D71E-659B-B546D018460C" name="Partido_se_juega" seqName="seg_0"/>
+   <object objectType="Relation" objectID="B1CF7A80-2740-B4DC-E9CE-33E919E4E4D4" name="Partido_termino" seqName="seg_0"/>
    <object objectType="Relation" objectID="FC628A53-F766-C510-F126-7F9E484ECBE0" name="Posicion_tiene" seqName="seg_0"/>
    <object objectType="Relation" objectID="9EA3891B-51EA-91A0-8CEA-125B5A4478BF" name="Seleccion_tiene" seqName="seg_0"/>
    <object objectType="Hierarchy relation" objectID="57F4335E-C365-9CBC-3D84-B19277B959CE" name="Hierarchy_1" seqName="seg_0"/>

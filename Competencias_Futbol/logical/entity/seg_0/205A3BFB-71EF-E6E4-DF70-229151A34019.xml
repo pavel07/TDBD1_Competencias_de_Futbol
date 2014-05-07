@@ -15,4 +15,50 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_pais" id="439DCBB9-AEF1-A03D-CBD1-F589F954B6F2">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 02:29:16 UTC</createdTime>
+<generatorID>A8A04C7E-68B4-10A0-1674-3015DE01AEBB</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>433163E9-2616-A89F-BCDD-A9C3C79BFFF9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_ciudad" id="D302A25B-3CC1-1060-AC16-ACCD3147F588">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 02:39:05 UTC</createdTime>
+<generatorID>3F977523-9B7A-6D3D-2A0A-FCBF3F52D518</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>BBB7E0D3-927D-FAF9-C38C-C31DD12DADCF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D2F36B21-1CEF-8F4C-75BC-C89993F92C56" name="Ubicacion PK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 02:39:34 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>439DCBB9-AEF1-A03D-CBD1-F589F954B6F2</attributeRef>
+<attributeRef>D302A25B-3CC1-1060-AC16-ACCD3147F588</attributeRef>
+<attributeRef>439DCBB9-AEF1-A03D-CBD1-F589F954B6F2</attributeRef>
+<attributeRef>D302A25B-3CC1-1060-AC16-ACCD3147F588</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0DF13CF8-9536-5575-C7AE-0FDD046E8FD0" name="Estadio">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CBEA931F-FD70-46A1-58A3-F2205DE62D15" name="Resultado_Partido">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-05 11:48:31 UTC</createdTime>
+<createdTime>2014-05-07 02:04:17 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <engineerTo>
@@ -16,35 +16,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_estadio" id="ADF50BF6-0989-0513-49BA-E2FAE3C710C8">
+<Attribute name="Goles_Primer_Tiempo" id="8C4B633F-E53B-AF29-49BB-34845469115F">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-05 11:48:41 UTC</createdTime>
-<generatorID>Generado por el Usuario</generatorID>
-<ownerDesignName>Competencias_Futbol</ownerDesignName>
-<engineerTo>
-<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-</Attribute>
-<Attribute name="nombre" id="405D0BEE-017C-0B41-66F2-736B58758DB0">
-<createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-05 11:49:13 UTC</createdTime>
-<generatorID>Generado por el Usuario</generatorID>
-<ownerDesignName>Competencias_Futbol</ownerDesignName>
-<engineerTo>
-<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-</Attribute>
-<Attribute name="capacidad" id="BB9EF8FC-E1D4-4DE3-FD66-73D227B3AD4A">
-<createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-05 11:49:29 UTC</createdTime>
+<createdTime>2014-05-07 02:05:02 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <engineerTo>
@@ -55,72 +29,96 @@
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 </Attribute>
-<Attribute name="fecha_inauguracion" id="0782BB54-1C10-A4FB-F2B9-B100049DF863">
+<Attribute name="Goles_Segundo_Tiempo" id="9472A4E5-48EC-15CE-3468-D59C61DE441A">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-05 11:50:33 UTC</createdTime>
+<createdTime>2014-05-07 02:05:31 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <engineerTo>
 <item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
-</Attribute>
-<Attribute name="historia" id="31D395E4-D490-4DC2-80D9-39F7EC57F9C7">
-<createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-05 11:51:01 UTC</createdTime>
-<generatorID>Generado por el Usuario</generatorID>
-<ownerDesignName>Competencias_Futbol</ownerDesignName>
-<engineerTo>
-<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT040</logicalDatatype>
-</Attribute>
-<Attribute name="id_pais" id="DBA25269-0045-A16B-E98B-DD6E3CB10B45">
-<createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-07 02:39:34 UTC</createdTime>
-<generatorID>7FD5EF44-8C16-4600-23FD-3726D5CDC222</generatorID>
-<ownerDesignName>Competencias_Futbol</ownerDesignName>
-<engineerTo>
-<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
-</engineerTo>
-<referedAttribute>439DCBB9-AEF1-A03D-CBD1-F589F954B6F2</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 </Attribute>
-<Attribute name="id_ciudad" id="038A442D-DF44-16F8-C01E-F1E8FA7E01E3">
+<Attribute name="Goles_Tiempo_Extra" id="D90F4943-C26D-5AFB-C8E8-183AE4E853F6">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-07 02:39:37 UTC</createdTime>
-<generatorID>7FD5EF44-8C16-4600-23FD-3726D5CDC222</generatorID>
+<createdTime>2014-05-07 02:05:46 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <engineerTo>
 <item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
 </engineerTo>
-<referedAttribute>D302A25B-3CC1-1060-AC16-ACCD3147F588</referedAttribute>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="Goles_Penales" id="709407D0-1022-D181-BA13-3D3BFDFAB5A7">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 02:06:09 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="Tarjetas_Amarillas" id="C648E9D1-9C77-70DD-A06C-DD5647EE1758">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 02:06:20 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="Tarjetas_Roja" id="B4C0BF6D-7AE1-7EFC-66B0-5F657F6D6C5E">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 02:10:22 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_calendario" id="81B694A8-B2BB-AD6E-9D4A-7C74BD31E11A">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 02:14:02 UTC</createdTime>
+<generatorID>B1CF7A80-2740-B4DC-E9CE-33E919E4E4D4</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>96D83F8A-970F-BB3E-382D-9A648474DBD3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_equipo" id="0796843A-74C9-4212-C9EF-AE26CA7205B4">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 02:19:51 UTC</createdTime>
+<generatorID>CF53B56D-CA00-7567-F46F-B73D18A6D168</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<referedAttribute>55F76198-42EB-DEEE-7C81-14136BB14010</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 </Attribute>
 </attributes>
-<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="BE22C8F5-4CB3-05DE-3D21-74EA9CBA3987" name="Estadio PK">
-<createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-05 11:48:59 UTC</createdTime>
-<generatorID>Generado por el Usuario</generatorID>
-<ownerDesignName>Competencias_Futbol</ownerDesignName>
-<engineerTo>
-<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
-</engineerTo>
-<pk>true</pk>
-<usedAttributes>
-<attributeRef>ADF50BF6-0989-0513-49BA-E2FAE3C710C8</attributeRef>
-</usedAttributes>
-</identifier>
-</identifiers>
 </Entity>

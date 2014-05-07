@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Partido_termino" directorySegmentName="seg_0" id="B1CF7A80-2740-B4DC-E9CE-33E919E4E4D4">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-07 02:14:02 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<engineerTo>
+<item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
+</engineerTo>
+<sourcePk>9861D203-2B10-4193-076C-EB4A6C6E23C5</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>57B0807F-5CB0-1DE9-89AD-32FEC42B67E0</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>CBEA931F-FD70-46A1-58A3-F2205DE62D15</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

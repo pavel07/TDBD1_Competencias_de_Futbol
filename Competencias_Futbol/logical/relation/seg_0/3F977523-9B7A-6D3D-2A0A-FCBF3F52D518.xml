@@ -1,19 +1,19 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Estadio_se_encuentra" directorySegmentName="seg_0" id="7FD5EF44-8C16-4600-23FD-3726D5CDC222">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Ciudad_se_ubica" directorySegmentName="seg_0" id="3F977523-9B7A-6D3D-2A0A-FCBF3F52D518">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-05 11:51:51 UTC</createdTime>
+<createdTime>2014-05-07 02:39:05 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <engineerTo>
 <item key="90FA1055-91D2-312A-FF39-75F4C41A39A1" value="true"/>
 </engineerTo>
-<sourcePk>BE22C8F5-4CB3-05DE-3D21-74EA9CBA3987</sourcePk>
-<targetPk>D2F36B21-1CEF-8F4C-75BC-C89993F92C56</targetPk>
-<identifying>false</identifying>
-<optionalSource>false</optionalSource>
-<optionalTarget>true</optionalTarget>
+<sourcePk>770A8EA2-9954-9639-1AF2-E19BEB61F09D</sourcePk>
+<dominantRole>F2F72042-F51E-2C85-B75C-AD9536BF2456</dominantRole>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>0DF13CF8-9536-5575-C7AE-0FDD046E8FD0</sourceEntity>
+<sourceEntity>F2F72042-F51E-2C85-B75C-AD9536BF2456</sourceEntity>
 <targetCardinalityString>1</targetCardinalityString>
 <targetEntity>205A3BFB-71EF-E6E4-DF70-229151A34019</targetEntity>
 <transferable>true</transferable>
