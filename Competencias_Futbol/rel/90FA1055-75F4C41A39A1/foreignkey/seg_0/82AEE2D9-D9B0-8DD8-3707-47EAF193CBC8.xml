@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="82AEE2D9-D9B0-8DD8-3707-47EAF193CBC8" name="ALINEACIONES_OFICIALES_COMPETENCIAS_FK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:16 UTC</createdTime>
+<generatorID>4517AB89-64E2-F70F-A06C-C040A38E8A13</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<containerWithKeyObject>3AAB439B-87E3-1AA9-3992-7ED6794E310E</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>E51202DD-294E-F0CD-C89D-A25BA92AA201</localFKIndex>
+<keyObject>C52080D8-9BCD-1DB5-74D1-A403E19F49A9</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

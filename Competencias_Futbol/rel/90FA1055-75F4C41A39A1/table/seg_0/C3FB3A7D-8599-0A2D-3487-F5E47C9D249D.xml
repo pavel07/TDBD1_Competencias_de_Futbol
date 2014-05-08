@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C3FB3A7D-8599-0A2D-3487-F5E47C9D249D" name="CALENDARIO_PARTIDOS">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>57B0807F-5CB0-1DE9-89AD-32FEC42B67E0</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_calendario" id="7F6C3C62-A44D-7C2D-6C3E-D8CAB487F668">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>96D83F8A-970F-BB3E-382D-9A648474DBD3</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_competencia" id="80819B36-CFB4-E710-7C6D-C81D64022347">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>AA9F4039-F755-C531-99E3-E5920B136E22</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>0B232DB8-F686-D4B5-EF8D-AF2110B4C3B7</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A9BAA6A2-DA1D-A959-18F9-D168ECB9F08E" referredColumn="0B232DB8-F686-D4B5-EF8D-AF2110B4C3B7"/>
+</associations>
+</Column>
+<Column name="id_estadio" id="2F7A20B0-DF92-D884-407E-C16B04BBCCE7">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>DB76FFCF-C88A-682F-2342-967E90196D81</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>A160EFAD-AA2E-BA4E-51DF-C46CF7042D1D</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DEE7E79B-D342-DE11-7386-09339E4DE251" referredColumn="A160EFAD-AA2E-BA4E-51DF-C46CF7042D1D"/>
+</associations>
+</Column>
+<Column name="fecha_partido" id="A8BB67E6-E8DD-F2EE-FD01-7CFA95BB2E6A">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>AEED8540-C292-8728-4BC0-94D64E300DA5</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hora_inicio" id="83F52A3C-9CA2-2A60-E380-ADAC5A335288">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>C2CE3937-469F-79C6-C5E0-CA95E6F44EEB</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="FEBEC585-9AC2-2CA0-F020-7DF436F587E8">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<comment>El estado se identificara por un numero:&lt;br/&gt;1=En Juego&lt;br/&gt;0=Finalizado&lt;br/&gt;2=Pendiente Iniciar</comment>
+<generatorID>F4254C2B-C946-9C30-8449-68AA2B6AED63</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="41097BBF-B922-EC63-8A95-BE45EAE4FB2D" name="CALENDARIO_PARTIDOS_PK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>9861D203-2B10-4193-076C-EB4A6C6E23C5</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F6C3C62-A44D-7C2D-6C3E-D8CAB487F668"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="08484DF2-282A-3C97-4578-21FA849AC860" name="CALENDARIO_PARTIDOS">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:16 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>0BA9D356-D04D-D71E-659B-B546D018460C</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="2F7A20B0-DF92-D884-407E-C16B04BBCCE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CEC06287-DF74-FA7D-F8DF-D423883C23F2" name="CALENDARIO_PARTIDOS_COMPETENCIAS_FK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:16 UTC</createdTime>
+<generatorID>0F044E9C-A18E-CF4C-922F-F7AC50A6A9BB</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="80819B36-CFB4-E710-7C6D-C81D64022347"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B19CCC32-CC8D-5E6A-6338-58533D0D7575" name="CALENDARIO_PARTIDOS_ESTADIO_FK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:16 UTC</createdTime>
+<generatorID>0BA9D356-D04D-D71E-659B-B546D018460C</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F7A20B0-DF92-D884-407E-C16B04BBCCE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

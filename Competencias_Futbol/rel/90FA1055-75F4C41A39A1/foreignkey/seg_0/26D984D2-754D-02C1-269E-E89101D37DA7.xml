@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="26D984D2-754D-02C1-269E-E89101D37DA7" name="CLUB_DEPORTIVO_EQUIPO_FK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>644644F8-FBF5-2132-70C7-0ED0DCA08012</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<arc>7A6E9C28-ABFB-3D28-CD63-B2E423112439</arc>
+<containerWithKeyObject>3891D694-7EC9-D323-2DD7-1F2334FB2E11</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>D119DB93-9EA9-EFA6-222E-D7B142CBE703</localFKIndex>
+<keyObject>52D75729-0A93-5856-7B06-69416154E54C</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

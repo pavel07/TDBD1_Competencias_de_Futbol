@@ -1,0 +1,122 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F288C8DF-5B3C-FEA5-1E4B-0F219ECA5E2C" name="ESTADIO">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>0DF13CF8-9536-5575-C7AE-0FDD046E8FD0</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_estadio" id="A160EFAD-AA2E-BA4E-51DF-C46CF7042D1D">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>ADF50BF6-0989-0513-49BA-E2FAE3C710C8</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="095DCF7F-EAB4-071E-3EC1-8EE6373300C5">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>405D0BEE-017C-0B41-66F2-736B58758DB0</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="capacidad" id="CC792450-9228-A134-43AA-3F086AA817ED">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>BB9EF8FC-E1D4-4DE3-FD66-73D227B3AD4A</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_inauguracion" id="18781E72-5731-00AB-21E0-2DD359C68525">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>0782BB54-1C10-A4FB-F2B9-B100049DF863</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="historia" id="DE312FD2-3014-A054-8E7E-FF01741D750E">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>31D395E4-D490-4DC2-80D9-39F7EC57F9C7</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_ciudad" id="2F5E504B-2230-34AE-2E51-C13D29A11352">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 03:51:51 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>FE4E7FB3-04AF-C950-86BE-AE6503761E6E</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA5012BB-3E24-6EA5-AA19-9777E1F6BB6A" referredColumn="FE4E7FB3-04AF-C950-86BE-AE6503761E6E"/>
+</associations>
+</Column>
+<Column name="id_pais" id="79CDB3B4-FF8E-3131-6CB2-9A6A4EB43E3B">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 03:51:51 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>811C3A54-D441-52E1-C99E-355C861B9789</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EA5012BB-3E24-6EA5-AA19-9777E1F6BB6A" referredColumn="811C3A54-D441-52E1-C99E-355C861B9789"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="65860844-AB17-A3BA-7797-23B46DA56C5F" name="ESTADIO_PK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>BE22C8F5-4CB3-05DE-3D21-74EA9CBA3987</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A160EFAD-AA2E-BA4E-51DF-C46CF7042D1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="74254C8D-5ECE-27D8-D756-D544487F5959" name="ESTADIO_UBICACION_FK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 03:51:51 UTC</createdTime>
+<generatorID>D2F36B21-1CEF-8F4C-75BC-C89993F92C56</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F5E504B-2230-34AE-2E51-C13D29A11352"/>
+<colUsage columnID="79CDB3B4-FF8E-3131-6CB2-9A6A4EB43E3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E782F468-27B5-FB81-1B3B-C4225EDB7D48" name="UBICACION">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>205A3BFB-71EF-E6E4-DF70-229151A34019</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_ciudad" id="FE4E7FB3-04AF-C950-86BE-AE6503761E6E">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 03:45:34 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>0E4EE5BA-6247-BF65-AC8C-2EDE8F39E449</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D69DF059-9C1E-E429-D945-D587D9C19507" referredColumn="0E4EE5BA-6247-BF65-AC8C-2EDE8F39E449"/>
+</associations>
+</Column>
+<Column name="id_pais" id="811C3A54-D441-52E1-C99E-355C861B9789">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 03:46:28 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>9D0FBCD4-A88F-3164-8E13-7E6310A13C0B</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="57D3B30C-6A41-F551-17F3-2E8DBE1C4B19" referredColumn="9D0FBCD4-A88F-3164-8E13-7E6310A13C0B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1C08AC7C-5EC4-8B3F-212A-F9E27D879DB7" name="UBICACION_PK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>D2F36B21-1CEF-8F4C-75BC-C89993F92C56</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE4E7FB3-04AF-C950-86BE-AE6503761E6E"/>
+<colUsage columnID="811C3A54-D441-52E1-C99E-355C861B9789"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F1AE93F0-A909-7B38-2015-90AEE2B6BD40" name="UBICACION_CIUDADES_FK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 03:45:34 UTC</createdTime>
+<generatorID>D2F36B21-1CEF-8F4C-75BC-C89993F92C56</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE4E7FB3-04AF-C950-86BE-AE6503761E6E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B55E0CC-364C-BD5C-D14D-A8C41EB101F5" name="UBICACION_PAIS_FK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 03:46:28 UTC</createdTime>
+<generatorID>D2F36B21-1CEF-8F4C-75BC-C89993F92C56</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="811C3A54-D441-52E1-C99E-355C861B9789"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

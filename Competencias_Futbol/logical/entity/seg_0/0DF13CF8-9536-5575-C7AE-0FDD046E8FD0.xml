@@ -81,9 +81,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT040</logicalDatatype>
 </Attribute>
-<Attribute name="id_pais" id="DBA25269-0045-A16B-E98B-DD6E3CB10B45">
+<Attribute name="id_pais" id="E41A8C68-2C76-13D1-15F8-94C228B38AFA">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-07 02:39:34 UTC</createdTime>
+<createdTime>2014-05-08 03:50:37 UTC</createdTime>
 <generatorID>7FD5EF44-8C16-4600-23FD-3726D5CDC222</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <engineerTo>
@@ -94,9 +94,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 </Attribute>
-<Attribute name="id_ciudad" id="038A442D-DF44-16F8-C01E-F1E8FA7E01E3">
+<Attribute name="id_ciudad" id="D4464872-B4A3-041D-1529-C99F4116BC05">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-07 02:39:37 UTC</createdTime>
+<createdTime>2014-05-08 03:50:37 UTC</createdTime>
 <generatorID>7FD5EF44-8C16-4600-23FD-3726D5CDC222</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <engineerTo>

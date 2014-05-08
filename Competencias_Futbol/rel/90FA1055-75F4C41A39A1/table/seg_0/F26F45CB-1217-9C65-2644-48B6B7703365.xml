@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F26F45CB-1217-9C65-2644-48B6B7703365" name="ENTRENADOR">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>4960BBAA-E036-C6A3-7DE4-965DD2939BCF</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_miembro" id="4A81D8D9-E86C-17C7-01C2-2C67D81FD4A7">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>4AE7C599-1E77-F693-0772-BAA6FD8635D8</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>17C1290F-A58C-D8E9-6FB8-C3CD5FFE3562</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2CDF9002-0E47-44C3-0507-917BE4BEE95F" referredColumn="17C1290F-A58C-D8E9-6FB8-C3CD5FFE3562"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CFD38D9A-75D3-3ED7-756A-EA162FFC2EC1" name="ENTRENADOR_PK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>242CF4D9-343D-B745-E908-33103888CB66</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A81D8D9-E86C-17C7-01C2-2C67D81FD4A7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="18D8EF3C-3834-4602-F112-12AABC2974D1" name="ENTRENADOR_MIEMBRO_FK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>3F89DD60-E0EB-4A47-4866-38AB261A2ECA</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A81D8D9-E86C-17C7-01C2-2C67D81FD4A7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

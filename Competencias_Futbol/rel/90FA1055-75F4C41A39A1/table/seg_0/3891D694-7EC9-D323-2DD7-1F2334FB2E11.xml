@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3891D694-7EC9-D323-2DD7-1F2334FB2E11" name="CLUB_DEPORTIVO">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>33DA8784-EB9E-E06B-951F-451A5E896C8C</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_equipo" id="CFBE51A7-A878-90BC-E035-74AA79B6F8B2">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>55F76198-42EB-DEEE-7C81-14136BB14010</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>A1B1B327-6428-B525-5C6E-7E5CB4AFA78C</delegate>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="26D984D2-754D-02C1-269E-E89101D37DA7" referredColumn="A1B1B327-6428-B525-5C6E-7E5CB4AFA78C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A4404793-23B0-0430-C7AB-F28B1AB558BF" name="CLUB_DEPORTIVO_PK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>1D90F721-CBF3-591D-94B3-7031A4FFD4BC</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CFBE51A7-A878-90BC-E035-74AA79B6F8B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D119DB93-9EA9-EFA6-222E-D7B142CBE703" name="CLUB_DEPORTIVO_EQUIPO_FK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-08 01:15:15 UTC</createdTime>
+<generatorID>644644F8-FBF5-2132-70C7-0ED0DCA08012</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CFBE51A7-A878-90BC-E035-74AA79B6F8B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
