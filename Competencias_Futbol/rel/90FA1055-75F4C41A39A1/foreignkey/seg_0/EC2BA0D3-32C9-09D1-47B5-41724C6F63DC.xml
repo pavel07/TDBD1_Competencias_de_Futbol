@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EC2BA0D3-32C9-09D1-47B5-41724C6F63DC" name="DESEMPENIO_PORTERO_EVALUA">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 08:42:12 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<containerWithKeyObject>F89F33E6-B77F-680A-7C4F-8939DA9C2395</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>17DBBAFC-CC08-AE14-1263-623DF1B10A2A</localFKIndex>
+<keyObject>07AFEB70-1E81-7A06-EA48-3D281447F49A</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

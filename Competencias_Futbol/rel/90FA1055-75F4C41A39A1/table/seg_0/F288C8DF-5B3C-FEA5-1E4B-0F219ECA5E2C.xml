@@ -7,7 +7,7 @@
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id_estadio" id="A160EFAD-AA2E-BA4E-51DF-C46CF7042D1D">
+<Column name="ID_ESTADIO" id="A160EFAD-AA2E-BA4E-51DF-C46CF7042D1D">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>ADF50BF6-0989-0513-49BA-E2FAE3C710C8</generatorID>
@@ -17,7 +17,22 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nombre" id="095DCF7F-EAB4-071E-3EC1-8EE6373300C5">
+<Column name="ID_CIUDAD" id="A868A0C4-F227-BE61-9FF8-6F1D3CCC6F3E">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 09:03:23 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>0E4EE5BA-6247-BF65-AC8C-2EDE8F39E449</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A51E74DD-C5F8-8DF4-0CBC-B0CFA112E69E" referredColumn="0E4EE5BA-6247-BF65-AC8C-2EDE8F39E449"/>
+</associations>
+</Column>
+<Column name="NOMBRE" id="095DCF7F-EAB4-071E-3EC1-8EE6373300C5">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>405D0BEE-017C-0B41-66F2-736B58758DB0</generatorID>
@@ -26,10 +41,10 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
+<dataTypeSize>100</dataTypeSize>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="capacidad" id="CC792450-9228-A134-43AA-3F086AA817ED">
+<Column name="CAPACIDAD" id="CC792450-9228-A134-43AA-3F086AA817ED">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>BB9EF8FC-E1D4-4DE3-FD66-73D227B3AD4A</generatorID>
@@ -40,7 +55,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="fecha_inauguracion" id="18781E72-5731-00AB-21E0-2DD359C68525">
+<Column name="FECHA_INAUGURACION" id="18781E72-5731-00AB-21E0-2DD359C68525">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>0782BB54-1C10-A4FB-F2B9-B100049DF863</generatorID>
@@ -51,7 +66,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="historia" id="DE312FD2-3014-A054-8E7E-FF01741D750E">
+<Column name="HISTORIA" id="DE312FD2-3014-A054-8E7E-FF01741D750E">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>31D395E4-D490-4DC2-80D9-39F7EC57F9C7</generatorID>
@@ -61,36 +76,6 @@
 <use>1</use>
 <logicalDatatype>LOGDT040</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="id_ciudad" id="2F5E504B-2230-34AE-2E51-C13D29A11352">
-<createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-08 03:51:51 UTC</createdTime>
-<generatorID>Generado por el Usuario</generatorID>
-<ownerDesignName>Competencias_Futbol</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<delegate>FE4E7FB3-04AF-C950-86BE-AE6503761E6E</delegate>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="EA5012BB-3E24-6EA5-AA19-9777E1F6BB6A" referredColumn="FE4E7FB3-04AF-C950-86BE-AE6503761E6E"/>
-</associations>
-</Column>
-<Column name="id_pais" id="79CDB3B4-FF8E-3131-6CB2-9A6A4EB43E3B">
-<createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-08 03:51:51 UTC</createdTime>
-<generatorID>Generado por el Usuario</generatorID>
-<ownerDesignName>Competencias_Futbol</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<delegate>811C3A54-D441-52E1-C99E-355C861B9789</delegate>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="EA5012BB-3E24-6EA5-AA19-9777E1F6BB6A" referredColumn="811C3A54-D441-52E1-C99E-355C861B9789"/>
-</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -106,16 +91,15 @@
 <colUsage columnID="A160EFAD-AA2E-BA4E-51DF-C46CF7042D1D"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="74254C8D-5ECE-27D8-D756-D544487F5959" name="ESTADIO_UBICACION_FK">
+<ind_PK_UK id="4737D23E-A25A-EFA1-BE7E-D7DC73A76BCA" name="ESTADIO_PERTENECE_CIUDAD">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-08 03:51:51 UTC</createdTime>
+<createdTime>2014-05-26 09:03:23 UTC</createdTime>
 <generatorID>D2F36B21-1CEF-8F4C-75BC-C89993F92C56</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="2F5E504B-2230-34AE-2E51-C13D29A11352"/>
-<colUsage columnID="79CDB3B4-FF8E-3131-6CB2-9A6A4EB43E3B"/>
+<colUsage columnID="A868A0C4-F227-BE61-9FF8-6F1D3CCC6F3E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

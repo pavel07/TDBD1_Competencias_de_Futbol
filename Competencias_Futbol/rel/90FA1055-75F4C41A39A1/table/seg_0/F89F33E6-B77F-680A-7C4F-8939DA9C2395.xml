@@ -1,53 +1,45 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F26F45CB-1217-9C65-2644-48B6B7703365" name="ENTRENADOR">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F89F33E6-B77F-680A-7C4F-8939DA9C2395" name="DESEMPENIO_PORTERO">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-08 01:15:15 UTC</createdTime>
-<generatorID>4960BBAA-E036-C6A3-7DE4-965DD2939BCF</generatorID>
+<createdTime>2014-05-19 21:35:15 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="ID_ENTRENADOR" id="4A81D8D9-E86C-17C7-01C2-2C67D81FD4A7">
+<Column name="ID_JUGADOR" id="F302834C-739E-F115-E77E-CEDB0D5B6D9E">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-08 01:15:15 UTC</createdTime>
-<generatorID>4AE7C599-1E77-F693-0772-BAA6FD8635D8</generatorID>
-<ownerDesignName>Competencias_Futbol</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<delegate>17C1290F-A58C-D8E9-6FB8-C3CD5FFE3562</delegate>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="ID_PAIS" id="D1161B78-14EB-1FBD-9EE7-CEB824BF8E1B">
-<createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-26 09:15:35 UTC</createdTime>
+<createdTime>2014-05-26 08:33:23 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
-<delegate>9D0FBCD4-A88F-3164-8E13-7E6310A13C0B</delegate>
+<delegate>0DA543D8-5252-7F4B-7C0F-658FA50A4F57</delegate>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="A25D881B-DCCD-C18E-0162-62F2AC7829A8" referredColumn="9D0FBCD4-A88F-3164-8E13-7E6310A13C0B"/>
+<colAssociation fkAssociation="56FD86A0-A03F-5511-16F6-2C14A7441B5C" referredColumn="0DA543D8-5252-7F4B-7C0F-658FA50A4F57"/>
 </associations>
 </Column>
-<Column name="NOMBRE" id="D9DE6C5E-C7CE-2C7B-C274-F555681AC20C">
+<Column name="ID_RESULTADO" id="43021ACC-A27F-35A4-9FEE-1479B3BC7970">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-19 06:44:01 UTC</createdTime>
+<createdTime>2014-05-26 08:42:12 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>100</dataTypeSize>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>09196477-B919-2DF8-73DD-FC7720DA22F9</delegate>
+<previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EC2BA0D3-32C9-09D1-47B5-41724C6F63DC" referredColumn="09196477-B919-2DF8-73DD-FC7720DA22F9"/>
+</associations>
 </Column>
-<Column name="EDAD" id="AE012D69-5139-7987-88A1-2DF30835361D">
+<Column name="CAPACIDAD_ATAJAR" id="3826C624-8356-BFD1-C19F-2AEDAD53EA13">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-19 06:44:01 UTC</createdTime>
+<createdTime>2014-05-19 21:36:22 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -56,9 +48,9 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="CEDULA_IDENTIDAD" id="DBE62B73-4289-DAB8-E693-F60CA14CA5C4">
+<Column name="LUCHA1_1" id="F38B45F4-5101-01BA-BD3F-0BACD5EB84FB">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-19 06:44:01 UTC</createdTime>
+<createdTime>2014-05-19 21:36:22 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -67,51 +59,63 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="BIOGRAFIA" id="6AD3F908-7997-8689-5B23-85634367ADE9">
+<Column name="ANTICIPACION" id="7C6D025E-0CCF-0CF0-B7D4-21B97C96F0E4">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-19 06:44:01 UTC</createdTime>
+<createdTime>2014-05-19 21:36:22 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT040</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="FOTO" id="AFA2FA57-0C9E-8629-2784-1DFDB149ACCD">
+<Column name="REFLEJOS" id="21C5CC00-628B-3612-FAEB-062238B04AB8">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-19 06:44:01 UTC</createdTime>
+<createdTime>2014-05-19 21:36:22 UTC</createdTime>
 <generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT010</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="CFD38D9A-75D3-3ED7-756A-EA162FFC2EC1" name="ENTRENADOR_PK">
+<ind_PK_UK id="93F07937-94F6-98CB-780F-A6D31D390C9B" name="DESEMPENIO_PORTERO_PK">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-08 01:15:15 UTC</createdTime>
-<generatorID>242CF4D9-343D-B745-E908-33103888CB66</generatorID>
+<createdTime>2014-05-26 08:34:31 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="4A81D8D9-E86C-17C7-01C2-2C67D81FD4A7"/>
+<colUsage columnID="F302834C-739E-F115-E77E-CEDB0D5B6D9E"/>
+<colUsage columnID="43021ACC-A27F-35A4-9FEE-1479B3BC7970"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="7805FCDB-C26B-0B61-0815-2B638279039E" name="ENTRENADOR_NACIO_PAIS">
+<ind_PK_UK id="B822B3D4-B7B9-C92A-550C-B0601B2D28BE" name="DESEMPENIO_PORTERO_JUGADOR">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-26 09:15:35 UTC</createdTime>
-<generatorID>D2F36B21-1CEF-8F4C-75BC-C89993F92C56</generatorID>
+<createdTime>2014-05-26 08:33:23 UTC</createdTime>
+<generatorID>242CF4D9-343D-B745-E908-33103888CB66</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="D1161B78-14EB-1FBD-9EE7-CEB824BF8E1B"/>
+<colUsage columnID="F302834C-739E-F115-E77E-CEDB0D5B6D9E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="17DBBAFC-CC08-AE14-1263-623DF1B10A2A" name="DESEMPENIO_PORTERO_EVALUA">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 08:42:12 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="43021ACC-A27F-35A4-9FEE-1479B3BC7970"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -7,7 +7,7 @@
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id_pais" id="9D0FBCD4-A88F-3164-8E13-7E6310A13C0B">
+<Column name="ID_PAIS" id="9D0FBCD4-A88F-3164-8E13-7E6310A13C0B">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>439DCBB9-AEF1-A03D-CBD1-F589F954B6F2</generatorID>
@@ -18,7 +18,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nombre" id="28579C4F-AEE8-4D5D-A014-89E55184C90C">
+<Column name="NOMBRE" id="28579C4F-AEE8-4D5D-A014-89E55184C90C">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>CDD5F872-A6B9-89E8-29D9-CFE1F69CC161</generatorID>
@@ -27,7 +27,19 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NACIONALIDAD" id="20A77356-9511-839B-649C-B291C5686826">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-25 04:25:39 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

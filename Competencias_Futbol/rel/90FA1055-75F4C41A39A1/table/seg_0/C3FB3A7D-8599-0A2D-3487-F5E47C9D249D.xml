@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C3FB3A7D-8599-0A2D-3487-F5E47C9D249D" name="CALENDARIO_PARTIDOS">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C3FB3A7D-8599-0A2D-3487-F5E47C9D249D" name="PARTIDO">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>57B0807F-5CB0-1DE9-89AD-32FEC42B67E0</generatorID>
@@ -7,7 +7,7 @@
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id_calendario" id="7F6C3C62-A44D-7C2D-6C3E-D8CAB487F668">
+<Column name="ID_PARTIDO" id="7F6C3C62-A44D-7C2D-6C3E-D8CAB487F668">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>96D83F8A-970F-BB3E-382D-9A648474DBD3</generatorID>
@@ -17,10 +17,10 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="id_competencia" id="80819B36-CFB4-E710-7C6D-C81D64022347">
+<Column name="ID_COMPETENCIA" id="9259231B-D284-EA20-5D7D-9704AF3FDC7D">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-08 01:15:15 UTC</createdTime>
-<generatorID>AA9F4039-F755-C531-99E3-E5920B136E22</generatorID>
+<createdTime>2014-05-26 08:45:46 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -29,13 +29,13 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="A9BAA6A2-DA1D-A959-18F9-D168ECB9F08E" referredColumn="0B232DB8-F686-D4B5-EF8D-AF2110B4C3B7"/>
+<colAssociation fkAssociation="3D42F5B5-4218-CA27-66F6-3A0B5C2F7D80" referredColumn="0B232DB8-F686-D4B5-EF8D-AF2110B4C3B7"/>
 </associations>
 </Column>
-<Column name="id_estadio" id="2F7A20B0-DF92-D884-407E-C16B04BBCCE7">
+<Column name="ID_ESTADIO" id="EC3D3B9B-6269-E329-72DB-12773C98F9FE">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-08 01:15:15 UTC</createdTime>
-<generatorID>DB76FFCF-C88A-682F-2342-967E90196D81</generatorID>
+<createdTime>2014-05-26 08:52:14 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -44,10 +44,40 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="DEE7E79B-D342-DE11-7386-09339E4DE251" referredColumn="A160EFAD-AA2E-BA4E-51DF-C46CF7042D1D"/>
+<colAssociation fkAssociation="EFAD5B32-CD5B-0DB3-0B01-FF957B7DA21F" referredColumn="A160EFAD-AA2E-BA4E-51DF-C46CF7042D1D"/>
 </associations>
 </Column>
-<Column name="fecha_partido" id="A8BB67E6-E8DD-F2EE-FD01-7CFA95BB2E6A">
+<Column name="ID_EQUIPO_LOCAL" id="394EC5F1-CECC-0C78-F1C7-DB2ACA5C5E8D">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 09:22:28 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>A1B1B327-6428-B525-5C6E-7E5CB4AFA78C</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A357E0AE-48C1-81F9-A74D-478276EBD91E" referredColumn="A1B1B327-6428-B525-5C6E-7E5CB4AFA78C"/>
+</associations>
+</Column>
+<Column name="ID_EQUIPO_VISITA" id="7040E28C-8FBE-F099-F0B1-E81B27ED6EAB">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 09:23:42 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>A1B1B327-6428-B525-5C6E-7E5CB4AFA78C</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="672EE8D5-4F83-E0EB-E796-8EB364352E2C" referredColumn="A1B1B327-6428-B525-5C6E-7E5CB4AFA78C"/>
+</associations>
+</Column>
+<Column name="FECHA_PARTIDO" id="A8BB67E6-E8DD-F2EE-FD01-7CFA95BB2E6A">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>AEED8540-C292-8728-4BC0-94D64E300DA5</generatorID>
@@ -58,7 +88,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="hora_inicio" id="83F52A3C-9CA2-2A60-E380-ADAC5A335288">
+<Column name="HORA_INICIO" id="83F52A3C-9CA2-2A60-E380-ADAC5A335288">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>C2CE3937-469F-79C6-C5E0-CA95E6F44EEB</generatorID>
@@ -69,7 +99,7 @@
 <logicalDatatype>LOGDT020</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="estado" id="FEBEC585-9AC2-2CA0-F020-7DF436F587E8">
+<Column name="ESTADO" id="FEBEC585-9AC2-2CA0-F020-7DF436F587E8">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <comment>El estado se identificara por un numero:&lt;br/&gt;1=En Juego&lt;br/&gt;0=Finalizado&lt;br/&gt;2=Pendiente Iniciar</comment>
@@ -83,7 +113,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="41097BBF-B922-EC63-8A95-BE45EAE4FB2D" name="CALENDARIO_PARTIDOS_PK">
+<ind_PK_UK id="41097BBF-B922-EC63-8A95-BE45EAE4FB2D" name="PARTIDO_PK">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>9861D203-2B10-4193-076C-EB4A6C6E23C5</generatorID>
@@ -95,38 +125,48 @@
 <colUsage columnID="7F6C3C62-A44D-7C2D-6C3E-D8CAB487F668"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="08484DF2-282A-3C97-4578-21FA849AC860" name="CALENDARIO_PARTIDOS">
+<ind_PK_UK id="15EFEAAC-51BD-9A7C-62E8-B7A75BA704F6" name="COMPETENCIA_SE_JUEGAN">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-08 01:15:16 UTC</createdTime>
-<generatorID>Generado por el Usuario</generatorID>
-<ownerDesignName>Competencias_Futbol</ownerDesignName>
-<indexState>Unique Plain Index</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<relationGeneratorID>0BA9D356-D04D-D71E-659B-B546D018460C</relationGeneratorID>
-<indexColumnUsage>
-<colUsage columnID="2F7A20B0-DF92-D884-407E-C16B04BBCCE7"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="CEC06287-DF74-FA7D-F8DF-D423883C23F2" name="CALENDARIO_PARTIDOS_COMPETENCIAS_FK">
-<createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-08 01:15:16 UTC</createdTime>
-<generatorID>0F044E9C-A18E-CF4C-922F-F7AC50A6A9BB</generatorID>
+<createdTime>2014-05-26 08:45:46 UTC</createdTime>
+<generatorID>EE77D541-AA4D-1A97-2159-AD73B8C15D8E</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="80819B36-CFB4-E710-7C6D-C81D64022347"/>
+<colUsage columnID="9259231B-D284-EA20-5D7D-9704AF3FDC7D"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="B19CCC32-CC8D-5E6A-6338-58533D0D7575" name="CALENDARIO_PARTIDOS_ESTADIO_FK">
+<ind_PK_UK id="77BE8697-4D24-2BB4-3FF6-178BF76D49C1" name="PARTIDO_SE_JUEGA_ESTADIO">
 <createdBy>Pavel-NotePc</createdBy>
-<createdTime>2014-05-08 01:15:16 UTC</createdTime>
-<generatorID>0BA9D356-D04D-D71E-659B-B546D018460C</generatorID>
+<createdTime>2014-05-26 08:52:14 UTC</createdTime>
+<generatorID>BE22C8F5-4CB3-05DE-3D21-74EA9CBA3987</generatorID>
 <ownerDesignName>Competencias_Futbol</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="2F7A20B0-DF92-D884-407E-C16B04BBCCE7"/>
+<colUsage columnID="EC3D3B9B-6269-E329-72DB-12773C98F9FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="917A1A9E-EB8B-4420-CB86-CF40B6B1BA66" name="PARTIDO_LOCAL_EQUIPO">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 09:22:28 UTC</createdTime>
+<generatorID>1D90F721-CBF3-591D-94B3-7031A4FFD4BC</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="394EC5F1-CECC-0C78-F1C7-DB2ACA5C5E8D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9A1D765C-6D2C-0CC5-DFD0-C40A0C10AA95" name="PARTIDO_VISITA_EQUIPO">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 09:23:42 UTC</createdTime>
+<generatorID>1D90F721-CBF3-591D-94B3-7031A4FFD4BC</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7040E28C-8FBE-F099-F0B1-E81B27ED6EAB"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2D223C18-70FD-254C-1680-E73A61AB3112" name="COMPETENCIA_ESTADIO">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 08:57:40 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_COMPETENCIA" id="1AA716DC-7FA4-7917-825E-901F75E5EFB2">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 08:58:07 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>0B232DB8-F686-D4B5-EF8D-AF2110B4C3B7</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81CB35B9-8324-8424-2A05-6A1FD8B82579" referredColumn="0B232DB8-F686-D4B5-EF8D-AF2110B4C3B7"/>
+</associations>
+</Column>
+<Column name="ID_ESTADIO" id="FE573629-3D77-E4BF-B7E5-9A3E3166D2F0">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 08:59:12 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>A160EFAD-AA2E-BA4E-51DF-C46CF7042D1D</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="922DDC5D-0079-7999-F972-519B0546B60B" referredColumn="A160EFAD-AA2E-BA4E-51DF-C46CF7042D1D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CEADE427-618F-0F98-D5CB-9FF6A8757548" name="COMPETENCIA_ESTADIO_PK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 08:58:56 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1AA716DC-7FA4-7917-825E-901F75E5EFB2"/>
+<colUsage columnID="FE573629-3D77-E4BF-B7E5-9A3E3166D2F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="387FFAF0-E75E-8761-29EE-75BE67FD7651" name="COMPETENCIA_JUEGA_ESTADIOS">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 08:58:07 UTC</createdTime>
+<generatorID>EE77D541-AA4D-1A97-2159-AD73B8C15D8E</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1AA716DC-7FA4-7917-825E-901F75E5EFB2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="54A1BFEF-031C-B026-B898-971EA38341F0" name="ESTADIO_COMPITEN_COMPETENCIAS">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 08:59:12 UTC</createdTime>
+<generatorID>BE22C8F5-4CB3-05DE-3D21-74EA9CBA3987</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE573629-3D77-E4BF-B7E5-9A3E3166D2F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

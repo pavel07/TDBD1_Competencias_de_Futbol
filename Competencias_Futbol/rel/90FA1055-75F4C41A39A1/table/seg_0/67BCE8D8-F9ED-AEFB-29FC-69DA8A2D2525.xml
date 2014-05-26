@@ -1,0 +1,193 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="67BCE8D8-F9ED-AEFB-29FC-69DA8A2D2525" name="RESULTADO">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:37:35 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_RESULTADO" id="09196477-B919-2DF8-73DD-FC7720DA22F9">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:47:39 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PARTIDO" id="9FA6CC73-ADEA-1B26-DF9A-2FA85FCF2627">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 08:49:09 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>7F6C3C62-A44D-7C2D-6C3E-D8CAB487F668</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CB10488F-C9CC-A4D9-733D-B79F6CB01019" referredColumn="7F6C3C62-A44D-7C2D-6C3E-D8CAB487F668"/>
+</associations>
+</Column>
+<Column name="PRIMERT_GOLES_EQUIPO1" id="80A46459-A0F5-4FAE-63D2-1D6A0D563D7D">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:43:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRIMERT_GOLES_EQUIPO2" id="81188923-AA87-7C55-4D20-BB38E4A10D34">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:43:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SEGUNDOT_GOLES_EQUIPO1" id="7099083A-F1AE-7547-C45B-4EAA7855C895">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:43:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SEGUNDOT_GOLES_EQUIPO2" id="DBAE9ED7-69A7-4CDC-F63D-019D2A1D1C02">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:43:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIEMPOEXTRA_GOLES_EQUIPO1" id="CD186605-ADA3-14F6-4539-141B23925131">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:43:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIEMPOEXTRA_GOLES_EQUIPO2" id="9FAB5A70-1395-51D4-B91B-AB4D727E6617">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:43:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PENALES_GOLES_EQUIPOS1" id="462F192E-FD44-2DC8-82C8-6C222074A10C">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:43:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PENALES_GOLES_EQUIPO2" id="5B56842D-8186-1ED3-A694-58E04FFC9A84">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:43:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TARJETAS_A_EQUIPO1" id="C714CB62-E640-9226-F026-ED8E4C455228">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:43:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TARJETAS_A_EQUIPO2" id="29E8DD87-5FED-410D-9F0E-714C63CE79E8">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:43:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TARJETAS_R_EQUIPO1" id="D578FCC3-925E-6276-5D91-DF3C8D0EC629">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:43:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TARJETAS_R_EQUIPO2" id="6153CC86-616B-D16C-42CD-024C6B0ED187">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:43:32 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="07AFEB70-1E81-7A06-EA48-3D281447F49A" name="RESULTADO_PK">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-19 21:47:39 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09196477-B919-2DF8-73DD-FC7720DA22F9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B12BDD0E-2765-392E-F357-C0DF8F766A34" name="RESULTADO_TIENE_PARTIDO">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 08:49:09 UTC</createdTime>
+<generatorID>9861D203-2B10-4193-076C-EB4A6C6E23C5</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9FA6CC73-ADEA-1B26-DF9A-2FA85FCF2627"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="ECB6FF3E-F2CC-C356-472E-A78B7C24A4B8" name="COMPETENCIA_TIENE">
+<createdBy>Pavel-NotePc</createdBy>
+<createdTime>2014-05-26 08:23:20 UTC</createdTime>
+<generatorID>EE77D541-AA4D-1A97-2159-AD73B8C15D8E</generatorID>
+<ownerDesignName>Competencias_Futbol</ownerDesignName>
+<containerWithKeyObject>A5109F5C-2E5D-F3EA-7797-BB31AC4E81A5</containerWithKeyObject>
+<deleteRule>NO ACTION</deleteRule>
+<localFKIndex>338703DE-BA0D-894E-697B-E9E7E2E1BB7F</localFKIndex>
+<keyObject>C52080D8-9BCD-1DB5-74D1-A403E19F49A9</keyObject>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

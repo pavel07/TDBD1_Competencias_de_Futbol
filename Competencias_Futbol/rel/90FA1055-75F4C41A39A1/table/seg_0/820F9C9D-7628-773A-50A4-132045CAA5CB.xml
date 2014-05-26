@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="820F9C9D-7628-773A-50A4-132045CAA5CB" name="COMPETENCIAS">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="820F9C9D-7628-773A-50A4-132045CAA5CB" name="COMPETENCIA">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>65D6170D-873D-80AB-3C47-F9D220092AC1</generatorID>
@@ -7,7 +7,7 @@
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id_competencia" id="0B232DB8-F686-D4B5-EF8D-AF2110B4C3B7">
+<Column name="ID_COMPETENCIA" id="0B232DB8-F686-D4B5-EF8D-AF2110B4C3B7">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>15566B1C-42C2-17F8-C210-7DB41AAEFBE3</generatorID>
@@ -17,7 +17,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nombre" id="6DB235C1-4843-4717-810E-47D731E6A11B">
+<Column name="NOMBRE" id="6DB235C1-4843-4717-810E-47D731E6A11B">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>2A097FB7-32D8-2303-B711-2A336140AAF4</generatorID>
@@ -29,7 +29,7 @@
 <dataTypeSize>60</dataTypeSize>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="fecha_inicio" id="CF95C439-C014-A006-9706-EBEE5BC9ACA9">
+<Column name="FECHA_INICIO" id="CF95C439-C014-A006-9706-EBEE5BC9ACA9">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>14222413-C475-32ED-776E-6A820D976509</generatorID>
@@ -40,7 +40,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="fecha_fin" id="F550E139-6EAF-E1F5-5613-77126ADFABE0">
+<Column name="FECHA_FIN" id="F550E139-6EAF-E1F5-5613-77126ADFABE0">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>7073F111-1B5A-B4A9-4680-72EA43CB19ED</generatorID>
@@ -51,7 +51,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="estado" id="7DD7E0DA-60A2-ABFF-FBA4-B08721640753">
+<Column name="ESTADO_ACTUAL" id="7DD7E0DA-60A2-ABFF-FBA4-B08721640753">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <comment>El estado se identificara por un numero:&lt;br/&gt;1=Activo&lt;br/&gt;0=Cerrado&lt;br/&gt;2=Pendiente Iniciar</comment>
@@ -65,7 +65,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="C52080D8-9BCD-1DB5-74D1-A403E19F49A9" name="COMPETENCIAS_PK">
+<ind_PK_UK id="C52080D8-9BCD-1DB5-74D1-A403E19F49A9" name="COMPETENCIA_PK">
 <createdBy>Pavel-NotePc</createdBy>
 <createdTime>2014-05-08 01:15:15 UTC</createdTime>
 <generatorID>EE77D541-AA4D-1A97-2159-AD73B8C15D8E</generatorID>
