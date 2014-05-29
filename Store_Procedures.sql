@@ -1,3 +1,4 @@
+/*PROCEDIMIENTOS DE INSERCION*/
 CREATE OR REPLACE PROCEDURE SP_CIUDAD_INSERT (  pID_PAIS CIUDAD.ID_PAIS%TYPE,
                                                 pNOMBRE CIUDAD.NOMBRE%TYPE)IS
 BEGIN
@@ -133,3 +134,268 @@ BEGIN
   COMMIT;
 END;
 
+/*PROCEDIMIENTOS DE ELIMINACION*/
+
+CREATE OR REPLACE PROCEDURE SP_CIUDAD_DELETE (  pID_CIUDAD CIUDAD.ID_CIUDAD%TYPE)IS
+BEGIN
+  DELETE FROM CIUDAD WHERE ID_CIUDAD = pID_CIUDAD;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_COMPETENCIA_DELETE (  pID_COMPETENCIA COMPETENCIA.ID_COMPETENCIA%TYPE)IS
+BEGIN
+  DELETE FROM COMPETENCIA WHERE ID_COMPETENCIA = pID_COMPETENCIA;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_DESEMPENIO_DMD_DELETE (  pID_JUGADOR DESEMPENIO_DMD.ID_JUGADOR%TYPE,
+                                                        pID_RESULTADO DESEMPENIO_DMD.ID_RESULTADO%TYPE)IS
+BEGIN
+  DELETE FROM DESEMPENIO_DMD WHERE ID_JUGADOR = pID_JUGADOR AND
+  ID_RESULTADO = pID_RESULTADO;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_DESEMPENIO_PORTERO_DELETE (  pID_JUGADOR DESEMPENIO_PORTERO.ID_JUGADOR%TYPE,
+                                                            pID_RESULTADO DESEMPENIO_PORTERO.ID_RESULTADO%TYPE)IS
+BEGIN
+  DELETE FROM DESEMPENIO_PORTERO WHERE ID_JUGADOR = pID_JUGADOR AND
+  ID_RESULTADO = pID_RESULTADO;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_ENTRENADOR_DELETE (  pID_ENTRENADOR ENTRENADOR.ID_ENTRENADOR%TYPE)IS
+BEGIN
+  DELETE FROM ENTRENADOR WHERE ID_ENTRENADOR = pID_ENTRENADOR;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_EQUIPO_DELETE (  pID_EQUIPO EQUIPO.ID_EQUIPO%TYPE)IS
+BEGIN
+  DELETE FROM EQUIPO WHERE ID_EQUIPO = pID_EQUIPO;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_ESTADIO_DELETE (  pID_ESTADIO ESTADIO.ID_ESTADIO%TYPE)IS
+BEGIN
+  DELETE FROM ESTADIO WHERE ID_ESTADIO = pID_ESTADIO;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_JUGADOR_DELETE (  pID_JUGADOR JUGADOR.ID_JUGADOR%TYPE)IS
+BEGIN
+  DELETE FROM JUGADOR WHERE ID_JUGADOR = pID_JUGADOR;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_PAIS_DELETE (  pID_PAIS PAIS.ID_PAIS%TYPE)IS
+BEGIN
+  DELETE FROM PAIS WHERE ID_PAIS = pID_PAIS;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_PARTIDO_DELETE (  pID_PARTIDO PARTIDO.ID_PARTIDO%TYPE)IS
+BEGIN
+  DELETE FROM PARTIDO WHERE ID_PARTIDO = pID_PARTIDO;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_RESULTADO_DELETE (  pID_RESULTADO RESULTADO.ID_RESULTADO%TYPE)IS
+BEGIN
+  DELETE FROM RESULTADO WHERE ID_RESULTADO = pID_RESULTADO;
+  COMMIT;
+END;
+
+/*PROCEDIMIENTOS DE UPDATE*/
+CREATE OR REPLACE PROCEDURE SP_PAIS_UPDATE (  
+                                    pID_PAIS PAIS.ID_PAIS%TYPE, 
+                                    pNOMBRE PAIS.NOMBRE%TYPE, 
+                                    pNACIONALIDAD PAIS.NACIONALIDAD%TYPE) IS
+BEGIN
+  UPDATE PAIS SET NOMBRE= pNOMBRE,
+                  NACIONALIDAD = pNACIONALIDAD
+  WHERE ID_PAIS = pID_PAIS;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_CIUDAD_UPDATE (  pID_PAIS CIUDAD.ID_PAIS%TYPE,
+                                                pNOMBRE CIUDAD.NOMBRE%TYPE,
+                                                pID_CIUDAD CIUDAD.ID_CIUDAD%TYPE)IS
+BEGIN
+  UPDATE CIUDAD SET NOMBRE= pNOMBRE,
+                    ID_PAIS = pID_PAIS
+  WHERE ID_CIUDAD = pID_CIUDAD;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_COMPETENCIA_UPDATE ( pNOMBRE COMPETENCIA.NOMBRE%TYPE,
+                                                    pFECHA_INICIO COMPETENCIA.FECHA_INICIO%TYPE,
+                                                    pFECHA_FIN COMPETENCIA.FECHA_FIN%TYPE,
+                                                    pESTADO_ACTUAL COMPETENCIA.ESTADO_ACTUAL%TYPE,
+                                                    pID_COMPETENCIA COMPETENCIA.ID_COMPETENCIA%TYPE)IS
+BEGIN
+  UPDATE COMPETENCIA SET  NOMBRE = pNOMBRE,
+                          FECHA_INICIO = pFECHA_INICIO,
+                          FECHA_FIN = pFECHA_FIN,
+                          ESTADO_ACTUAL = pESTADO_ACTUAL
+  WHERE ID_COMPETENCIA = pID_COMPETENCIA;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_DESEMPENIO_DMD_UPDATE (  pID_JUGADOR DESEMPENIO_DMD.ID_JUGADOR%TYPE,
+                                                        pID_RESULTADO DESEMPENIO_DMD.ID_RESULTADO%TYPE,
+                                                        pVELOCIDAD DESEMPENIO_DMD.VELOCIDAD%TYPE,
+                                                        pCAPACIDAD_PASE DESEMPENIO_DMD.CAPACIDAD_PASE%TYPE,
+                                                        pCAPACIDAD_MARCA DESEMPENIO_DMD.CAPACIDAD_MARCA%TYPE,
+                                                        pTIRO_GOL DESEMPENIO_DMD.TIRO_GOL%TYPE)IS
+BEGIN
+  UPDATE DESEMPENIO_DMD SET   VELOCIDAD = pVELOCIDAD,
+                              CAPACIDAD_PASE = pCAPACIDAD_PASE,
+                              CAPACIDAD_MARCA = pCAPACIDAD_MARCA,
+                              TIRO_GOL = pTIRO_GOL
+  WHERE ID_JUGADOR = pID_JUGADOR AND
+  ID_RESULTADO = pID_RESULTADO;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_DESEMPENIO_PORTERO_UPDATE (  pID_JUGADOR DESEMPENIO_PORTERO.ID_JUGADOR%TYPE,
+                                                            pID_RESULTADO DESEMPENIO_PORTERO.ID_RESULTADO%TYPE,
+                                                            pCAPACIDAD_ATAJAR DESEMPENIO_PORTERO.CAPACIDAD_ATAJAR%TYPE,
+                                                            pLUCHA1_1 DESEMPENIO_PORTERO.LUCHA1_1%TYPE,
+                                                            pANTICIPACION DESEMPENIO_PORTERO.ANTICIPACION%TYPE,
+                                                            pREFLEJOS DESEMPENIO_PORTERO.REFLEJOS%TYPE)IS
+BEGIN
+  UPDATE DESEMPENIO_PORTERO SET CAPACIDAD_ATAJAR = pCAPACIDAD_ATAJAR,
+                                LUCHA1_1 = pLUCHA1_1,
+                                ANTICIPACION = pANTICIPACION,
+                                REFLEJOS = pREFLEJOS
+  WHERE ID_JUGADOR = pID_JUGADOR AND
+  ID_RESULTADO = pID_RESULTADO;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_ENTRENADOR_UPDATE (  pID_PAIS ENTRENADOR.ID_PAIS%TYPE,
+                                                    pNOMBRE ENTRENADOR.NOMBRE%TYPE,
+                                                    pEDAD ENTRENADOR.EDAD%TYPE,
+                                                    pCEDULA_IDENTIDAD ENTRENADOR.CEDULA_IDENTIDAD%TYPE,
+                                                    pBIOGRAFIA ENTRENADOR.BIOGRAFIA%TYPE,
+                                                    pFOTO ENTRENADOR.FOTO%TYPE,
+                                                    pID_ENTRENADOR ENTRENADOR.ID_ENTRENADOR%TYPE)IS
+BEGIN
+  UPDATE ENTRENADOR SET ID_PAIS = pID_PAIS,
+                        NOMBRE = pNOMBRE,
+                        EDAD = pEDAD,
+                        CEDULA_IDENTIDAD = pCEDULA_IDENTIDAD,
+                        BIOGRAFIA = pBIOGRAFIA,
+                        FOTO = pFOTO
+  WHERE ID_ENTRENADOR = pID_ENTRENADOR;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_JUGADOR_UPDATE (   pID_PAIS JUGADOR.ID_PAIS%TYPE,
+                                                  pNOMBRE JUGADOR.NOMBRE%TYPE,
+                                                  pEDAD JUGADOR.EDAD%TYPE,
+                                                  pPESO JUGADOR.PESO%TYPE,
+                                                  pPOSICION JUGADOR.POSICION%TYPE,
+                                                  pCEDULA_IDENTIDAD JUGADOR.CEDULA_IDENTIDAD%TYPE,
+                                                  pBIOGRAFIA JUGADOR.BIOGRAFIA%TYPE,
+                                                  pFOTO JUGADOR.FOTO%TYPE,
+                                                  pID_JUGADOR JUGADOR.ID_JUGADOR%TYPE)IS
+BEGIN
+  UPDATE JUGADOR SET  ID_PAIS = pID_PAIS,
+                      CEDULA_IDENTIDAD = pCEDULA_IDENTIDAD,
+                      NOMBRE = pNOMBRE,
+                      EDAD = pEDAD,
+                      PESO = pPESO,
+                      POSICION = pPOSICION,
+                      BIOGRAFIA = pBIOGRAFIA,
+                      FOTO = pFOTO
+  WHERE ID_JUGADOR = pID_JUGADOR;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_EQUIPO_UPDATE (  pID_CIUDAD EQUIPO.ID_CIUDAD%TYPE,
+                                                pID_ENTRENADOR EQUIPO.ID_ENTRENADOR%TYPE,
+                                                pNOMBRE EQUIPO.NOMBRE%TYPE,
+                                                pFECHA_FUNDACION EQUIPO.FECHA_FUNDACION%TYPE,
+                                                pNUMERO_COPASGANADAS EQUIPO.NUMERO_COPASGANADAS%TYPE,
+                                                pLOGOTIPO EQUIPO.LOGOTIPO%TYPE,
+                                                pID_EQUIPO EQUIPO.ID_EQUIPO%TYPE)IS
+BEGIN
+  UPDATE EQUIPO SET   ID_CIUDAD = pID_CIUDAD,
+                      ID_ENTRENADOR = pID_ENTRENADOR,
+                      NOMBRE = pNOMBRE,
+                      FECHA_FUNDACION = pFECHA_FUNDACION,
+                      NUMERO_COPASGANADAS = pNUMERO_COPASGANADAS,
+                      LOGOTIPO = pLOGOTIPO
+  WHERE ID_EQUIPO = pID_EQUIPO;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_ESTADIO_UPDATE ( pID_CIUDAD ESTADIO.ID_CIUDAD%TYPE,
+                                                pNOMBRE ESTADIO.NOMBRE%TYPE,
+                                                pCAPACIDAD ESTADIO.CAPACIDAD%TYPE,
+                                                pFECHA_INAUGURACION ESTADIO.FECHA_INAUGURACION%TYPE,
+                                                pHISTORIA ESTADIO.HISTORIA%TYPE,
+                                                pID_ESTADIO ESTADIO.ID_ESTADIO%TYPE)IS
+BEGIN
+  UPDATE ESTADIO SET  ID_CIUDAD = pID_CIUDAD,
+                      NOMBRE = pNOMBRE,
+                      CAPACIDAD = pCAPACIDAD,
+                      FECHA_INAUGURACION = pFECHA_INAUGURACION,
+                      HISTORIA = pHISTORIA
+  WHERE ID_ESTADIO = pID_ESTADIO;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_PARTIDO_UPDATE ( pID_COMPETENCIA PARTIDO.ID_COMPETENCIA%TYPE,
+                                                pID_ESTADIO PARTIDO.ID_ESTADIO%TYPE,
+                                                pID_EQUIPO_LOCAL PARTIDO.ID_EQUIPO_LOCAL%TYPE,
+                                                pID_EQUIPO_VISITA PARTIDO.ID_EQUIPO_VISITA%TYPE,
+                                                pFECHA_PARTIDO PARTIDO.FECHA_PARTIDO%TYPE,
+                                                pHORA_INICIO PARTIDO.HORA_INICIO%TYPE,
+                                                pESTADO PARTIDO.ESTADO%TYPE,
+                                                pID_PARTIDO PARTIDO.ID_PARTIDO%TYPE)IS
+BEGIN
+  UPDATE PARTIDO SET  ID_COMPETENCIA = pID_COMPETENCIA,
+                      ID_ESTADIO = pID_ESTADIO,
+                      ID_EQUIPO_LOCAL = pID_EQUIPO_LOCAL,
+                      ID_EQUIPO_VISITA = pID_EQUIPO_VISITA,
+                      FECHA_PARTIDO = pFECHA_PARTIDO,
+                      HORA_INICIO = pHORA_INICIO,
+                      ESTADO = pESTADO
+  WHERE ID_PARTIDO = pID_PARTIDO;
+  COMMIT;
+END;
+
+CREATE OR REPLACE PROCEDURE SP_RESULTADO_UPDATE ( pID_PARTIDO RESULTADO.ID_PARTIDO%TYPE, 
+                                                  pPRIMERT_GOLES_EQUIPO1 RESULTADO.PRIMERT_GOLES_EQUIPO1%TYPE, 
+                                                  pPRIMERT_GOLES_EQUIPO2 RESULTADO.PRIMERT_GOLES_EQUIPO2%TYPE, 
+                                                  pSEGUNDOT_GOLES_EQUIPO1 RESULTADO.SEGUNDOT_GOLES_EQUIPO1%TYPE, 
+                                                  pSEGUNDOT_GOLES_EQUIPO2 RESULTADO.SEGUNDOT_GOLES_EQUIPO2%TYPE, 
+                                                  pTIEMPOEXTRA_GOLES_EQUIPO1 RESULTADO.TIEMPOEXTRA_GOLES_EQUIPO1%TYPE, 
+                                                  pTIEMPOEXTRA_GOLES_EQUIPO2 RESULTADO.TIEMPOEXTRA_GOLES_EQUIPO2%TYPE, 
+                                                  pPENALES_GOLES_EQUIPO1 RESULTADO.PENALES_GOLES_EQUIPO1%TYPE, 
+                                                  pPENALES_GOLES_EQUIPO2 RESULTADO.PENALES_GOLES_EQUIPO2%TYPE, 
+                                                  pTARJETAS_A_EQUIPO1 RESULTADO.TARJETAS_A_EQUIPO1%TYPE, 
+                                                  pTARJETAS_A_EQUIPO2 RESULTADO.TARJETAS_A_EQUIPO2%TYPE, 
+                                                  pTARJETAS_R_EQUIPO1 RESULTADO.TARJETAS_R_EQUIPO1%TYPE, 
+                                                  pTARJETAS_R_EQUIPO2 RESULTADO.TARJETAS_R_EQUIPO2%TYPE,
+                                                  pID_RESULTADO RESULTADO.ID_RESULTADO%TYPE)IS
+BEGIN
+  UPDATE RESULTADO SET  ID_PARTIDO = pID_PARTIDO,
+                        PRIMERT_GOLES_EQUIPO1 = pPRIMERT_GOLES_EQUIPO1,
+                        PRIMERT_GOLES_EQUIPO2 = pPRIMERT_GOLES_EQUIPO2,
+                        SEGUNDOT_GOLES_EQUIPO1 = pSEGUNDOT_GOLES_EQUIPO1,
+                        SEGUNDOT_GOLES_EQUIPO2 = pSEGUNDOT_GOLES_EQUIPO2,
+                        TIEMPOEXTRA_GOLES_EQUIPO1 = pTIEMPOEXTRA_GOLES_EQUIPO1,
+                        TIEMPOEXTRA_GOLES_EQUIPO2 = pTIEMPOEXTRA_GOLES_EQUIPO2,
+                        PENALES_GOLES_EQUIPO1 = pPENALES_GOLES_EQUIPO1,
+                        PENALES_GOLES_EQUIPO2 = pPENALES_GOLES_EQUIPO2,
+                        TARJETAS_A_EQUIPO1 = pTARJETAS_A_EQUIPO1,
+                        TARJETAS_A_EQUIPO2 = pTARJETAS_A_EQUIPO2,
+                        TARJETAS_R_EQUIPO1 = pTARJETAS_R_EQUIPO1,
+                        TARJETAS_R_EQUIPO2 = pTARJETAS_R_EQUIPO2
+  WHERE ID_RESULTADO = pID_RESULTADO;
+  COMMIT;
+END;
