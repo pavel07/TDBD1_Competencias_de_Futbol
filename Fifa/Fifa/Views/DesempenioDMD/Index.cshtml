@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Fifa.Models.DESEMPENIO_DMD>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>DESEMPENIO DE JUGADORES</h2>
+
+<p>
+    @Html.ActionLink("NUEVO REGISTRO", "Create")
+    @Html.ActionLink("REGRESAR PAGINA PRINCIPAL", "Inicio", "Account")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("JUGADOR")
+        </th>
+        <th>
+            @Html.DisplayName("RESULTADO")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VELOCIDAD)
+        </th>
+        <th>
+            @Html.DisplayName("CAPACIDAD DE PASE")
+        </th>
+        <th>
+            @Html.DisplayName("CAPACIDAD DE MARCA")
+        </th>
+        <th>
+            @Html.DisplayName("TIRO A GOL")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JUGADOR.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RESULTADO.ID_RESULTADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VELOCIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAPACIDAD_PASE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAPACIDAD_MARCA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIRO_GOL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ID_JUGADOR }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.ID_JUGADOR  })
+        </td>
+    </tr>
+}
+
+</table>

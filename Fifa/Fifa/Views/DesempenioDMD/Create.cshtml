@@ -1,0 +1,76 @@
+﻿@model Fifa.Models.DESEMPENIO_DMD
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>INGRESAR DESEMPENIO DE JUGADOR</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>DESEMPENIO_DMD</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_JUGADOR, "JUGADOR")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_JUGADOR", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_JUGADOR)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_RESULTADO, "RESULTADO")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_RESULTADO", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_RESULTADO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VELOCIDAD)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VELOCIDAD)
+            @Html.ValidationMessageFor(model => model.VELOCIDAD)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("CAPACIDAD DE PASE")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CAPACIDAD_PASE)
+            @Html.ValidationMessageFor(model => model.CAPACIDAD_PASE)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("CAPACIDAD DE MARCA")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CAPACIDAD_MARCA)
+            @Html.ValidationMessageFor(model => model.CAPACIDAD_MARCA)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("TIRO A GOL")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TIRO_GOL)
+            @Html.ValidationMessageFor(model => model.TIRO_GOL)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

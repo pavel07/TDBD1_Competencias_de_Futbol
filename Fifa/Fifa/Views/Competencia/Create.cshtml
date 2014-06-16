@@ -1,0 +1,60 @@
+﻿@model Fifa.Models.COMPETENCIA
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>NUEVA COMPETENCIA</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>COMPETENCIA</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NOMBRE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NOMBRE)
+            @Html.ValidationMessageFor(model => model.NOMBRE)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("FECHA INICIO")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FECHA_INICIO)
+            @Html.ValidationMessageFor(model => model.FECHA_INICIO)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("FECHA FINAL")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FECHA_FIN)
+            @Html.ValidationMessageFor(model => model.FECHA_FIN)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("ESTADO")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ESTADO_ACTUAL)
+            @Html.ValidationMessageFor(model => model.ESTADO_ACTUAL)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

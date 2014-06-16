@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Fifa.Models.ESTADIO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("NUEVO REGISTRO", "Create")
+    @Html.ActionLink("REGRESAR PAGINA PRINCIPAL", "Inicio", "Account")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("ID")
+        </th>
+        <th>
+            @Html.DisplayName("CIUDAD")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CAPACIDAD)
+        </th>
+        <th>
+            @Html.DisplayName("FECHA DE INAUGURACION")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HISTORIA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_ESTADIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIUDAD.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CAPACIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_INAUGURACION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HISTORIA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ID_ESTADIO  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.ID_ESTADIO  })
+        </td>
+    </tr>
+}
+
+</table>

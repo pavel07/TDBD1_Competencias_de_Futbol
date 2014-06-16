@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Fifa.Models.PAIS>
+
+@{
+    ViewBag.Title = "PAIS";
+}
+
+<h2>PAISES</h2>
+
+<p>
+    @Html.ActionLink("NUEVO REGISTRO", "Create")
+    @Html.ActionLink("REGRESAR PAGINA PRINCIPAL", "Inicio", "Account")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("ID")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NACIONALIDAD)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_PAIS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOMBRE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NACIONALIDAD)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID_PAIS }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID_PAIS })
+            </td>
+        </tr>
+    }
+
+</table>

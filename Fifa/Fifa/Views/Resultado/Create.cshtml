@@ -1,0 +1,132 @@
+﻿@model Fifa.Models.RESULTADO
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>AGREGAR RESULTADOS DE PARTIDOS</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>RESULTADO</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_PARTIDO, "PARTIDO")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_PARTIDO", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_PARTIDO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PRIMERT_GOLES_EQUIPO1,"PT E1")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PRIMERT_GOLES_EQUIPO1)
+            @Html.ValidationMessageFor(model => model.PRIMERT_GOLES_EQUIPO1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PRIMERT_GOLES_EQUIPO2,"PT E2")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PRIMERT_GOLES_EQUIPO2)
+            @Html.ValidationMessageFor(model => model.PRIMERT_GOLES_EQUIPO2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SEGUNDOT_GOLES_EQUIPO1,"ST E1")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SEGUNDOT_GOLES_EQUIPO1)
+            @Html.ValidationMessageFor(model => model.SEGUNDOT_GOLES_EQUIPO1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SEGUNDOT_GOLES_EQUIPO2,"ST E2")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SEGUNDOT_GOLES_EQUIPO2)
+            @Html.ValidationMessageFor(model => model.SEGUNDOT_GOLES_EQUIPO2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TIEMPOEXTRA_GOLES_EQUIPO1,"TE E1")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TIEMPOEXTRA_GOLES_EQUIPO1)
+            @Html.ValidationMessageFor(model => model.TIEMPOEXTRA_GOLES_EQUIPO1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TIEMPOEXTRA_GOLES_EQUIPO2,"TE E2")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TIEMPOEXTRA_GOLES_EQUIPO2)
+            @Html.ValidationMessageFor(model => model.TIEMPOEXTRA_GOLES_EQUIPO2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PENALES_GOLES_EQUIPO1, "P E1")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PENALES_GOLES_EQUIPO1)
+            @Html.ValidationMessageFor(model => model.PENALES_GOLES_EQUIPO1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PENALES_GOLES_EQUIPO2, "P E2")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PENALES_GOLES_EQUIPO2)
+            @Html.ValidationMessageFor(model => model.PENALES_GOLES_EQUIPO2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TARJETAS_A_EQUIPO1, "TA E1")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TARJETAS_A_EQUIPO1)
+            @Html.ValidationMessageFor(model => model.TARJETAS_A_EQUIPO1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TARJETAS_A_EQUIPO2, "TA E2")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TARJETAS_A_EQUIPO2)
+            @Html.ValidationMessageFor(model => model.TARJETAS_A_EQUIPO2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TARJETAS_R_EQUIPO1, "TR E1")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TARJETAS_R_EQUIPO1)
+            @Html.ValidationMessageFor(model => model.TARJETAS_R_EQUIPO1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TARJETAS_R_EQUIPO2, "TR E2")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TARJETAS_R_EQUIPO2)
+            @Html.ValidationMessageFor(model => model.TARJETAS_R_EQUIPO2)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,68 @@
+﻿@model Fifa.Models.DESEMPENIO_PORTERO
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>NUEVO REGISTRO DE DESEMPENIO DE PORTERO</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>DESEMPENIO_PORTERO</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_RESULTADO, "RESULTADO")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_RESULTADO", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_RESULTADO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CAPACIDAD_ATAJAR ,"CAPACIDAD DE ATAJAR")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CAPACIDAD_ATAJAR)
+            @Html.ValidationMessageFor(model => model.CAPACIDAD_ATAJAR)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LUCHA1_1, "LUCHA 1 A 1")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LUCHA1_1)
+            @Html.ValidationMessageFor(model => model.LUCHA1_1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ANTICIPACION)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ANTICIPACION)
+            @Html.ValidationMessageFor(model => model.ANTICIPACION)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.REFLEJOS)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.REFLEJOS)
+            @Html.ValidationMessageFor(model => model.REFLEJOS)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

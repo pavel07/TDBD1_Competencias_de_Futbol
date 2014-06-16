@@ -1,0 +1,61 @@
+﻿@model Fifa.Models.ESTADIO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>ELIMINAR REGISTRO DE ESTADIO</h2>
+
+<h3>SEGURO DE ELIMINAR ESTE ESTADIO?</h3>
+<fieldset>
+    <legend>ESTADIO</legend>
+
+    <div class="display-label">
+         @Html.DisplayName("ID")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_ESTADIO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("CIUDAD")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CIUDAD.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CAPACIDAD)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CAPACIDAD)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("FECHA DE INAUGURACION")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FECHA_INAUGURACION)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HISTORIA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HISTORIA)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

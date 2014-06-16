@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Fifa.Models.EQUIPO_COMPETENCIA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>EQUIPOS EN COMPETENIAS</h2>
+
+<p>
+    @Html.ActionLink("NUEVO REGISTRO", "Create")
+    @Html.ActionLink("REGRESAR PAGINA PRINCIPAL", "Inicio", "Account")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("EQUIPO")
+        </th>
+        <th>
+            @Html.DisplayName("COMPETENCIA")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PUNTOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.POSICION)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EQUIPO.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPETENCIA.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PUNTOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.POSICION)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ID_COMPETENCIA  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.ID_COMPETENCIA })
+        </td>
+    </tr>
+}
+
+</table>

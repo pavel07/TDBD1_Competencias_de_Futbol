@@ -1,0 +1,52 @@
+﻿@model Fifa.Models.CIUDAD
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>MODIFICAR REGISTRO CIUDAD</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>CIUDAD</legend>
+
+        <div class="editor-label" hidden="">
+            @Html.LabelFor(model => model.ID_CIUDAD)
+        </div>
+        <div class="editor-field" hidden="">
+            @Html.EditorFor(model => model.ID_CIUDAD)
+            @Html.ValidationMessageFor(model => model.ID_CIUDAD)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_PAIS, "PAIS")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_PAIS", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_PAIS)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NOMBRE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NOMBRE)
+            @Html.ValidationMessageFor(model => model.NOMBRE)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

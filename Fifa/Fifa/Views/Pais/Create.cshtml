@@ -1,0 +1,45 @@
+﻿@model Fifa.Models.PAIS
+
+@{
+    ViewBag.Title = "INGRESO NUEVO";
+}
+
+<h2>INGRESAR NUEVO REGISTRO PAIS</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>INGRESAR NUEVO REGISTRO PAIS</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NOMBRE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NOMBRE)
+            @Html.ValidationMessageFor(model => model.NOMBRE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NACIONALIDAD)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NACIONALIDAD)
+            @Html.ValidationMessageFor(model => model.NACIONALIDAD)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

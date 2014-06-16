@@ -1,0 +1,54 @@
+﻿@model Fifa.Models.COMPETENCIA
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>ELIMINAR REGISTRO COMPETENCIA</h2>
+
+<h3>SEGURO DE ELIMINAR REGISTRO DE COMPETENCIA?</h3>
+<fieldset>
+    <legend>COMPETENCIA</legend>
+
+    <div class="display-label">
+         @Html.DisplayName("ID")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_COMPETENCIA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("FECHA INICIO")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FECHA_INICIO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("FECHA FINAL")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FECHA_FIN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("ESTADO")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ESTADO_ACTUAL)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

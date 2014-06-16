@@ -1,0 +1,61 @@
+﻿@model Fifa.Models.DESEMPENIO_DMD
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>ELIMINAR REGISTRO DE DESEMPENIO DE JUGADOR</h2>
+
+<h3>SEGURO DE ELIMINAR ESTE REGISTRO?</h3>
+<fieldset>
+    <legend>DESEMPENIO_DMD</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.JUGADOR.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JUGADOR.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("RESULTADO")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RESULTADO.ID_RESULTADO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.VELOCIDAD)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.VELOCIDAD)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("CAPACIDAD DE PASE")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CAPACIDAD_PASE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("CAPACIDAD DE MARCA")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CAPACIDAD_MARCA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("TIRO A GOL")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TIRO_GOL)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

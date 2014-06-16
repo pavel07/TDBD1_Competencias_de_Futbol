@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PaisModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="PAIS">
+    <Key>
+      <PropertyRef Name="ID_PAIS" />
+    </Key>
+    <Property Name="ID_PAIS" Type="Int32" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NACIONALIDAD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="FifaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PAIS" EntityType="Self.PAIS" />
+    <FunctionImport Name="SP_PAIS_DELETE">
+      <Parameter Name="PID_PAIS" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PAIS_INSERT">
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PNACIONALIDAD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PAIS_UPDATE">
+      <Parameter Name="PID_PAIS" Mode="In" Type="Decimal" />
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PNACIONALIDAD" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,60 @@
+﻿@model Fifa.Models.EQUIPO_COMPETENCIA
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>MODIFICAR EQUIPOS DE LAS COMPETENCIAS</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>EQUIPO_COMPETENCIA</legend>
+
+        <div class="editor-label" hidden>
+            @Html.LabelFor(model => model.ID_EQUIPO, "EQUIPO")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_EQUIPO", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_EQUIPO)
+        </div>
+
+        <div class="editor-label" hidden>
+            @Html.LabelFor(model => model.ID_COMPETENCIA, "COMPETENCIA")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_COMPETENCIA", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_COMPETENCIA)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PUNTOS)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PUNTOS)
+            @Html.ValidationMessageFor(model => model.PUNTOS)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.POSICION)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.POSICION)
+            @Html.ValidationMessageFor(model => model.POSICION)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EntitiesModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="CIUDAD">
+      <EntityTypeMapping TypeName="EntitiesModel.CIUDAD">
+        <MappingFragment StoreEntitySet="CIUDAD">
+          <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPETENCIA">
+      <EntityTypeMapping TypeName="EntitiesModel.COMPETENCIA">
+        <MappingFragment StoreEntitySet="COMPETENCIA">
+          <ScalarProperty Name="ID_COMPETENCIA" ColumnName="ID_COMPETENCIA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+          <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+          <ScalarProperty Name="ESTADO_ACTUAL" ColumnName="ESTADO_ACTUAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DESEMPENIO_DMD">
+      <EntityTypeMapping TypeName="EntitiesModel.DESEMPENIO_DMD">
+        <MappingFragment StoreEntitySet="DESEMPENIO_DMD">
+          <ScalarProperty Name="ID_JUGADOR" ColumnName="ID_JUGADOR" />
+          <ScalarProperty Name="ID_RESULTADO" ColumnName="ID_RESULTADO" />
+          <ScalarProperty Name="VELOCIDAD" ColumnName="VELOCIDAD" />
+          <ScalarProperty Name="CAPACIDAD_PASE" ColumnName="CAPACIDAD_PASE" />
+          <ScalarProperty Name="CAPACIDAD_MARCA" ColumnName="CAPACIDAD_MARCA" />
+          <ScalarProperty Name="TIRO_GOL" ColumnName="TIRO_GOL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DESEMPENIO_PORTERO">
+      <EntityTypeMapping TypeName="EntitiesModel.DESEMPENIO_PORTERO">
+        <MappingFragment StoreEntitySet="DESEMPENIO_PORTERO">
+          <ScalarProperty Name="ID_JUGADOR" ColumnName="ID_JUGADOR" />
+          <ScalarProperty Name="ID_RESULTADO" ColumnName="ID_RESULTADO" />
+          <ScalarProperty Name="CAPACIDAD_ATAJAR" ColumnName="CAPACIDAD_ATAJAR" />
+          <ScalarProperty Name="LUCHA1_1" ColumnName="LUCHA1_1" />
+          <ScalarProperty Name="ANTICIPACION" ColumnName="ANTICIPACION" />
+          <ScalarProperty Name="REFLEJOS" ColumnName="REFLEJOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENTRENADOR">
+      <EntityTypeMapping TypeName="EntitiesModel.ENTRENADOR">
+        <MappingFragment StoreEntitySet="ENTRENADOR">
+          <ScalarProperty Name="ID_ENTRENADOR" ColumnName="ID_ENTRENADOR" />
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="CEDULA_IDENTIDAD" ColumnName="CEDULA_IDENTIDAD" />
+          <ScalarProperty Name="BIOGRAFIA" ColumnName="BIOGRAFIA" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EQUIPO">
+      <EntityTypeMapping TypeName="EntitiesModel.EQUIPO">
+        <MappingFragment StoreEntitySet="EQUIPO">
+          <ScalarProperty Name="ID_EQUIPO" ColumnName="ID_EQUIPO" />
+          <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+          <ScalarProperty Name="ID_ENTRENADOR" ColumnName="ID_ENTRENADOR" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="FECHA_FUNDACION" ColumnName="FECHA_FUNDACION" />
+          <ScalarProperty Name="NUMERO_COPASGANADAS" ColumnName="NUMERO_COPASGANADAS" />
+          <ScalarProperty Name="LOGOTIPO" ColumnName="LOGOTIPO" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EQUIPO_COMPETENCIA">
+      <EntityTypeMapping TypeName="EntitiesModel.EQUIPO_COMPETENCIA">
+        <MappingFragment StoreEntitySet="EQUIPO_COMPETENCIA">
+          <ScalarProperty Name="ID_EQUIPO" ColumnName="ID_EQUIPO" />
+          <ScalarProperty Name="ID_COMPETENCIA" ColumnName="ID_COMPETENCIA" />
+          <ScalarProperty Name="PUNTOS" ColumnName="PUNTOS" />
+          <ScalarProperty Name="POSICION" ColumnName="POSICION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EQUIPO_JUGADOR">
+      <EntityTypeMapping TypeName="EntitiesModel.EQUIPO_JUGADOR">
+        <MappingFragment StoreEntitySet="EQUIPO_JUGADOR">
+          <ScalarProperty Name="ID_EQUIPO" ColumnName="ID_EQUIPO" />
+          <ScalarProperty Name="ID_JUGADOR" ColumnName="ID_JUGADOR" />
+          <ScalarProperty Name="NUMERO_CAMISOLA" ColumnName="NUMERO_CAMISOLA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADIO">
+      <EntityTypeMapping TypeName="EntitiesModel.ESTADIO">
+        <MappingFragment StoreEntitySet="ESTADIO">
+          <ScalarProperty Name="ID_ESTADIO" ColumnName="ID_ESTADIO" />
+          <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CAPACIDAD" ColumnName="CAPACIDAD" />
+          <ScalarProperty Name="FECHA_INAUGURACION" ColumnName="FECHA_INAUGURACION" />
+          <ScalarProperty Name="HISTORIA" ColumnName="HISTORIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JUGADOR">
+      <EntityTypeMapping TypeName="EntitiesModel.JUGADOR">
+        <MappingFragment StoreEntitySet="JUGADOR">
+          <ScalarProperty Name="ID_JUGADOR" ColumnName="ID_JUGADOR" />
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="CEDULA_IDENTIDAD" ColumnName="CEDULA_IDENTIDAD" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="PESO" ColumnName="PESO" />
+          <ScalarProperty Name="POSICION" ColumnName="POSICION" />
+          <ScalarProperty Name="BIOGRAFIA" ColumnName="BIOGRAFIA" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAIS">
+      <EntityTypeMapping TypeName="EntitiesModel.PAIS">
+        <MappingFragment StoreEntitySet="PAIS">
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PARTIDO">
+      <EntityTypeMapping TypeName="EntitiesModel.PARTIDO">
+        <MappingFragment StoreEntitySet="PARTIDO">
+          <ScalarProperty Name="ID_PARTIDO" ColumnName="ID_PARTIDO" />
+          <ScalarProperty Name="ID_COMPETENCIA" ColumnName="ID_COMPETENCIA" />
+          <ScalarProperty Name="ID_ESTADIO" ColumnName="ID_ESTADIO" />
+          <ScalarProperty Name="ID_EQUIPO_LOCAL" ColumnName="ID_EQUIPO_LOCAL" />
+          <ScalarProperty Name="ID_EQUIPO_VISITA" ColumnName="ID_EQUIPO_VISITA" />
+          <ScalarProperty Name="FECHA_PARTIDO" ColumnName="FECHA_PARTIDO" />
+          <ScalarProperty Name="HORA_INICIO" ColumnName="HORA_INICIO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESULTADO">
+      <EntityTypeMapping TypeName="EntitiesModel.RESULTADO">
+        <MappingFragment StoreEntitySet="RESULTADO">
+          <ScalarProperty Name="ID_RESULTADO" ColumnName="ID_RESULTADO" />
+          <ScalarProperty Name="ID_PARTIDO" ColumnName="ID_PARTIDO" />
+          <ScalarProperty Name="PRIMERT_GOLES_EQUIPO1" ColumnName="PRIMERT_GOLES_EQUIPO1" />
+          <ScalarProperty Name="PRIMERT_GOLES_EQUIPO2" ColumnName="PRIMERT_GOLES_EQUIPO2" />
+          <ScalarProperty Name="SEGUNDOT_GOLES_EQUIPO1" ColumnName="SEGUNDOT_GOLES_EQUIPO1" />
+          <ScalarProperty Name="SEGUNDOT_GOLES_EQUIPO2" ColumnName="SEGUNDOT_GOLES_EQUIPO2" />
+          <ScalarProperty Name="TIEMPOEXTRA_GOLES_EQUIPO1" ColumnName="TIEMPOEXTRA_GOLES_EQUIPO1" />
+          <ScalarProperty Name="TIEMPOEXTRA_GOLES_EQUIPO2" ColumnName="TIEMPOEXTRA_GOLES_EQUIPO2" />
+          <ScalarProperty Name="PENALES_GOLES_EQUIPO1" ColumnName="PENALES_GOLES_EQUIPO1" />
+          <ScalarProperty Name="PENALES_GOLES_EQUIPO2" ColumnName="PENALES_GOLES_EQUIPO2" />
+          <ScalarProperty Name="TARJETAS_A_EQUIPO1" ColumnName="TARJETAS_A_EQUIPO1" />
+          <ScalarProperty Name="TARJETAS_A_EQUIPO2" ColumnName="TARJETAS_A_EQUIPO2" />
+          <ScalarProperty Name="TARJETAS_R_EQUIPO1" ColumnName="TARJETAS_R_EQUIPO1" />
+          <ScalarProperty Name="TARJETAS_R_EQUIPO2" ColumnName="TARJETAS_R_EQUIPO2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="COMPETENCIA_ESTADIO" TypeName="EntitiesModel.COMPETENCIA_ESTADIO" StoreEntitySet="COMPETENCIA_ESTADIO">
+      <EndProperty Name="COMPETENCIA">
+        <ScalarProperty Name="ID_COMPETENCIA" ColumnName="ID_COMPETENCIA" />
+      </EndProperty>
+      <EndProperty Name="ESTADIO">
+        <ScalarProperty Name="ID_ESTADIO" ColumnName="ID_ESTADIO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="COMPETENCIA_PAIS" TypeName="EntitiesModel.COMPETENCIA_PAIS" StoreEntitySet="COMPETENCIA_PAIS">
+      <EndProperty Name="COMPETENCIA">
+        <ScalarProperty Name="ID_COMPETENCIA" ColumnName="ID_COMPETENCIA" />
+      </EndProperty>
+      <EndProperty Name="PAIS">
+        <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="SP_CIUDAD_DELETE" FunctionName="EntitiesModel.Store.SP_CIUDAD_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_CIUDAD_INSERT" FunctionName="EntitiesModel.Store.SP_CIUDAD_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_CIUDAD_UPDATE" FunctionName="EntitiesModel.Store.SP_CIUDAD_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_COMPETENCIA_DELETE" FunctionName="EntitiesModel.Store.SP_COMPETENCIA_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_COMPETENCIA_ESTADIO_DELETE" FunctionName="EntitiesModel.Store.SP_COMPETENCIA_ESTADIO_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_COMPETENCIA_ESTADIO_INSERT" FunctionName="EntitiesModel.Store.SP_COMPETENCIA_ESTADIO_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_COMPETENCIA_INSERT" FunctionName="EntitiesModel.Store.SP_COMPETENCIA_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_COMPETENCIA_PAIS_DELETE" FunctionName="EntitiesModel.Store.SP_COMPETENCIA_PAIS_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_COMPETENCIA_PAIS_INSERT" FunctionName="EntitiesModel.Store.SP_COMPETENCIA_PAIS_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_COMPETENCIA_UPDATE" FunctionName="EntitiesModel.Store.SP_COMPETENCIA_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_DESEMPENIO_DMD_DELETE" FunctionName="EntitiesModel.Store.SP_DESEMPENIO_DMD_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_DESEMPENIO_DMD_INSERT" FunctionName="EntitiesModel.Store.SP_DESEMPENIO_DMD_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_DESEMPENIO_DMD_UPDATE" FunctionName="EntitiesModel.Store.SP_DESEMPENIO_DMD_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_DESEMPENIO_PORTERO_DELETE" FunctionName="EntitiesModel.Store.SP_DESEMPENIO_PORTERO_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_DESEMPENIO_PORTERO_INSERT" FunctionName="EntitiesModel.Store.SP_DESEMPENIO_PORTERO_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_DESEMPENIO_PORTERO_UPDATE" FunctionName="EntitiesModel.Store.SP_DESEMPENIO_PORTERO_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_ENTRENADOR_DELETE" FunctionName="EntitiesModel.Store.SP_ENTRENADOR_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_ENTRENADOR_INSERT" FunctionName="EntitiesModel.Store.SP_ENTRENADOR_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_ENTRENADOR_UPDATE" FunctionName="EntitiesModel.Store.SP_ENTRENADOR_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_EQUIPO_COMPETENCIA_DELETE" FunctionName="EntitiesModel.Store.SP_EQUIPO_COMPETENCIA_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_EQUIPO_COMPETENCIA_INSERT" FunctionName="EntitiesModel.Store.SP_EQUIPO_COMPETENCIA_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_EQUIPO_DELETE" FunctionName="EntitiesModel.Store.SP_EQUIPO_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_EQUIPO_INSERT" FunctionName="EntitiesModel.Store.SP_EQUIPO_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_EQUIPO_JUGADOR_DELETE" FunctionName="EntitiesModel.Store.SP_EQUIPO_JUGADOR_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_EQUIPO_JUGADOR_INSERT" FunctionName="EntitiesModel.Store.SP_EQUIPO_JUGADOR_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_EQUIPO_UPDATE" FunctionName="EntitiesModel.Store.SP_EQUIPO_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_ESTADIO_DELETE" FunctionName="EntitiesModel.Store.SP_ESTADIO_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_ESTADIO_INSERT" FunctionName="EntitiesModel.Store.SP_ESTADIO_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_ESTADIO_UPDATE" FunctionName="EntitiesModel.Store.SP_ESTADIO_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_JUGADOR_DELETE" FunctionName="EntitiesModel.Store.SP_JUGADOR_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_JUGADOR_INSERT" FunctionName="EntitiesModel.Store.SP_JUGADOR_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_JUGADOR_UPDATE" FunctionName="EntitiesModel.Store.SP_JUGADOR_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_PAIS_DELETE" FunctionName="EntitiesModel.Store.SP_PAIS_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_PAIS_INSERT" FunctionName="EntitiesModel.Store.SP_PAIS_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_PAIS_UPDATE" FunctionName="EntitiesModel.Store.SP_PAIS_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_PARTIDO_DELETE" FunctionName="EntitiesModel.Store.SP_PARTIDO_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_PARTIDO_INSERT" FunctionName="EntitiesModel.Store.SP_PARTIDO_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_PARTIDO_UPDATE" FunctionName="EntitiesModel.Store.SP_PARTIDO_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_RESULTADO_DELETE" FunctionName="EntitiesModel.Store.SP_RESULTADO_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_RESULTADO_INSERT" FunctionName="EntitiesModel.Store.SP_RESULTADO_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_RESULTADO_UPDATE" FunctionName="EntitiesModel.Store.SP_RESULTADO_UPDATE" />
+  </EntityContainerMapping>
+</Mapping>

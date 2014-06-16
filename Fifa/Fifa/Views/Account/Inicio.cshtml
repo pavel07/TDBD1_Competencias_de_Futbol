@@ -1,0 +1,122 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Administracion FIFA</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/Inicio_Content/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="~/Content/Inicio_Content/stylish-portfolio.css" rel="stylesheet">
+    <link href="~/Content/Inicio_Content/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Side Menu -->
+    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a>FIFA TB</a>
+            </li>
+            <li>
+                @Html.ActionLink("PAISES","Index","Pais")
+            </li>
+            <li>
+                @Html.ActionLink("CIUDADES", "Index", "Ciudad")
+            </li>
+            <li>
+                @Html.ActionLink("ESTADIOS", "Index", "Estadio")
+            </li>
+            <li>
+                @Html.ActionLink("JUGADORES", "Index", "Jugador")
+            </li>
+            <li>
+                @Html.ActionLink("ENTRENADORES", "Index", "Entrenador")
+            </li>
+            <li>
+                @Html.ActionLink("EQUIPOS", "Index", "Equipo")
+            </li>
+            <li>
+                @Html.ActionLink("COMPETENCIAS", "Index", "Competencia")
+            </li>
+            <li>
+                @Html.ActionLink("PARTIDOS", "Index", "Partido")
+            </li>
+            <li>
+                @Html.ActionLink("RESULTADOS", "Index", "Resultado")
+            </li>
+            <li>
+                @Html.ActionLink("DESEMPENIOS DE PORTEROS", "Index", "DesempenioPORTERO")
+            </li>
+            <li>
+                @Html.ActionLink("DESEMPENIOS DE JUGADORES", "Index", "DesempenioDMD")
+            </li>
+        </ul>
+    </div>
+    <!-- /Side Menu -->
+    <!-- Full Page Image Header Area -->
+    <div id="top" class="header">
+        <div class="vert-text">
+        </div>
+    </div>
+    <!-- /Full Page Image Header Area -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                    <p>Copyright &copy; Teoria de Bases de Datos 2014</p>
+                </div>
+            </div>
+    </footer>
+    <!-- /Footer -->
+    <!-- JavaScript -->
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
+    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+    <script>
+        $("#menu-close").click(function (e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+    </script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+    </script>
+    <script>
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Fifa.Models.PARTIDO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>PARTIDOS</h2>
+
+<p>
+    @Html.ActionLink("NUEVO REGISTRO", "Create")
+    @Html.ActionLink("REGRESAR PAGINA PRINCIPAL", "Inicio", "Account")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("ID")
+        </th>
+        <th>
+            @Html.DisplayName("COMPETENCIA")
+        </th>
+        <th>
+            @Html.DisplayName("ESTADIO")
+        </th>
+        <th>
+            @Html.DisplayName("EQUIPO LOCAL")
+        </th>
+        <th>
+            @Html.DisplayName("EQUIPO VISITA")
+        </th>
+        <th>
+            @Html.DisplayName("FECHA DEL PARTIDO")
+        </th>
+        <th>
+            @Html.DisplayName("HORA")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_PARTIDO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPETENCIA.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADIO.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EQUIPO.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EQUIPO1.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_PARTIDO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HORA_INICIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ID_PARTIDO }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.ID_PARTIDO  })
+        </td>
+    </tr>
+}
+
+</table>

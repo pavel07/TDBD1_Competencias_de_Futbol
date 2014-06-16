@@ -1,0 +1,41 @@
+﻿@model Fifa.Models.PAIS
+
+@{
+    ViewBag.Title = "ELIMINAR PAIS";
+}
+
+<h2>ELIMINAR REGISTRO PAI</h2>
+
+<h3>Seguro de Eliminar este Registro?</h3>
+<fieldset>
+    <legend>ELIMINAR REGISTRO PAIS</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.ID_PAIS)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_PAIS)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOMBRE)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.NACIONALIDAD)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NACIONALIDAD)
+    </div>
+</fieldset>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

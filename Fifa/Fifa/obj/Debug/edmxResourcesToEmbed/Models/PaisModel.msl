@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PaisModelStoreContainer" CdmEntityContainer="FifaEntities">
+    <EntitySetMapping Name="PAIS">
+      <EntityTypeMapping TypeName="PaisModel.PAIS">
+        <MappingFragment StoreEntitySet="PAIS">
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_PAIS_DELETE" FunctionName="PaisModel.Store.SP_PAIS_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_PAIS_INSERT" FunctionName="PaisModel.Store.SP_PAIS_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_PAIS_UPDATE" FunctionName="PaisModel.Store.SP_PAIS_UPDATE" />
+  </EntityContainerMapping>
+</Mapping>

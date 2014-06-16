@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Fifa.Models.EQUIPO_JUGADOR>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>ASIGNAR JUGADORES A EQUIPOS</h2>
+
+<p>
+    @Html.ActionLink("NUEVO REGISTRO", "Create")
+    @Html.ActionLink("REGRESAR PAGINA PRINCIPAL", "Inicio", "Account")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("EQUIPO")
+        </th>
+        <th>
+            @Html.DisplayName("JUGADOR")
+        </th>
+        <th>
+            @Html.DisplayName("NUMERO DE CAMISOLA")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EQUIPO.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JUGADOR.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUMERO_CAMISOLA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ID_EQUIPO  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.ID_EQUIPO })
+        </td>
+    </tr>
+}
+
+</table>

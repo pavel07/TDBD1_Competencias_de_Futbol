@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Fifa.Models.RESULTADO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>RESULTADOS DE PARTIDOS</h2>
+
+<p>
+    @Html.ActionLink("NUEVO REGISTRO", "Create")
+    @Html.ActionLink("REGRESAR PAGINA PRINCIPAL", "Inicio", "Account")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("ID RESULTADO")
+        </th>
+        <th>
+            @Html.DisplayName("ID PARTIDO")
+        </th>
+        <th>
+            @Html.DisplayName("PT E1")
+        </th>
+        <th>
+            @Html.DisplayName("PT E2")
+        </th>
+        <th>
+            @Html.DisplayName("ST E1")
+        </th>
+        <th>
+            @Html.DisplayName("ST E2")
+        </th>
+        <th>
+            @Html.DisplayName("TE E1")
+        </th>
+        <th>
+            @Html.DisplayName("TE E2")
+        </th>
+        <th>
+            @Html.DisplayName("P E1")
+        </th>
+        <th>
+            @Html.DisplayName("P E2")
+        </th>
+        <th>
+            @Html.DisplayName("TA E1")
+        </th>
+        <th>
+            @Html.DisplayName("TA E2")
+        </th>
+        <th>
+            @Html.DisplayName("TR E1")
+        </th>
+        <th>
+            @Html.DisplayName("TR E2")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_RESULTADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PARTIDO.ID_PARTIDO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRIMERT_GOLES_EQUIPO1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRIMERT_GOLES_EQUIPO2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEGUNDOT_GOLES_EQUIPO1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEGUNDOT_GOLES_EQUIPO2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIEMPOEXTRA_GOLES_EQUIPO1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIEMPOEXTRA_GOLES_EQUIPO2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PENALES_GOLES_EQUIPO1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PENALES_GOLES_EQUIPO2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TARJETAS_A_EQUIPO1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TARJETAS_A_EQUIPO2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TARJETAS_R_EQUIPO1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TARJETAS_R_EQUIPO2)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_RESULTADO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_RESULTADO })
+        </td>
+    </tr>
+}
+
+</table>

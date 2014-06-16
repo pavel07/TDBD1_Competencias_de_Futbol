@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EntitiesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="CIUDAD">
+    <Key>
+      <PropertyRef Name="ID_CIUDAD" />
+    </Key>
+    <Property Name="ID_CIUDAD" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_PAIS" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PAIS" Relationship="Self.CIUDAD_SE_ENCUENTRA_PAIS" FromRole="CIUDAD" ToRole="PAIS" />
+    <NavigationProperty Name="EQUIPO" Relationship="Self.EQUIPO_ES_DE_CIUDAD" FromRole="CIUDAD" ToRole="EQUIPO" />
+    <NavigationProperty Name="ESTADIO" Relationship="Self.ESTADIO_PERTENECE_CIUDAD" FromRole="CIUDAD" ToRole="ESTADIO" />
+  </EntityType>
+  <EntityType Name="COMPETENCIA">
+    <Key>
+      <PropertyRef Name="ID_COMPETENCIA" />
+    </Key>
+    <Property Name="ID_COMPETENCIA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_INICIO" Type="DateTime" />
+    <Property Name="FECHA_FIN" Type="DateTime" />
+    <Property Name="ESTADO_ACTUAL" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="PARTIDO" Relationship="Self.COMPETENCIA_SE_JUEGAN" FromRole="COMPETENCIA" ToRole="PARTIDO" />
+    <NavigationProperty Name="EQUIPO_COMPETENCIA" Relationship="Self.COMPETENCIA_TIENE" FromRole="COMPETENCIA" ToRole="EQUIPO_COMPETENCIA" />
+    <NavigationProperty Name="ESTADIO" Relationship="Self.COMPETENCIA_ESTADIO" FromRole="COMPETENCIA" ToRole="ESTADIO" />
+    <NavigationProperty Name="PAIS" Relationship="Self.COMPETENCIA_PAIS" FromRole="COMPETENCIA" ToRole="PAIS" />
+  </EntityType>
+  <EntityType Name="DESEMPENIO_DMD">
+    <Key>
+      <PropertyRef Name="ID_JUGADOR" />
+      <PropertyRef Name="ID_RESULTADO" />
+    </Key>
+    <Property Name="ID_JUGADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_RESULTADO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="VELOCIDAD" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CAPACIDAD_PASE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CAPACIDAD_MARCA" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TIRO_GOL" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="RESULTADO" Relationship="Self.DESEMPENIO_DMD_EVALUA" FromRole="DESEMPENIO_DMD" ToRole="RESULTADO" />
+    <NavigationProperty Name="JUGADOR" Relationship="Self.DESEMPENIO_DMD_JUGADOR" FromRole="DESEMPENIO_DMD" ToRole="JUGADOR" />
+  </EntityType>
+  <EntityType Name="DESEMPENIO_PORTERO">
+    <Key>
+      <PropertyRef Name="ID_JUGADOR" />
+      <PropertyRef Name="ID_RESULTADO" />
+    </Key>
+    <Property Name="ID_JUGADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_RESULTADO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CAPACIDAD_ATAJAR" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="LUCHA1_1" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ANTICIPACION" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="REFLEJOS" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="RESULTADO" Relationship="Self.DESEMPENIO_PORTERO_EVALUA" FromRole="DESEMPENIO_PORTERO" ToRole="RESULTADO" />
+    <NavigationProperty Name="JUGADOR" Relationship="Self.DESEMPENIO_PORTERO_JUGADOR" FromRole="DESEMPENIO_PORTERO" ToRole="JUGADOR" />
+  </EntityType>
+  <EntityType Name="ENTRENADOR">
+    <Key>
+      <PropertyRef Name="ID_ENTRENADOR" />
+    </Key>
+    <Property Name="ID_ENTRENADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_PAIS" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EDAD" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CEDULA_IDENTIDAD" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="BIOGRAFIA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="PAIS" Relationship="Self.ENTRENADOR_NACIO_PAIS" FromRole="ENTRENADOR" ToRole="PAIS" />
+    <NavigationProperty Name="EQUIPO" Relationship="Self.EQUIPO_TIENE_ENTRENADOR" FromRole="ENTRENADOR" ToRole="EQUIPO" />
+  </EntityType>
+  <EntityType Name="EQUIPO">
+    <Key>
+      <PropertyRef Name="ID_EQUIPO" />
+    </Key>
+    <Property Name="ID_EQUIPO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_CIUDAD" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_ENTRENADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_FUNDACION" Type="DateTime" />
+    <Property Name="NUMERO_COPASGANADAS" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="LOGOTIPO" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="TIPO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CIUDAD" Relationship="Self.EQUIPO_ES_DE_CIUDAD" FromRole="EQUIPO" ToRole="CIUDAD" />
+    <NavigationProperty Name="ENTRENADOR" Relationship="Self.EQUIPO_TIENE_ENTRENADOR" FromRole="EQUIPO" ToRole="ENTRENADOR" />
+    <NavigationProperty Name="EQUIPO_COMPETENCIA" Relationship="Self.EQUIPO_JUEGA_EN_COMPETENCIA" FromRole="EQUIPO" ToRole="EQUIPO_COMPETENCIA" />
+    <NavigationProperty Name="EQUIPO_JUGADOR" Relationship="Self.EQUIPO_TIENE" FromRole="EQUIPO" ToRole="EQUIPO_JUGADOR" />
+    <NavigationProperty Name="PARTIDO" Relationship="Self.PARTIDO_LOCAL_EQUIPO" FromRole="EQUIPO" ToRole="PARTIDO" />
+    <NavigationProperty Name="PARTIDO1" Relationship="Self.PARTIDO_VISITA_EQUIPO" FromRole="EQUIPO" ToRole="PARTIDO" />
+  </EntityType>
+  <EntityType Name="EQUIPO_COMPETENCIA">
+    <Key>
+      <PropertyRef Name="ID_EQUIPO" />
+      <PropertyRef Name="ID_COMPETENCIA" />
+    </Key>
+    <Property Name="ID_EQUIPO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_COMPETENCIA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PUNTOS" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="POSICION" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="COMPETENCIA" Relationship="Self.COMPETENCIA_TIENE" FromRole="EQUIPO_COMPETENCIA" ToRole="COMPETENCIA" />
+    <NavigationProperty Name="EQUIPO" Relationship="Self.EQUIPO_JUEGA_EN_COMPETENCIA" FromRole="EQUIPO_COMPETENCIA" ToRole="EQUIPO" />
+  </EntityType>
+  <EntityType Name="EQUIPO_JUGADOR">
+    <Key>
+      <PropertyRef Name="ID_EQUIPO" />
+      <PropertyRef Name="ID_JUGADOR" />
+    </Key>
+    <Property Name="ID_EQUIPO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_JUGADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NUMERO_CAMISOLA" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="EQUIPO" Relationship="Self.EQUIPO_TIENE" FromRole="EQUIPO_JUGADOR" ToRole="EQUIPO" />
+    <NavigationProperty Name="JUGADOR" Relationship="Self.JUGADOR_PERTENECE" FromRole="EQUIPO_JUGADOR" ToRole="JUGADOR" />
+  </EntityType>
+  <EntityType Name="ESTADIO">
+    <Key>
+      <PropertyRef Name="ID_ESTADIO" />
+    </Key>
+    <Property Name="ID_ESTADIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_CIUDAD" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CAPACIDAD" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="FECHA_INAUGURACION" Type="DateTime" />
+    <Property Name="HISTORIA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CIUDAD" Relationship="Self.ESTADIO_PERTENECE_CIUDAD" FromRole="ESTADIO" ToRole="CIUDAD" />
+    <NavigationProperty Name="PARTIDO" Relationship="Self.PARTIDO_SE_JUEGA_ESTADIO" FromRole="ESTADIO" ToRole="PARTIDO" />
+    <NavigationProperty Name="COMPETENCIA" Relationship="Self.COMPETENCIA_ESTADIO" FromRole="ESTADIO" ToRole="COMPETENCIA" />
+  </EntityType>
+  <EntityType Name="JUGADOR">
+    <Key>
+      <PropertyRef Name="ID_JUGADOR" />
+    </Key>
+    <Property Name="ID_JUGADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_PAIS" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CEDULA_IDENTIDAD" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EDAD" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PESO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="POSICION" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="BIOGRAFIA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="DESEMPENIO_DMD" Relationship="Self.DESEMPENIO_DMD_JUGADOR" FromRole="JUGADOR" ToRole="DESEMPENIO_DMD" />
+    <NavigationProperty Name="DESEMPENIO_PORTERO" Relationship="Self.DESEMPENIO_PORTERO_JUGADOR" FromRole="JUGADOR" ToRole="DESEMPENIO_PORTERO" />
+    <NavigationProperty Name="EQUIPO_JUGADOR" Relationship="Self.JUGADOR_PERTENECE" FromRole="JUGADOR" ToRole="EQUIPO_JUGADOR" />
+    <NavigationProperty Name="PAIS" Relationship="Self.JUGADOR_NACIO_PAIS" FromRole="JUGADOR" ToRole="PAIS" />
+  </EntityType>
+  <EntityType Name="PAIS">
+    <Key>
+      <PropertyRef Name="ID_PAIS" />
+    </Key>
+    <Property Name="ID_PAIS" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NACIONALIDAD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CIUDAD" Relationship="Self.CIUDAD_SE_ENCUENTRA_PAIS" FromRole="PAIS" ToRole="CIUDAD" />
+    <NavigationProperty Name="ENTRENADOR" Relationship="Self.ENTRENADOR_NACIO_PAIS" FromRole="PAIS" ToRole="ENTRENADOR" />
+    <NavigationProperty Name="JUGADOR" Relationship="Self.JUGADOR_NACIO_PAIS" FromRole="PAIS" ToRole="JUGADOR" />
+    <NavigationProperty Name="COMPETENCIA" Relationship="Self.COMPETENCIA_PAIS" FromRole="PAIS" ToRole="COMPETENCIA" />
+  </EntityType>
+  <EntityType Name="PARTIDO">
+    <Key>
+      <PropertyRef Name="ID_PARTIDO" />
+    </Key>
+    <Property Name="ID_PARTIDO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_COMPETENCIA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_ESTADIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_EQUIPO_LOCAL" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_EQUIPO_VISITA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="FECHA_PARTIDO" Type="DateTime" />
+    <Property Name="HORA_INICIO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ESTADO" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="COMPETENCIA" Relationship="Self.COMPETENCIA_SE_JUEGAN" FromRole="PARTIDO" ToRole="COMPETENCIA" />
+    <NavigationProperty Name="EQUIPO" Relationship="Self.PARTIDO_LOCAL_EQUIPO" FromRole="PARTIDO" ToRole="EQUIPO" />
+    <NavigationProperty Name="EQUIPO1" Relationship="Self.PARTIDO_VISITA_EQUIPO" FromRole="PARTIDO" ToRole="EQUIPO" />
+    <NavigationProperty Name="ESTADIO" Relationship="Self.PARTIDO_SE_JUEGA_ESTADIO" FromRole="PARTIDO" ToRole="ESTADIO" />
+    <NavigationProperty Name="RESULTADO" Relationship="Self.RESULTADO_TIENE_PARTIDO" FromRole="PARTIDO" ToRole="RESULTADO" />
+  </EntityType>
+  <EntityType Name="RESULTADO">
+    <Key>
+      <PropertyRef Name="ID_RESULTADO" />
+    </Key>
+    <Property Name="ID_RESULTADO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ID_PARTIDO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="PRIMERT_GOLES_EQUIPO1" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PRIMERT_GOLES_EQUIPO2" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="SEGUNDOT_GOLES_EQUIPO1" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="SEGUNDOT_GOLES_EQUIPO2" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TIEMPOEXTRA_GOLES_EQUIPO1" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TIEMPOEXTRA_GOLES_EQUIPO2" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PENALES_GOLES_EQUIPO1" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PENALES_GOLES_EQUIPO2" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TARJETAS_A_EQUIPO1" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TARJETAS_A_EQUIPO2" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TARJETAS_R_EQUIPO1" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TARJETAS_R_EQUIPO2" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="DESEMPENIO_DMD" Relationship="Self.DESEMPENIO_DMD_EVALUA" FromRole="RESULTADO" ToRole="DESEMPENIO_DMD" />
+    <NavigationProperty Name="DESEMPENIO_PORTERO" Relationship="Self.DESEMPENIO_PORTERO_EVALUA" FromRole="RESULTADO" ToRole="DESEMPENIO_PORTERO" />
+    <NavigationProperty Name="PARTIDO" Relationship="Self.RESULTADO_TIENE_PARTIDO" FromRole="RESULTADO" ToRole="PARTIDO" />
+  </EntityType>
+  <Association Name="CIUDAD_SE_ENCUENTRA_PAIS">
+    <End Role="PAIS" Type="Self.PAIS" Multiplicity="1" />
+    <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PAIS">
+        <PropertyRef Name="ID_PAIS" />
+      </Principal>
+      <Dependent Role="CIUDAD">
+        <PropertyRef Name="ID_PAIS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EQUIPO_ES_DE_CIUDAD">
+    <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="1" />
+    <End Role="EQUIPO" Type="Self.EQUIPO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDAD">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Principal>
+      <Dependent Role="EQUIPO">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ESTADIO_PERTENECE_CIUDAD">
+    <End Role="CIUDAD" Type="Self.CIUDAD" Multiplicity="1" />
+    <End Role="ESTADIO" Type="Self.ESTADIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CIUDAD">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Principal>
+      <Dependent Role="ESTADIO">
+        <PropertyRef Name="ID_CIUDAD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COMPETENCIA_SE_JUEGAN">
+    <End Role="COMPETENCIA" Type="Self.COMPETENCIA" Multiplicity="1" />
+    <End Role="PARTIDO" Type="Self.PARTIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPETENCIA">
+        <PropertyRef Name="ID_COMPETENCIA" />
+      </Principal>
+      <Dependent Role="PARTIDO">
+        <PropertyRef Name="ID_COMPETENCIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COMPETENCIA_TIENE">
+    <End Role="COMPETENCIA" Type="Self.COMPETENCIA" Multiplicity="1" />
+    <End Role="EQUIPO_COMPETENCIA" Type="Self.EQUIPO_COMPETENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPETENCIA">
+        <PropertyRef Name="ID_COMPETENCIA" />
+      </Principal>
+      <Dependent Role="EQUIPO_COMPETENCIA">
+        <PropertyRef Name="ID_COMPETENCIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DESEMPENIO_DMD_EVALUA">
+    <End Role="RESULTADO" Type="Self.RESULTADO" Multiplicity="1" />
+    <End Role="DESEMPENIO_DMD" Type="Self.DESEMPENIO_DMD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESULTADO">
+        <PropertyRef Name="ID_RESULTADO" />
+      </Principal>
+      <Dependent Role="DESEMPENIO_DMD">
+        <PropertyRef Name="ID_RESULTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DESEMPENIO_DMD_JUGADOR">
+    <End Role="JUGADOR" Type="Self.JUGADOR" Multiplicity="1" />
+    <End Role="DESEMPENIO_DMD" Type="Self.DESEMPENIO_DMD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JUGADOR">
+        <PropertyRef Name="ID_JUGADOR" />
+      </Principal>
+      <Dependent Role="DESEMPENIO_DMD">
+        <PropertyRef Name="ID_JUGADOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DESEMPENIO_PORTERO_EVALUA">
+    <End Role="RESULTADO" Type="Self.RESULTADO" Multiplicity="1" />
+    <End Role="DESEMPENIO_PORTERO" Type="Self.DESEMPENIO_PORTERO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESULTADO">
+        <PropertyRef Name="ID_RESULTADO" />
+      </Principal>
+      <Dependent Role="DESEMPENIO_PORTERO">
+        <PropertyRef Name="ID_RESULTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DESEMPENIO_PORTERO_JUGADOR">
+    <End Role="JUGADOR" Type="Self.JUGADOR" Multiplicity="1" />
+    <End Role="DESEMPENIO_PORTERO" Type="Self.DESEMPENIO_PORTERO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JUGADOR">
+        <PropertyRef Name="ID_JUGADOR" />
+      </Principal>
+      <Dependent Role="DESEMPENIO_PORTERO">
+        <PropertyRef Name="ID_JUGADOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ENTRENADOR_NACIO_PAIS">
+    <End Role="PAIS" Type="Self.PAIS" Multiplicity="1" />
+    <End Role="ENTRENADOR" Type="Self.ENTRENADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PAIS">
+        <PropertyRef Name="ID_PAIS" />
+      </Principal>
+      <Dependent Role="ENTRENADOR">
+        <PropertyRef Name="ID_PAIS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EQUIPO_TIENE_ENTRENADOR">
+    <End Role="ENTRENADOR" Type="Self.ENTRENADOR" Multiplicity="1" />
+    <End Role="EQUIPO" Type="Self.EQUIPO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENTRENADOR">
+        <PropertyRef Name="ID_ENTRENADOR" />
+      </Principal>
+      <Dependent Role="EQUIPO">
+        <PropertyRef Name="ID_ENTRENADOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EQUIPO_JUEGA_EN_COMPETENCIA">
+    <End Role="EQUIPO" Type="Self.EQUIPO" Multiplicity="1" />
+    <End Role="EQUIPO_COMPETENCIA" Type="Self.EQUIPO_COMPETENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EQUIPO">
+        <PropertyRef Name="ID_EQUIPO" />
+      </Principal>
+      <Dependent Role="EQUIPO_COMPETENCIA">
+        <PropertyRef Name="ID_EQUIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EQUIPO_TIENE">
+    <End Role="EQUIPO" Type="Self.EQUIPO" Multiplicity="1" />
+    <End Role="EQUIPO_JUGADOR" Type="Self.EQUIPO_JUGADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EQUIPO">
+        <PropertyRef Name="ID_EQUIPO" />
+      </Principal>
+      <Dependent Role="EQUIPO_JUGADOR">
+        <PropertyRef Name="ID_EQUIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PARTIDO_LOCAL_EQUIPO">
+    <End Role="EQUIPO" Type="Self.EQUIPO" Multiplicity="1" />
+    <End Role="PARTIDO" Type="Self.PARTIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EQUIPO">
+        <PropertyRef Name="ID_EQUIPO" />
+      </Principal>
+      <Dependent Role="PARTIDO">
+        <PropertyRef Name="ID_EQUIPO_LOCAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PARTIDO_VISITA_EQUIPO">
+    <End Role="EQUIPO" Type="Self.EQUIPO" Multiplicity="1" />
+    <End Role="PARTIDO" Type="Self.PARTIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EQUIPO">
+        <PropertyRef Name="ID_EQUIPO" />
+      </Principal>
+      <Dependent Role="PARTIDO">
+        <PropertyRef Name="ID_EQUIPO_VISITA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JUGADOR_PERTENECE">
+    <End Role="JUGADOR" Type="Self.JUGADOR" Multiplicity="1" />
+    <End Role="EQUIPO_JUGADOR" Type="Self.EQUIPO_JUGADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JUGADOR">
+        <PropertyRef Name="ID_JUGADOR" />
+      </Principal>
+      <Dependent Role="EQUIPO_JUGADOR">
+        <PropertyRef Name="ID_JUGADOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PARTIDO_SE_JUEGA_ESTADIO">
+    <End Role="ESTADIO" Type="Self.ESTADIO" Multiplicity="1" />
+    <End Role="PARTIDO" Type="Self.PARTIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADIO">
+        <PropertyRef Name="ID_ESTADIO" />
+      </Principal>
+      <Dependent Role="PARTIDO">
+        <PropertyRef Name="ID_ESTADIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JUGADOR_NACIO_PAIS">
+    <End Role="PAIS" Type="Self.PAIS" Multiplicity="1" />
+    <End Role="JUGADOR" Type="Self.JUGADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PAIS">
+        <PropertyRef Name="ID_PAIS" />
+      </Principal>
+      <Dependent Role="JUGADOR">
+        <PropertyRef Name="ID_PAIS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RESULTADO_TIENE_PARTIDO">
+    <End Role="PARTIDO" Type="Self.PARTIDO" Multiplicity="1" />
+    <End Role="RESULTADO" Type="Self.RESULTADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PARTIDO">
+        <PropertyRef Name="ID_PARTIDO" />
+      </Principal>
+      <Dependent Role="RESULTADO">
+        <PropertyRef Name="ID_PARTIDO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COMPETENCIA_ESTADIO">
+    <End Role="COMPETENCIA" Type="Self.COMPETENCIA" Multiplicity="*" />
+    <End Role="ESTADIO" Type="Self.ESTADIO" Multiplicity="*" />
+  </Association>
+  <Association Name="COMPETENCIA_PAIS">
+    <End Role="COMPETENCIA" Type="Self.COMPETENCIA" Multiplicity="*" />
+    <End Role="PAIS" Type="Self.PAIS" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CIUDAD" EntityType="Self.CIUDAD" />
+    <EntitySet Name="COMPETENCIA" EntityType="Self.COMPETENCIA" />
+    <EntitySet Name="DESEMPENIO_DMD" EntityType="Self.DESEMPENIO_DMD" />
+    <EntitySet Name="DESEMPENIO_PORTERO" EntityType="Self.DESEMPENIO_PORTERO" />
+    <EntitySet Name="ENTRENADOR" EntityType="Self.ENTRENADOR" />
+    <EntitySet Name="EQUIPO" EntityType="Self.EQUIPO" />
+    <EntitySet Name="EQUIPO_COMPETENCIA" EntityType="Self.EQUIPO_COMPETENCIA" />
+    <EntitySet Name="EQUIPO_JUGADOR" EntityType="Self.EQUIPO_JUGADOR" />
+    <EntitySet Name="ESTADIO" EntityType="Self.ESTADIO" />
+    <EntitySet Name="JUGADOR" EntityType="Self.JUGADOR" />
+    <EntitySet Name="PAIS" EntityType="Self.PAIS" />
+    <EntitySet Name="PARTIDO" EntityType="Self.PARTIDO" />
+    <EntitySet Name="RESULTADO" EntityType="Self.RESULTADO" />
+    <AssociationSet Name="CIUDAD_SE_ENCUENTRA_PAIS" Association="Self.CIUDAD_SE_ENCUENTRA_PAIS">
+      <End Role="PAIS" EntitySet="PAIS" />
+      <End Role="CIUDAD" EntitySet="CIUDAD" />
+    </AssociationSet>
+    <AssociationSet Name="EQUIPO_ES_DE_CIUDAD" Association="Self.EQUIPO_ES_DE_CIUDAD">
+      <End Role="CIUDAD" EntitySet="CIUDAD" />
+      <End Role="EQUIPO" EntitySet="EQUIPO" />
+    </AssociationSet>
+    <AssociationSet Name="ESTADIO_PERTENECE_CIUDAD" Association="Self.ESTADIO_PERTENECE_CIUDAD">
+      <End Role="CIUDAD" EntitySet="CIUDAD" />
+      <End Role="ESTADIO" EntitySet="ESTADIO" />
+    </AssociationSet>
+    <AssociationSet Name="COMPETENCIA_SE_JUEGAN" Association="Self.COMPETENCIA_SE_JUEGAN">
+      <End Role="COMPETENCIA" EntitySet="COMPETENCIA" />
+      <End Role="PARTIDO" EntitySet="PARTIDO" />
+    </AssociationSet>
+    <AssociationSet Name="COMPETENCIA_TIENE" Association="Self.COMPETENCIA_TIENE">
+      <End Role="COMPETENCIA" EntitySet="COMPETENCIA" />
+      <End Role="EQUIPO_COMPETENCIA" EntitySet="EQUIPO_COMPETENCIA" />
+    </AssociationSet>
+    <AssociationSet Name="DESEMPENIO_DMD_EVALUA" Association="Self.DESEMPENIO_DMD_EVALUA">
+      <End Role="RESULTADO" EntitySet="RESULTADO" />
+      <End Role="DESEMPENIO_DMD" EntitySet="DESEMPENIO_DMD" />
+    </AssociationSet>
+    <AssociationSet Name="DESEMPENIO_DMD_JUGADOR" Association="Self.DESEMPENIO_DMD_JUGADOR">
+      <End Role="JUGADOR" EntitySet="JUGADOR" />
+      <End Role="DESEMPENIO_DMD" EntitySet="DESEMPENIO_DMD" />
+    </AssociationSet>
+    <AssociationSet Name="DESEMPENIO_PORTERO_EVALUA" Association="Self.DESEMPENIO_PORTERO_EVALUA">
+      <End Role="RESULTADO" EntitySet="RESULTADO" />
+      <End Role="DESEMPENIO_PORTERO" EntitySet="DESEMPENIO_PORTERO" />
+    </AssociationSet>
+    <AssociationSet Name="DESEMPENIO_PORTERO_JUGADOR" Association="Self.DESEMPENIO_PORTERO_JUGADOR">
+      <End Role="JUGADOR" EntitySet="JUGADOR" />
+      <End Role="DESEMPENIO_PORTERO" EntitySet="DESEMPENIO_PORTERO" />
+    </AssociationSet>
+    <AssociationSet Name="ENTRENADOR_NACIO_PAIS" Association="Self.ENTRENADOR_NACIO_PAIS">
+      <End Role="PAIS" EntitySet="PAIS" />
+      <End Role="ENTRENADOR" EntitySet="ENTRENADOR" />
+    </AssociationSet>
+    <AssociationSet Name="EQUIPO_TIENE_ENTRENADOR" Association="Self.EQUIPO_TIENE_ENTRENADOR">
+      <End Role="ENTRENADOR" EntitySet="ENTRENADOR" />
+      <End Role="EQUIPO" EntitySet="EQUIPO" />
+    </AssociationSet>
+    <AssociationSet Name="EQUIPO_JUEGA_EN_COMPETENCIA" Association="Self.EQUIPO_JUEGA_EN_COMPETENCIA">
+      <End Role="EQUIPO" EntitySet="EQUIPO" />
+      <End Role="EQUIPO_COMPETENCIA" EntitySet="EQUIPO_COMPETENCIA" />
+    </AssociationSet>
+    <AssociationSet Name="EQUIPO_TIENE" Association="Self.EQUIPO_TIENE">
+      <End Role="EQUIPO" EntitySet="EQUIPO" />
+      <End Role="EQUIPO_JUGADOR" EntitySet="EQUIPO_JUGADOR" />
+    </AssociationSet>
+    <AssociationSet Name="PARTIDO_LOCAL_EQUIPO" Association="Self.PARTIDO_LOCAL_EQUIPO">
+      <End Role="EQUIPO" EntitySet="EQUIPO" />
+      <End Role="PARTIDO" EntitySet="PARTIDO" />
+    </AssociationSet>
+    <AssociationSet Name="PARTIDO_VISITA_EQUIPO" Association="Self.PARTIDO_VISITA_EQUIPO">
+      <End Role="EQUIPO" EntitySet="EQUIPO" />
+      <End Role="PARTIDO" EntitySet="PARTIDO" />
+    </AssociationSet>
+    <AssociationSet Name="JUGADOR_PERTENECE" Association="Self.JUGADOR_PERTENECE">
+      <End Role="JUGADOR" EntitySet="JUGADOR" />
+      <End Role="EQUIPO_JUGADOR" EntitySet="EQUIPO_JUGADOR" />
+    </AssociationSet>
+    <AssociationSet Name="PARTIDO_SE_JUEGA_ESTADIO" Association="Self.PARTIDO_SE_JUEGA_ESTADIO">
+      <End Role="ESTADIO" EntitySet="ESTADIO" />
+      <End Role="PARTIDO" EntitySet="PARTIDO" />
+    </AssociationSet>
+    <AssociationSet Name="JUGADOR_NACIO_PAIS" Association="Self.JUGADOR_NACIO_PAIS">
+      <End Role="PAIS" EntitySet="PAIS" />
+      <End Role="JUGADOR" EntitySet="JUGADOR" />
+    </AssociationSet>
+    <AssociationSet Name="RESULTADO_TIENE_PARTIDO" Association="Self.RESULTADO_TIENE_PARTIDO">
+      <End Role="PARTIDO" EntitySet="PARTIDO" />
+      <End Role="RESULTADO" EntitySet="RESULTADO" />
+    </AssociationSet>
+    <AssociationSet Name="COMPETENCIA_ESTADIO" Association="Self.COMPETENCIA_ESTADIO">
+      <End Role="COMPETENCIA" EntitySet="COMPETENCIA" />
+      <End Role="ESTADIO" EntitySet="ESTADIO" />
+    </AssociationSet>
+    <AssociationSet Name="COMPETENCIA_PAIS" Association="Self.COMPETENCIA_PAIS">
+      <End Role="COMPETENCIA" EntitySet="COMPETENCIA" />
+      <End Role="PAIS" EntitySet="PAIS" />
+    </AssociationSet>
+    <FunctionImport Name="SP_CIUDAD_DELETE">
+      <Parameter Name="PID_CIUDAD" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_CIUDAD_INSERT">
+      <Parameter Name="PID_PAIS" Mode="In" Type="Decimal" />
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_CIUDAD_UPDATE">
+      <Parameter Name="PID_PAIS" Mode="In" Type="Decimal" />
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PID_CIUDAD" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_COMPETENCIA_DELETE">
+      <Parameter Name="PID_COMPETENCIA" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_COMPETENCIA_ESTADIO_DELETE">
+      <Parameter Name="PID_COMPETENCIA" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_ESTADIO" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_COMPETENCIA_ESTADIO_INSERT">
+      <Parameter Name="PID_COMPETENCIA" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_ESTADIO" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_COMPETENCIA_INSERT">
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PFECHA_INICIO" Mode="In" Type="DateTime" />
+      <Parameter Name="PFECHA_FIN" Mode="In" Type="DateTime" />
+      <Parameter Name="PESTADO_ACTUAL" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_COMPETENCIA_PAIS_DELETE">
+      <Parameter Name="PID_COMPETENCIA" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_PAIS" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_COMPETENCIA_PAIS_INSERT">
+      <Parameter Name="PID_COMPETENCIA" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_PAIS" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_COMPETENCIA_UPDATE">
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PFECHA_INICIO" Mode="In" Type="DateTime" />
+      <Parameter Name="PFECHA_FIN" Mode="In" Type="DateTime" />
+      <Parameter Name="PESTADO_ACTUAL" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_COMPETENCIA" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DESEMPENIO_DMD_DELETE">
+      <Parameter Name="PID_JUGADOR" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_RESULTADO" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DESEMPENIO_DMD_INSERT">
+      <Parameter Name="PID_JUGADOR" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_RESULTADO" Mode="In" Type="Decimal" />
+      <Parameter Name="PVELOCIDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PCAPACIDAD_PASE" Mode="In" Type="Decimal" />
+      <Parameter Name="PCAPACIDAD_MARCA" Mode="In" Type="Decimal" />
+      <Parameter Name="PTIRO_GOL" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DESEMPENIO_DMD_UPDATE">
+      <Parameter Name="PID_JUGADOR" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_RESULTADO" Mode="In" Type="Decimal" />
+      <Parameter Name="PVELOCIDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PCAPACIDAD_PASE" Mode="In" Type="Decimal" />
+      <Parameter Name="PCAPACIDAD_MARCA" Mode="In" Type="Decimal" />
+      <Parameter Name="PTIRO_GOL" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DESEMPENIO_PORTERO_DELETE">
+      <Parameter Name="PID_JUGADOR" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_RESULTADO" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DESEMPENIO_PORTERO_INSERT">
+      <Parameter Name="PID_JUGADOR" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_RESULTADO" Mode="In" Type="Decimal" />
+      <Parameter Name="PCAPACIDAD_ATAJAR" Mode="In" Type="Decimal" />
+      <Parameter Name="PLUCHA1_1" Mode="In" Type="Decimal" />
+      <Parameter Name="PANTICIPACION" Mode="In" Type="Decimal" />
+      <Parameter Name="PREFLEJOS" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_DESEMPENIO_PORTERO_UPDATE">
+      <Parameter Name="PID_JUGADOR" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_RESULTADO" Mode="In" Type="Decimal" />
+      <Parameter Name="PCAPACIDAD_ATAJAR" Mode="In" Type="Decimal" />
+      <Parameter Name="PLUCHA1_1" Mode="In" Type="Decimal" />
+      <Parameter Name="PANTICIPACION" Mode="In" Type="Decimal" />
+      <Parameter Name="PREFLEJOS" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ENTRENADOR_DELETE">
+      <Parameter Name="PID_ENTRENADOR" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ENTRENADOR_INSERT">
+      <Parameter Name="PID_PAIS" Mode="In" Type="Decimal" />
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PEDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PCEDULA_IDENTIDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PBIOGRAFIA" Mode="In" Type="String" />
+      <Parameter Name="PFOTO" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ENTRENADOR_UPDATE">
+      <Parameter Name="PID_PAIS" Mode="In" Type="Decimal" />
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PEDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PCEDULA_IDENTIDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PBIOGRAFIA" Mode="In" Type="String" />
+      <Parameter Name="PFOTO" Mode="In" Type="Binary" />
+      <Parameter Name="PID_ENTRENADOR" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_EQUIPO_COMPETENCIA_DELETE">
+      <Parameter Name="PID_EQUIPO" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_COMPETENCIA" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_EQUIPO_COMPETENCIA_INSERT">
+      <Parameter Name="PID_EQUIPO" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_COMPETENCIA" Mode="In" Type="Decimal" />
+      <Parameter Name="PPUNTOS" Mode="In" Type="Decimal" />
+      <Parameter Name="PPOSICION" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_EQUIPO_DELETE">
+      <Parameter Name="PID_EQUIPO" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_EQUIPO_INSERT">
+      <Parameter Name="PID_CIUDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_ENTRENADOR" Mode="In" Type="Decimal" />
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PFECHA_FUNDACION" Mode="In" Type="DateTime" />
+      <Parameter Name="PNUMERO_COPASGANADAS" Mode="In" Type="Decimal" />
+      <Parameter Name="PLOGOTIPO" Mode="In" Type="Binary" />
+      <Parameter Name="PTIPO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_EQUIPO_JUGADOR_DELETE">
+      <Parameter Name="PID_EQUIPO" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_JUGADOR" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_EQUIPO_JUGADOR_INSERT">
+      <Parameter Name="PID_EQUIPO" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_JUGADOR" Mode="In" Type="Decimal" />
+      <Parameter Name="PNUMERO_CAMISOLA" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_EQUIPO_UPDATE">
+      <Parameter Name="PID_CIUDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_ENTRENADOR" Mode="In" Type="Decimal" />
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PFECHA_FUNDACION" Mode="In" Type="DateTime" />
+      <Parameter Name="PNUMERO_COPASGANADAS" Mode="In" Type="Decimal" />
+      <Parameter Name="PLOGOTIPO" Mode="In" Type="Binary" />
+      <Parameter Name="PID_EQUIPO" Mode="In" Type="Decimal" />
+      <Parameter Name="PTIPO" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ESTADIO_DELETE">
+      <Parameter Name="PID_ESTADIO" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ESTADIO_INSERT">
+      <Parameter Name="PID_CIUDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PCAPACIDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PFECHA_INAUGURACION" Mode="In" Type="DateTime" />
+      <Parameter Name="PHISTORIA" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ESTADIO_UPDATE">
+      <Parameter Name="PID_CIUDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PCAPACIDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PFECHA_INAUGURACION" Mode="In" Type="DateTime" />
+      <Parameter Name="PHISTORIA" Mode="In" Type="String" />
+      <Parameter Name="PID_ESTADIO" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_JUGADOR_DELETE">
+      <Parameter Name="PID_JUGADOR" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_JUGADOR_INSERT">
+      <Parameter Name="PID_PAIS" Mode="In" Type="Decimal" />
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PEDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PPESO" Mode="In" Type="Decimal" />
+      <Parameter Name="PPOSICION" Mode="In" Type="String" />
+      <Parameter Name="PCEDULA_IDENTIDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PBIOGRAFIA" Mode="In" Type="String" />
+      <Parameter Name="PFOTO" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="SP_JUGADOR_UPDATE">
+      <Parameter Name="PID_PAIS" Mode="In" Type="Decimal" />
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PEDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PPESO" Mode="In" Type="Decimal" />
+      <Parameter Name="PPOSICION" Mode="In" Type="String" />
+      <Parameter Name="PCEDULA_IDENTIDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="PBIOGRAFIA" Mode="In" Type="String" />
+      <Parameter Name="PFOTO" Mode="In" Type="Binary" />
+      <Parameter Name="PID_JUGADOR" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PAIS_DELETE">
+      <Parameter Name="PID_PAIS" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PAIS_INSERT">
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PNACIONALIDAD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PAIS_UPDATE">
+      <Parameter Name="PID_PAIS" Mode="In" Type="Decimal" />
+      <Parameter Name="PNOMBRE" Mode="In" Type="String" />
+      <Parameter Name="PNACIONALIDAD" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PARTIDO_DELETE">
+      <Parameter Name="PID_PARTIDO" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PARTIDO_INSERT">
+      <Parameter Name="PID_COMPETENCIA" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_ESTADIO" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_EQUIPO_LOCAL" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_EQUIPO_VISITA" Mode="In" Type="Decimal" />
+      <Parameter Name="PFECHA_PARTIDO" Mode="In" Type="DateTime" />
+      <Parameter Name="PHORA_INICIO" Mode="In" Type="Decimal" />
+      <Parameter Name="PESTADO" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_PARTIDO_UPDATE">
+      <Parameter Name="PID_COMPETENCIA" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_ESTADIO" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_EQUIPO_LOCAL" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_EQUIPO_VISITA" Mode="In" Type="Decimal" />
+      <Parameter Name="PFECHA_PARTIDO" Mode="In" Type="DateTime" />
+      <Parameter Name="PHORA_INICIO" Mode="In" Type="Decimal" />
+      <Parameter Name="PESTADO" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_PARTIDO" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_RESULTADO_DELETE">
+      <Parameter Name="PID_RESULTADO" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_RESULTADO_INSERT">
+      <Parameter Name="PID_PARTIDO" Mode="In" Type="Decimal" />
+      <Parameter Name="PPRIMERT_GOLES_EQUIPO1" Mode="In" Type="Decimal" />
+      <Parameter Name="PPRIMERT_GOLES_EQUIPO2" Mode="In" Type="Decimal" />
+      <Parameter Name="PSEGUNDOT_GOLES_EQUIPO1" Mode="In" Type="Decimal" />
+      <Parameter Name="PSEGUNDOT_GOLES_EQUIPO2" Mode="In" Type="Decimal" />
+      <Parameter Name="PTIEMPOEXTRA_GOLES_EQUIPO1" Mode="In" Type="Decimal" />
+      <Parameter Name="PTIEMPOEXTRA_GOLES_EQUIPO2" Mode="In" Type="Decimal" />
+      <Parameter Name="PPENALES_GOLES_EQUIPO1" Mode="In" Type="Decimal" />
+      <Parameter Name="PPENALES_GOLES_EQUIPO2" Mode="In" Type="Decimal" />
+      <Parameter Name="PTARJETAS_A_EQUIPO1" Mode="In" Type="Decimal" />
+      <Parameter Name="PTARJETAS_A_EQUIPO2" Mode="In" Type="Decimal" />
+      <Parameter Name="PTARJETAS_R_EQUIPO1" Mode="In" Type="Decimal" />
+      <Parameter Name="PTARJETAS_R_EQUIPO2" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="SP_RESULTADO_UPDATE">
+      <Parameter Name="PID_PARTIDO" Mode="In" Type="Decimal" />
+      <Parameter Name="PPRIMERT_GOLES_EQUIPO1" Mode="In" Type="Decimal" />
+      <Parameter Name="PPRIMERT_GOLES_EQUIPO2" Mode="In" Type="Decimal" />
+      <Parameter Name="PSEGUNDOT_GOLES_EQUIPO1" Mode="In" Type="Decimal" />
+      <Parameter Name="PSEGUNDOT_GOLES_EQUIPO2" Mode="In" Type="Decimal" />
+      <Parameter Name="PTIEMPOEXTRA_GOLES_EQUIPO1" Mode="In" Type="Decimal" />
+      <Parameter Name="PTIEMPOEXTRA_GOLES_EQUIPO2" Mode="In" Type="Decimal" />
+      <Parameter Name="PPENALES_GOLES_EQUIPO1" Mode="In" Type="Decimal" />
+      <Parameter Name="PPENALES_GOLES_EQUIPO2" Mode="In" Type="Decimal" />
+      <Parameter Name="PTARJETAS_A_EQUIPO1" Mode="In" Type="Decimal" />
+      <Parameter Name="PTARJETAS_A_EQUIPO2" Mode="In" Type="Decimal" />
+      <Parameter Name="PTARJETAS_R_EQUIPO1" Mode="In" Type="Decimal" />
+      <Parameter Name="PTARJETAS_R_EQUIPO2" Mode="In" Type="Decimal" />
+      <Parameter Name="PID_RESULTADO" Mode="In" Type="Decimal" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

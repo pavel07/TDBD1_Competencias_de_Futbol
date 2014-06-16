@@ -1,0 +1,75 @@
+﻿@model Fifa.Models.PARTIDO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>ELIMINAR PARTIDO</h2>
+
+<h3>SEGURO DE ELIMINAR ESTE PARTIDO?</h3>
+<fieldset>
+    <legend>PARTIDO</legend>
+
+    <div class="display-label">
+         @Html.DisplayName("ID")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_PARTIDO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("COMPETENCIA")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.COMPETENCIA.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("ESTADIO")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ESTADIO.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("EQUIPO LOCAL")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EQUIPO.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("EQUIPO VISITA")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EQUIPO1.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("FECHA DEL PARTIDO")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FECHA_PARTIDO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("HORA")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HORA_INICIO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ESTADO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ESTADO)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,52 @@
+﻿@model Fifa.Models.EQUIPO_JUGADOR
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>AGREGAR JUGADOR A EQUIPO</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>EQUIPO_JUGADOR</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_EQUIPO, "EQUIPO")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_EQUIPO", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_EQUIPO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_JUGADOR, "JUGADOR")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_JUGADOR", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_JUGADOR)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("NUMERO DE CAMISA")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NUMERO_CAMISOLA)
+            @Html.ValidationMessageFor(model => model.NUMERO_CAMISOLA)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

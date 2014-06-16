@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CiudadModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="CIUDAD">
+      <EntityTypeMapping TypeName="CiudadModel.CIUDAD">
+        <MappingFragment StoreEntitySet="CIUDAD">
+          <ScalarProperty Name="ID_CIUDAD" ColumnName="ID_CIUDAD" />
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PAIS">
+      <EntityTypeMapping TypeName="CiudadModel.PAIS">
+        <MappingFragment StoreEntitySet="PAIS">
+          <ScalarProperty Name="ID_PAIS" ColumnName="ID_PAIS" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_CIUDAD_DELETE" FunctionName="CiudadModel.Store.SP_CIUDAD_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_CIUDAD_INSERT" FunctionName="CiudadModel.Store.SP_CIUDAD_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_CIUDAD_UPDATE" FunctionName="CiudadModel.Store.SP_CIUDAD_UPDATE" />
+  </EntityContainerMapping>
+</Mapping>

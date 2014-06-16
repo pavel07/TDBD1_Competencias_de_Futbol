@@ -1,0 +1,40 @@
+﻿@model Fifa.Models.CIUDAD
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>ELIMINAR CIUDAD</h2>
+
+<h3>DESEA ELIMINAR EL REGISTRO CIUDAD?</h3>
+<fieldset>
+    <legend>CIUDAD</legend>
+
+    <div class="display-label">
+         @Html.DisplayName("ID")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_CIUDAD)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("PAIS")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PAIS.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOMBRE)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

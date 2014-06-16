@@ -1,0 +1,92 @@
+﻿@model Fifa.Models.PARTIDO
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>PARTIDO</legend>
+
+        <div class="editor-label" hidden>
+            @Html.LabelFor(model => model.ID_PARTIDO)
+        </div>
+        <div class="editor-field" hidden>
+            @Html.EditorFor(model => model.ID_PARTIDO)
+            @Html.ValidationMessageFor(model => model.ID_PARTIDO)
+        </div>
+
+        <div class="editor-label" hidden>
+            @Html.LabelFor(model => model.ID_COMPETENCIA, "COMPETENCIA")
+        </div>
+        <div class="editor-field" hidden>
+            @Html.DropDownList("ID_COMPETENCIA", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_COMPETENCIA)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_ESTADIO, "ESTADIO")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_ESTADIO", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_ESTADIO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_EQUIPO_LOCAL, "EQUIPO")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_EQUIPO_LOCAL", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_EQUIPO_LOCAL)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_EQUIPO_VISITA, "EQUIPO1")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_EQUIPO_VISITA", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_EQUIPO_VISITA)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FECHA_PARTIDO)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FECHA_PARTIDO)
+            @Html.ValidationMessageFor(model => model.FECHA_PARTIDO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HORA_INICIO)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HORA_INICIO)
+            @Html.ValidationMessageFor(model => model.HORA_INICIO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ESTADO)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ESTADO)
+            @Html.ValidationMessageFor(model => model.ESTADO)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

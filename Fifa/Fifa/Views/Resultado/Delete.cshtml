@@ -1,0 +1,34 @@
+﻿@model Fifa.Models.RESULTADO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>ELIMINAR RESULTADO DE PARTIDO</h2>
+
+<h3>SEGURO DE ELIMINAR ESTE RESULTADO?</h3>
+<fieldset>
+    <legend>RESULTADO</legend>
+
+    <div class="display-label">
+         @Html.DisplayName("ID RESULTADO")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_RESULTADO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayName("ID PARTIDO")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PARTIDO.ID_PARTIDO)
+    </div>
+
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

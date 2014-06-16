@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Fifa.Models.JUGADOR>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>JUGADORES</h2>
+
+<p>
+    @Html.ActionLink("NUEVO REGISTRO", "Create")
+    @Html.ActionLink("REGRESAR PAGINA PRINCIPAL", "Inicio", "Account")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayName("ID")
+        </th>
+        <th>
+            @Html.DisplayName("PAIS")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CEDULA_IDENTIDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PESO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.POSICION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BIOGRAFIA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_JUGADOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PAIS.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CEDULA_IDENTIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PESO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.POSICION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BIOGRAFIA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_JUGADOR}) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.ID_JUGADOR  })
+        </td>
+    </tr>
+}
+
+</table>
