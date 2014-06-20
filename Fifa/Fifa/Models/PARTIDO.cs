@@ -19,11 +19,11 @@ namespace Fifa.Models
             this.RESULTADO = new HashSet<RESULTADO>();
         }
     
-        public decimal ID_PARTIDO { get; set; }
-        public decimal ID_COMPETENCIA { get; set; }
-        public decimal ID_ESTADIO { get; set; }
-        public decimal ID_EQUIPO_LOCAL { get; set; }
-        public decimal ID_EQUIPO_VISITA { get; set; }
+        public int ID_PARTIDO { get; set; }
+        public int ID_COMPETENCIA { get; set; }
+        public int ID_ESTADIO { get; set; }
+        public int ID_EQUIPO_LOCAL { get; set; }
+        public int ID_EQUIPO_VISITA { get; set; }
         public Nullable<System.DateTime> FECHA_PARTIDO { get; set; }
         public Nullable<decimal> HORA_INICIO { get; set; }
         public Nullable<decimal> ESTADO { get; set; }

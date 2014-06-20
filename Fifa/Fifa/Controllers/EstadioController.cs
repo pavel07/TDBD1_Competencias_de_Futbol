@@ -23,19 +23,6 @@ namespace Fifa.Controllers
         }
 
         //
-        // GET: /Estadio/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            ESTADIO estadio = db.ESTADIO.Find(id);
-            if (estadio == null)
-            {
-                return HttpNotFound();
-            }
-            return View(estadio);
-        }
-
-        //
         // GET: /Estadio/Create
 
         public ActionResult Create()
@@ -53,8 +40,8 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.ESTADIO.Add(estadio);
-                db.SaveChanges();
+                db.SP_ESTADIO_INSERT(estadio.ID_CIUDAD, estadio.NOMBRE, estadio.CAPACIDAD, estadio.FECHA_INAUGURACION,
+                    estadio.HISTORIA);
                 return RedirectToAction("Index");
             }
 
@@ -85,8 +72,8 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(estadio).State = EntityState.Modified;
-                db.SaveChanges();
+                db.SP_ESTADIO_UPDATE(estadio.ID_CIUDAD, estadio.NOMBRE, estadio.CAPACIDAD, estadio.FECHA_INAUGURACION,
+                    estadio.HISTORIA, estadio.ID_ESTADIO);
                 return RedirectToAction("Index");
             }
             ViewBag.ID_CIUDAD = new SelectList(db.CIUDAD, "ID_CIUDAD", "NOMBRE", estadio.ID_CIUDAD);
@@ -114,8 +101,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             ESTADIO estadio = db.ESTADIO.Find(id);
-            db.ESTADIO.Remove(estadio);
-            db.SaveChanges();
+            db.SP_ESTADIO_DELETE(estadio.ID_ESTADIO);
             return RedirectToAction("Index");
         }
 

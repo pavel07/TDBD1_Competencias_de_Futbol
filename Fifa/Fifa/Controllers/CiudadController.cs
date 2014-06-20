@@ -22,18 +22,6 @@ namespace Fifa.Controllers
             return View(ciudad.ToList());
         }
 
-        //
-        // GET: /Ciudad/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            CIUDAD ciudad = db.CIUDAD.Find(id);
-            if (ciudad == null)
-            {
-                return HttpNotFound();
-            }
-            return View(ciudad);
-        }
 
         //
         // GET: /Ciudad/Create
@@ -53,8 +41,7 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.CIUDAD.Add(ciudad);
-                db.SaveChanges();
+                db.SP_CIUDAD_INSERT(ciudad.ID_PAIS, ciudad.NOMBRE);
                 return RedirectToAction("Index");
             }
 
@@ -85,8 +72,7 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(ciudad).State = EntityState.Modified;
-                db.SaveChanges();
+                db.SP_CIUDAD_UPDATE(ciudad.ID_PAIS, ciudad.NOMBRE, ciudad.ID_CIUDAD);
                 return RedirectToAction("Index");
             }
             ViewBag.ID_PAIS = new SelectList(db.PAIS, "ID_PAIS", "NOMBRE", ciudad.ID_PAIS);
@@ -114,8 +100,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             CIUDAD ciudad = db.CIUDAD.Find(id);
-            db.CIUDAD.Remove(ciudad);
-            db.SaveChanges();
+            db.SP_CIUDAD_DELETE(ciudad.ID_CIUDAD);
             return RedirectToAction("Index");
         }
 

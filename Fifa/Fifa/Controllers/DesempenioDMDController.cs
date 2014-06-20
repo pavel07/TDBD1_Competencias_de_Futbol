@@ -23,19 +23,6 @@ namespace Fifa.Controllers
         }
 
         //
-        // GET: /DesempenioDMD/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            DESEMPENIO_DMD desempenio_dmd = db.DESEMPENIO_DMD.Find(id);
-            if (desempenio_dmd == null)
-            {
-                return HttpNotFound();
-            }
-            return View(desempenio_dmd);
-        }
-
-        //
         // GET: /DesempenioDMD/Create
 
         public ActionResult Create()
@@ -54,8 +41,9 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.DESEMPENIO_DMD.Add(desempenio_dmd);
-                db.SaveChanges();
+                db.SP_DESEMPENIO_DMD_INSERT(desempenio_dmd.ID_JUGADOR, desempenio_dmd.ID_RESULTADO,
+                    desempenio_dmd.VELOCIDAD, desempenio_dmd.CAPACIDAD_PASE, desempenio_dmd.CAPACIDAD_MARCA,
+                    desempenio_dmd.TIRO_GOL);
                 return RedirectToAction("Index");
             }
 
@@ -66,8 +54,8 @@ namespace Fifa.Controllers
 
         //
         // GET: /DesempenioDMD/Edit/5
-
-        public ActionResult Edit(int id = 0)
+        
+        public ActionResult Edit(int id=0)
         {
             DESEMPENIO_DMD desempenio_dmd = db.DESEMPENIO_DMD.Find(id);
             if (desempenio_dmd == null)
@@ -81,15 +69,16 @@ namespace Fifa.Controllers
 
         //
         // POST: /DesempenioDMD/Edit/5
-
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(DESEMPENIO_DMD desempenio_dmd)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(desempenio_dmd).State = EntityState.Modified;
-                db.SaveChanges();
+                db.SP_DESEMPENIO_DMD_UPDATE(desempenio_dmd.ID_JUGADOR, desempenio_dmd.ID_RESULTADO,
+                    desempenio_dmd.VELOCIDAD, desempenio_dmd.CAPACIDAD_PASE, desempenio_dmd.CAPACIDAD_MARCA,
+                    desempenio_dmd.TIRO_GOL);
                 return RedirectToAction("Index");
             }
             ViewBag.ID_RESULTADO = new SelectList(db.RESULTADO, "ID_RESULTADO", "ID_RESULTADO", desempenio_dmd.ID_RESULTADO);
@@ -100,8 +89,9 @@ namespace Fifa.Controllers
         //
         // GET: /DesempenioDMD/Delete/5
 
-        public ActionResult Delete(int id = 0)
+        public ActionResult Delete(int id=0)
         {
+            
             DESEMPENIO_DMD desempenio_dmd = db.DESEMPENIO_DMD.Find(id);
             if (desempenio_dmd == null)
             {
@@ -118,8 +108,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             DESEMPENIO_DMD desempenio_dmd = db.DESEMPENIO_DMD.Find(id);
-            db.DESEMPENIO_DMD.Remove(desempenio_dmd);
-            db.SaveChanges();
+            db.SP_DESEMPENIO_DMD_DELETE(desempenio_dmd.ID_JUGADOR,desempenio_dmd.ID_RESULTADO);
             return RedirectToAction("Index");
         }
 

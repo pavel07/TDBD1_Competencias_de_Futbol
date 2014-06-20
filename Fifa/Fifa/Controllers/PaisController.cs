@@ -22,19 +22,6 @@ namespace Fifa.Controllers
         }
 
         //
-        // GET: /Pais/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            PAIS pais = db.PAIS.Find(id);
-            if (pais == null)
-            {
-                return HttpNotFound();
-            }
-            return View(pais);
-        }
-
-        //
         // GET: /Pais/Create
 
         public ActionResult Create()
@@ -51,8 +38,7 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.PAIS.Add(pais);
-                db.SaveChanges();
+                db.SP_PAIS_INSERT(pais.NOMBRE, pais.NACIONALIDAD);
                 return RedirectToAction("Index");
             }
 
@@ -81,8 +67,7 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(pais).State = EntityState.Modified;
-                db.SaveChanges();
+                db.SP_PAIS_UPDATE(pais.ID_PAIS, pais.NOMBRE, pais.NACIONALIDAD);
                 return RedirectToAction("Index");
             }
             return View(pais);
@@ -109,8 +94,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             PAIS pais = db.PAIS.Find(id);
-            db.PAIS.Remove(pais);
-            db.SaveChanges();
+            db.SP_PAIS_DELETE(pais.ID_PAIS);
             return RedirectToAction("Index");
         }
 

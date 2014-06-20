@@ -23,19 +23,6 @@ namespace Fifa.Controllers
         }
 
         //
-        // GET: /EquipoJugador/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            EQUIPO_JUGADOR equipo_jugador = db.EQUIPO_JUGADOR.Find(id);
-            if (equipo_jugador == null)
-            {
-                return HttpNotFound();
-            }
-            return View(equipo_jugador);
-        }
-
-        //
         // GET: /EquipoJugador/Create
 
         public ActionResult Create()
@@ -54,8 +41,8 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.EQUIPO_JUGADOR.Add(equipo_jugador);
-                db.SaveChanges();
+                db.SP_EQUIPO_JUGADOR_INSERT(equipo_jugador.ID_EQUIPO, equipo_jugador.ID_JUGADOR,
+                    equipo_jugador.NUMERO_CAMISOLA);
                 return RedirectToAction("Index");
             }
 
@@ -118,8 +105,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             EQUIPO_JUGADOR equipo_jugador = db.EQUIPO_JUGADOR.Find(id);
-            db.EQUIPO_JUGADOR.Remove(equipo_jugador);
-            db.SaveChanges();
+            db.SP_EQUIPO_JUGADOR_DELETE(equipo_jugador.ID_EQUIPO, equipo_jugador.ID_JUGADOR);
             return RedirectToAction("Index");
         }
 

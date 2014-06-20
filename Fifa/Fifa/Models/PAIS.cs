@@ -22,7 +22,7 @@ namespace Fifa.Models
             this.COMPETENCIA = new HashSet<COMPETENCIA>();
         }
     
-        public decimal ID_PAIS { get; set; }
+        public int ID_PAIS { get; set; }
         public string NOMBRE { get; set; }
         public string NACIONALIDAD { get; set; }
     

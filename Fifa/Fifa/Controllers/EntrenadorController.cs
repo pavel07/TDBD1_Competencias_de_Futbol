@@ -23,19 +23,6 @@ namespace Fifa.Controllers
         }
 
         //
-        // GET: /Entrenador/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            ENTRENADOR entrenador = db.ENTRENADOR.Find(id);
-            if (entrenador == null)
-            {
-                return HttpNotFound();
-            }
-            return View(entrenador);
-        }
-
-        //
         // GET: /Entrenador/Create
 
         public ActionResult Create()
@@ -53,8 +40,9 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.ENTRENADOR.Add(entrenador);
-                db.SaveChanges();
+                db.SP_ENTRENADOR_INSERT(entrenador.ID_PAIS, entrenador.NOMBRE, entrenador.EDAD,
+                    entrenador.CEDULA_IDENTIDAD,
+                    entrenador.BIOGRAFIA, entrenador.FOTO);
                 return RedirectToAction("Index");
             }
 
@@ -85,8 +73,8 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(entrenador).State = EntityState.Modified;
-                db.SaveChanges();
+                db.SP_ENTRENADOR_UPDATE(entrenador.ID_PAIS, entrenador.NOMBRE, entrenador.EDAD, entrenador.CEDULA_IDENTIDAD,
+                    entrenador.BIOGRAFIA, entrenador.FOTO,entrenador.ID_ENTRENADOR);
                 return RedirectToAction("Index");
             }
             ViewBag.ID_PAIS = new SelectList(db.PAIS, "ID_PAIS", "NOMBRE", entrenador.ID_PAIS);
@@ -114,8 +102,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             ENTRENADOR entrenador = db.ENTRENADOR.Find(id);
-            db.ENTRENADOR.Remove(entrenador);
-            db.SaveChanges();
+            db.SP_ENTRENADOR_DELETE(entrenador.ID_ENTRENADOR);
             return RedirectToAction("Index");
         }
 

@@ -14,10 +14,10 @@ namespace Fifa.Models
     
     public partial class EQUIPO_COMPETENCIA
     {
-        public decimal ID_EQUIPO { get; set; }
-        public decimal ID_COMPETENCIA { get; set; }
-        public Nullable<decimal> PUNTOS { get; set; }
-        public Nullable<decimal> POSICION { get; set; }
+        public int ID_EQUIPO { get; set; }
+        public int ID_COMPETENCIA { get; set; }
+        public Nullable<int> PUNTOS { get; set; }
+        public Nullable<int> POSICION { get; set; }
     
         public virtual COMPETENCIA COMPETENCIA { get; set; }
         public virtual EQUIPO EQUIPO { get; set; }

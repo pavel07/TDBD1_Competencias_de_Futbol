@@ -20,20 +20,20 @@ namespace Fifa.Models
             this.DESEMPENIO_PORTERO = new HashSet<DESEMPENIO_PORTERO>();
         }
     
-        public decimal ID_RESULTADO { get; set; }
-        public decimal ID_PARTIDO { get; set; }
-        public Nullable<decimal> PRIMERT_GOLES_EQUIPO1 { get; set; }
-        public Nullable<decimal> PRIMERT_GOLES_EQUIPO2 { get; set; }
-        public Nullable<decimal> SEGUNDOT_GOLES_EQUIPO1 { get; set; }
-        public Nullable<decimal> SEGUNDOT_GOLES_EQUIPO2 { get; set; }
-        public Nullable<decimal> TIEMPOEXTRA_GOLES_EQUIPO1 { get; set; }
-        public Nullable<decimal> TIEMPOEXTRA_GOLES_EQUIPO2 { get; set; }
-        public Nullable<decimal> PENALES_GOLES_EQUIPO1 { get; set; }
-        public Nullable<decimal> PENALES_GOLES_EQUIPO2 { get; set; }
-        public Nullable<decimal> TARJETAS_A_EQUIPO1 { get; set; }
-        public Nullable<decimal> TARJETAS_A_EQUIPO2 { get; set; }
-        public Nullable<decimal> TARJETAS_R_EQUIPO1 { get; set; }
-        public Nullable<decimal> TARJETAS_R_EQUIPO2 { get; set; }
+        public int ID_RESULTADO { get; set; }
+        public int ID_PARTIDO { get; set; }
+        public Nullable<int> PRIMERT_GOLES_EQUIPO1 { get; set; }
+        public Nullable<int> PRIMERT_GOLES_EQUIPO2 { get; set; }
+        public Nullable<int> SEGUNDOT_GOLES_EQUIPO1 { get; set; }
+        public Nullable<int> SEGUNDOT_GOLES_EQUIPO2 { get; set; }
+        public Nullable<int> TIEMPOEXTRA_GOLES_EQUIPO1 { get; set; }
+        public Nullable<int> TIEMPOEXTRA_GOLES_EQUIPO2 { get; set; }
+        public Nullable<int> PENALES_GOLES_EQUIPO1 { get; set; }
+        public Nullable<int> PENALES_GOLES_EQUIPO2 { get; set; }
+        public Nullable<int> TARJETAS_A_EQUIPO1 { get; set; }
+        public Nullable<int> TARJETAS_A_EQUIPO2 { get; set; }
+        public Nullable<int> TARJETAS_R_EQUIPO1 { get; set; }
+        public Nullable<int> TARJETAS_R_EQUIPO2 { get; set; }
     
         public virtual ICollection<DESEMPENIO_DMD> DESEMPENIO_DMD { get; set; }
         public virtual ICollection<DESEMPENIO_PORTERO> DESEMPENIO_PORTERO { get; set; }

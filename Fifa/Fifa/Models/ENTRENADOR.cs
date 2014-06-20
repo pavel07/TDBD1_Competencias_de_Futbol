@@ -19,10 +19,10 @@ namespace Fifa.Models
             this.EQUIPO = new HashSet<EQUIPO>();
         }
     
-        public decimal ID_ENTRENADOR { get; set; }
-        public decimal ID_PAIS { get; set; }
+        public int ID_ENTRENADOR { get; set; }
+        public int ID_PAIS { get; set; }
         public string NOMBRE { get; set; }
-        public Nullable<decimal> EDAD { get; set; }
+        public Nullable<int> EDAD { get; set; }
         public Nullable<decimal> CEDULA_IDENTIDAD { get; set; }
         public string BIOGRAFIA { get; set; }
         public byte[] FOTO { get; set; }

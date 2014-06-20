@@ -22,18 +22,6 @@ namespace Fifa.Controllers
             return View(equipo.ToList());
         }
 
-        //
-        // GET: /Equipo/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            EQUIPO equipo = db.EQUIPO.Find(id);
-            if (equipo == null)
-            {
-                return HttpNotFound();
-            }
-            return View(equipo);
-        }
 
         //
         // GET: /Equipo/Create
@@ -54,8 +42,8 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.EQUIPO.Add(equipo);
-                db.SaveChanges();
+                db.SP_EQUIPO_INSERT(equipo.ID_CIUDAD, equipo.ID_ENTRENADOR, equipo.NOMBRE, equipo.FECHA_FUNDACION,
+                    equipo.NUMERO_COPASGANADAS, equipo.LOGOTIPO, equipo.TIPO);
                 return RedirectToAction("Index");
             }
 
@@ -88,8 +76,8 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(equipo).State = EntityState.Modified;
-                db.SaveChanges();
+                db.SP_EQUIPO_UPDATE(equipo.ID_CIUDAD, equipo.ID_ENTRENADOR, equipo.NOMBRE, equipo.FECHA_FUNDACION,
+                    equipo.NUMERO_COPASGANADAS, equipo.LOGOTIPO,equipo.ID_EQUIPO, equipo.TIPO);
                 return RedirectToAction("Index");
             }
             ViewBag.ID_CIUDAD = new SelectList(db.CIUDAD, "ID_CIUDAD", "NOMBRE", equipo.ID_CIUDAD);
@@ -118,8 +106,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             EQUIPO equipo = db.EQUIPO.Find(id);
-            db.EQUIPO.Remove(equipo);
-            db.SaveChanges();
+            db.SP_EQUIPO_DELETE(equipo.ID_EQUIPO);
             return RedirectToAction("Index");
         }
 

@@ -821,8 +821,8 @@
           <Key>
             <PropertyRef Name="ID_CIUDAD" />
           </Key>
-          <Property Name="ID_CIUDAD" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_PAIS" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_CIUDAD" Type="Int32" Nullable="false" />
+          <Property Name="ID_PAIS" Type="Int32" Nullable="false" />
           <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="PAIS" Relationship="Self.CIUDAD_SE_ENCUENTRA_PAIS" FromRole="CIUDAD" ToRole="PAIS" />
           <NavigationProperty Name="EQUIPO" Relationship="Self.EQUIPO_ES_DE_CIUDAD" FromRole="CIUDAD" ToRole="EQUIPO" />
@@ -832,7 +832,7 @@
           <Key>
             <PropertyRef Name="ID_COMPETENCIA" />
           </Key>
-          <Property Name="ID_COMPETENCIA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_COMPETENCIA" Type="Int32" Nullable="false" />
           <Property Name="NOMBRE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="FECHA_INICIO" Type="DateTime" />
           <Property Name="FECHA_FIN" Type="DateTime" />
@@ -847,12 +847,12 @@
             <PropertyRef Name="ID_JUGADOR" />
             <PropertyRef Name="ID_RESULTADO" />
           </Key>
-          <Property Name="ID_JUGADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_RESULTADO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="VELOCIDAD" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="CAPACIDAD_PASE" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="CAPACIDAD_MARCA" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="TIRO_GOL" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="ID_JUGADOR" Type="Int32" Nullable="false" />
+          <Property Name="ID_RESULTADO" Type="Int32" Nullable="false" />
+          <Property Name="VELOCIDAD" Type="Int32" />
+          <Property Name="CAPACIDAD_PASE" Type="Int32" />
+          <Property Name="CAPACIDAD_MARCA" Type="Int32" />
+          <Property Name="TIRO_GOL" Type="Int32" />
           <NavigationProperty Name="RESULTADO" Relationship="Self.DESEMPENIO_DMD_EVALUA" FromRole="DESEMPENIO_DMD" ToRole="RESULTADO" />
           <NavigationProperty Name="JUGADOR" Relationship="Self.DESEMPENIO_DMD_JUGADOR" FromRole="DESEMPENIO_DMD" ToRole="JUGADOR" />
         </EntityType>
@@ -861,12 +861,12 @@
             <PropertyRef Name="ID_JUGADOR" />
             <PropertyRef Name="ID_RESULTADO" />
           </Key>
-          <Property Name="ID_JUGADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_RESULTADO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="CAPACIDAD_ATAJAR" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="LUCHA1_1" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="ANTICIPACION" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="REFLEJOS" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="ID_JUGADOR" Type="Int32" Nullable="false" />
+          <Property Name="ID_RESULTADO" Type="Int32" Nullable="false" />
+          <Property Name="CAPACIDAD_ATAJAR" Type="Int32" />
+          <Property Name="LUCHA1_1" Type="Int32" />
+          <Property Name="ANTICIPACION" Type="Int32" />
+          <Property Name="REFLEJOS" Type="Int32" />
           <NavigationProperty Name="RESULTADO" Relationship="Self.DESEMPENIO_PORTERO_EVALUA" FromRole="DESEMPENIO_PORTERO" ToRole="RESULTADO" />
           <NavigationProperty Name="JUGADOR" Relationship="Self.DESEMPENIO_PORTERO_JUGADOR" FromRole="DESEMPENIO_PORTERO" ToRole="JUGADOR" />
         </EntityType>
@@ -874,10 +874,10 @@
           <Key>
             <PropertyRef Name="ID_ENTRENADOR" />
           </Key>
-          <Property Name="ID_ENTRENADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_PAIS" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_ENTRENADOR" Type="Int32" Nullable="false" />
+          <Property Name="ID_PAIS" Type="Int32" Nullable="false" />
           <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="EDAD" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="EDAD" Type="Int32" />
           <Property Name="CEDULA_IDENTIDAD" Type="Decimal" Precision="38" Scale="0" />
           <Property Name="BIOGRAFIA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
@@ -888,12 +888,12 @@
           <Key>
             <PropertyRef Name="ID_EQUIPO" />
           </Key>
-          <Property Name="ID_EQUIPO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_CIUDAD" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_ENTRENADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_EQUIPO" Type="Int32" Nullable="false" />
+          <Property Name="ID_CIUDAD" Type="Int32" Nullable="false" />
+          <Property Name="ID_ENTRENADOR" Type="Int32" Nullable="false" />
           <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="FECHA_FUNDACION" Type="DateTime" />
-          <Property Name="NUMERO_COPASGANADAS" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="NUMERO_COPASGANADAS" Type="Int32" />
           <Property Name="LOGOTIPO" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="TIPO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CIUDAD" Relationship="Self.EQUIPO_ES_DE_CIUDAD" FromRole="EQUIPO" ToRole="CIUDAD" />
@@ -908,10 +908,10 @@
             <PropertyRef Name="ID_EQUIPO" />
             <PropertyRef Name="ID_COMPETENCIA" />
           </Key>
-          <Property Name="ID_EQUIPO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_COMPETENCIA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="PUNTOS" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="POSICION" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="ID_EQUIPO" Type="Int32" Nullable="false" />
+          <Property Name="ID_COMPETENCIA" Type="Int32" Nullable="false" />
+          <Property Name="PUNTOS" Type="Int32" />
+          <Property Name="POSICION" Type="Int32" />
           <NavigationProperty Name="COMPETENCIA" Relationship="Self.COMPETENCIA_TIENE" FromRole="EQUIPO_COMPETENCIA" ToRole="COMPETENCIA" />
           <NavigationProperty Name="EQUIPO" Relationship="Self.EQUIPO_JUEGA_EN_COMPETENCIA" FromRole="EQUIPO_COMPETENCIA" ToRole="EQUIPO" />
         </EntityType>
@@ -920,9 +920,9 @@
             <PropertyRef Name="ID_EQUIPO" />
             <PropertyRef Name="ID_JUGADOR" />
           </Key>
-          <Property Name="ID_EQUIPO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_JUGADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="NUMERO_CAMISOLA" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="ID_EQUIPO" Type="Int32" Nullable="false" />
+          <Property Name="ID_JUGADOR" Type="Int32" Nullable="false" />
+          <Property Name="NUMERO_CAMISOLA" Type="Int32" />
           <NavigationProperty Name="EQUIPO" Relationship="Self.EQUIPO_TIENE" FromRole="EQUIPO_JUGADOR" ToRole="EQUIPO" />
           <NavigationProperty Name="JUGADOR" Relationship="Self.JUGADOR_PERTENECE" FromRole="EQUIPO_JUGADOR" ToRole="JUGADOR" />
         </EntityType>
@@ -930,10 +930,10 @@
           <Key>
             <PropertyRef Name="ID_ESTADIO" />
           </Key>
-          <Property Name="ID_ESTADIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_CIUDAD" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_ESTADIO" Type="Int32" Nullable="false" />
+          <Property Name="ID_CIUDAD" Type="Int32" Nullable="false" />
           <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="CAPACIDAD" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="CAPACIDAD" Type="Int32" />
           <Property Name="FECHA_INAUGURACION" Type="DateTime" />
           <Property Name="HISTORIA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CIUDAD" Relationship="Self.ESTADIO_PERTENECE_CIUDAD" FromRole="ESTADIO" ToRole="CIUDAD" />
@@ -944,11 +944,11 @@
           <Key>
             <PropertyRef Name="ID_JUGADOR" />
           </Key>
-          <Property Name="ID_JUGADOR" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_PAIS" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_JUGADOR" Type="Int32" Nullable="false" />
+          <Property Name="ID_PAIS" Type="Int32" Nullable="false" />
           <Property Name="CEDULA_IDENTIDAD" Type="Decimal" Precision="38" Scale="0" />
           <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="EDAD" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="EDAD" Type="Int32" />
           <Property Name="PESO" Type="Decimal" Precision="38" Scale="0" />
           <Property Name="POSICION" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="BIOGRAFIA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -962,7 +962,7 @@
           <Key>
             <PropertyRef Name="ID_PAIS" />
           </Key>
-          <Property Name="ID_PAIS" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_PAIS" Type="Int32" Nullable="false" />
           <Property Name="NOMBRE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="NACIONALIDAD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CIUDAD" Relationship="Self.CIUDAD_SE_ENCUENTRA_PAIS" FromRole="PAIS" ToRole="CIUDAD" />
@@ -974,11 +974,11 @@
           <Key>
             <PropertyRef Name="ID_PARTIDO" />
           </Key>
-          <Property Name="ID_PARTIDO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_COMPETENCIA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_ESTADIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_EQUIPO_LOCAL" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_EQUIPO_VISITA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="ID_PARTIDO" Type="Int32" Nullable="false" />
+          <Property Name="ID_COMPETENCIA" Type="Int32" Nullable="false" />
+          <Property Name="ID_ESTADIO" Type="Int32" Nullable="false" />
+          <Property Name="ID_EQUIPO_LOCAL" Type="Int32" Nullable="false" />
+          <Property Name="ID_EQUIPO_VISITA" Type="Int32" Nullable="false" />
           <Property Name="FECHA_PARTIDO" Type="DateTime" />
           <Property Name="HORA_INICIO" Type="Decimal" Precision="38" Scale="0" />
           <Property Name="ESTADO" Type="Decimal" Precision="38" Scale="0" />
@@ -992,20 +992,20 @@
           <Key>
             <PropertyRef Name="ID_RESULTADO" />
           </Key>
-          <Property Name="ID_RESULTADO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="ID_PARTIDO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="PRIMERT_GOLES_EQUIPO1" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="PRIMERT_GOLES_EQUIPO2" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="SEGUNDOT_GOLES_EQUIPO1" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="SEGUNDOT_GOLES_EQUIPO2" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="TIEMPOEXTRA_GOLES_EQUIPO1" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="TIEMPOEXTRA_GOLES_EQUIPO2" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="PENALES_GOLES_EQUIPO1" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="PENALES_GOLES_EQUIPO2" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="TARJETAS_A_EQUIPO1" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="TARJETAS_A_EQUIPO2" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="TARJETAS_R_EQUIPO1" Type="Decimal" Precision="38" Scale="0" />
-          <Property Name="TARJETAS_R_EQUIPO2" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="ID_RESULTADO" Type="Int32" Nullable="false" />
+          <Property Name="ID_PARTIDO" Type="Int32" Nullable="false" />
+          <Property Name="PRIMERT_GOLES_EQUIPO1" Type="Int32" />
+          <Property Name="PRIMERT_GOLES_EQUIPO2" Type="Int32" />
+          <Property Name="SEGUNDOT_GOLES_EQUIPO1" Type="Int32" />
+          <Property Name="SEGUNDOT_GOLES_EQUIPO2" Type="Int32" />
+          <Property Name="TIEMPOEXTRA_GOLES_EQUIPO1" Type="Int32" />
+          <Property Name="TIEMPOEXTRA_GOLES_EQUIPO2" Type="Int32" />
+          <Property Name="PENALES_GOLES_EQUIPO1" Type="Int32" />
+          <Property Name="PENALES_GOLES_EQUIPO2" Type="Int32" />
+          <Property Name="TARJETAS_A_EQUIPO1" Type="Int32" />
+          <Property Name="TARJETAS_A_EQUIPO2" Type="Int32" />
+          <Property Name="TARJETAS_R_EQUIPO1" Type="Int32" />
+          <Property Name="TARJETAS_R_EQUIPO2" Type="Int32" />
           <NavigationProperty Name="DESEMPENIO_DMD" Relationship="Self.DESEMPENIO_DMD_EVALUA" FromRole="RESULTADO" ToRole="DESEMPENIO_DMD" />
           <NavigationProperty Name="DESEMPENIO_PORTERO" Relationship="Self.DESEMPENIO_PORTERO_EVALUA" FromRole="RESULTADO" ToRole="DESEMPENIO_PORTERO" />
           <NavigationProperty Name="PARTIDO" Relationship="Self.RESULTADO_TIENE_PARTIDO" FromRole="RESULTADO" ToRole="PARTIDO" />

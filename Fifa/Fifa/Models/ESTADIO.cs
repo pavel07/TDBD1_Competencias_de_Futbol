@@ -20,10 +20,10 @@ namespace Fifa.Models
             this.COMPETENCIA = new HashSet<COMPETENCIA>();
         }
     
-        public decimal ID_ESTADIO { get; set; }
-        public decimal ID_CIUDAD { get; set; }
+        public int ID_ESTADIO { get; set; }
+        public int ID_CIUDAD { get; set; }
         public string NOMBRE { get; set; }
-        public Nullable<decimal> CAPACIDAD { get; set; }
+        public Nullable<int> CAPACIDAD { get; set; }
         public Nullable<System.DateTime> FECHA_INAUGURACION { get; set; }
         public string HISTORIA { get; set; }
     

@@ -22,12 +22,12 @@ namespace Fifa.Models
             this.PARTIDO1 = new HashSet<PARTIDO>();
         }
     
-        public decimal ID_EQUIPO { get; set; }
-        public decimal ID_CIUDAD { get; set; }
-        public decimal ID_ENTRENADOR { get; set; }
+        public int ID_EQUIPO { get; set; }
+        public int ID_CIUDAD { get; set; }
+        public int ID_ENTRENADOR { get; set; }
         public string NOMBRE { get; set; }
         public Nullable<System.DateTime> FECHA_FUNDACION { get; set; }
-        public Nullable<decimal> NUMERO_COPASGANADAS { get; set; }
+        public Nullable<int> NUMERO_COPASGANADAS { get; set; }
         public byte[] LOGOTIPO { get; set; }
         public string TIPO { get; set; }
     

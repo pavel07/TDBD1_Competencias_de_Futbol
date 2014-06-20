@@ -87,3 +87,4 @@ c:\users\pavel-notepc\documents\visual studio 2013\Projects\Fifa\Fifa\bin\zh-Han
 c:\users\pavel-notepc\documents\visual studio 2013\Projects\Fifa\Fifa\bin\zh-Hant\System.Spatial.resources.dll
 c:\users\pavel-notepc\documents\visual studio 2013\Projects\Fifa\Fifa\obj\Debug\Fifa.dll
 c:\users\pavel-notepc\documents\visual studio 2013\Projects\Fifa\Fifa\obj\Debug\Fifa.pdb
+C:\Users\Pavel-NotePc\Documents\Visual Studio 2013\Projects\Fifa\Fifa\obj\Debug\Fifa.csprojResolveAssemblyReference.cache

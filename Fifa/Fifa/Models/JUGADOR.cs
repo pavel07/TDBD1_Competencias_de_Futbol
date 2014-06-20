@@ -21,11 +21,11 @@ namespace Fifa.Models
             this.EQUIPO_JUGADOR = new HashSet<EQUIPO_JUGADOR>();
         }
     
-        public decimal ID_JUGADOR { get; set; }
-        public decimal ID_PAIS { get; set; }
+        public int ID_JUGADOR { get; set; }
+        public int ID_PAIS { get; set; }
         public Nullable<decimal> CEDULA_IDENTIDAD { get; set; }
         public string NOMBRE { get; set; }
-        public Nullable<decimal> EDAD { get; set; }
+        public Nullable<int> EDAD { get; set; }
         public Nullable<decimal> PESO { get; set; }
         public string POSICION { get; set; }
         public string BIOGRAFIA { get; set; }

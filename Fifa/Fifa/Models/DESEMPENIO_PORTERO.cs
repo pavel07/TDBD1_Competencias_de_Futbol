@@ -14,12 +14,12 @@ namespace Fifa.Models
     
     public partial class DESEMPENIO_PORTERO
     {
-        public decimal ID_JUGADOR { get; set; }
-        public decimal ID_RESULTADO { get; set; }
-        public Nullable<decimal> CAPACIDAD_ATAJAR { get; set; }
-        public Nullable<decimal> LUCHA1_1 { get; set; }
-        public Nullable<decimal> ANTICIPACION { get; set; }
-        public Nullable<decimal> REFLEJOS { get; set; }
+        public int ID_JUGADOR { get; set; }
+        public int ID_RESULTADO { get; set; }
+        public Nullable<int> CAPACIDAD_ATAJAR { get; set; }
+        public Nullable<int> LUCHA1_1 { get; set; }
+        public Nullable<int> ANTICIPACION { get; set; }
+        public Nullable<int> REFLEJOS { get; set; }
     
         public virtual RESULTADO RESULTADO { get; set; }
         public virtual JUGADOR JUGADOR { get; set; }

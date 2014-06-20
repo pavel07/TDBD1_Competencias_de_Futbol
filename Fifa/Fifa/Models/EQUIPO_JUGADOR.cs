@@ -14,9 +14,9 @@ namespace Fifa.Models
     
     public partial class EQUIPO_JUGADOR
     {
-        public decimal ID_EQUIPO { get; set; }
-        public decimal ID_JUGADOR { get; set; }
-        public Nullable<decimal> NUMERO_CAMISOLA { get; set; }
+        public int ID_EQUIPO { get; set; }
+        public int ID_JUGADOR { get; set; }
+        public Nullable<int> NUMERO_CAMISOLA { get; set; }
     
         public virtual EQUIPO EQUIPO { get; set; }
         public virtual JUGADOR JUGADOR { get; set; }

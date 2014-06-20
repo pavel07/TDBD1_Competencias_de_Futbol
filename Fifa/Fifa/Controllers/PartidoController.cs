@@ -23,19 +23,6 @@ namespace Fifa.Controllers
         }
 
         //
-        // GET: /Partido/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            PARTIDO partido = db.PARTIDO.Find(id);
-            if (partido == null)
-            {
-                return HttpNotFound();
-            }
-            return View(partido);
-        }
-
-        //
         // GET: /Partido/Create
 
         public ActionResult Create()
@@ -56,8 +43,9 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.PARTIDO.Add(partido);
-                db.SaveChanges();
+                db.SP_PARTIDO_INSERT(partido.ID_COMPETENCIA, partido.ID_ESTADIO, partido.ID_EQUIPO_LOCAL,
+                    partido.ID_EQUIPO_VISITA,
+                    partido.FECHA_PARTIDO, partido.HORA_INICIO, partido.ESTADO);
                 return RedirectToAction("Index");
             }
 
@@ -94,8 +82,9 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(partido).State = EntityState.Modified;
-                db.SaveChanges();
+                db.SP_PARTIDO_UPDATE(partido.ID_COMPETENCIA, partido.ID_ESTADIO, partido.ID_EQUIPO_LOCAL,
+                    partido.ID_EQUIPO_VISITA,
+                    partido.FECHA_PARTIDO, partido.HORA_INICIO, partido.ESTADO, partido.ID_PARTIDO);
                 return RedirectToAction("Index");
             }
             ViewBag.ID_COMPETENCIA = new SelectList(db.COMPETENCIA, "ID_COMPETENCIA", "NOMBRE", partido.ID_COMPETENCIA);
@@ -126,8 +115,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             PARTIDO partido = db.PARTIDO.Find(id);
-            db.PARTIDO.Remove(partido);
-            db.SaveChanges();
+            db.SP_PARTIDO_DELETE(partido.ID_PARTIDO);
             return RedirectToAction("Index");
         }
 

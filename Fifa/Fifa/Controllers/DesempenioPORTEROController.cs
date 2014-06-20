@@ -23,19 +23,6 @@ namespace Fifa.Controllers
         }
 
         //
-        // GET: /DesempenioPORTERO/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            DESEMPENIO_PORTERO desempenio_portero = db.DESEMPENIO_PORTERO.Find(id);
-            if (desempenio_portero == null)
-            {
-                return HttpNotFound();
-            }
-            return View(desempenio_portero);
-        }
-
-        //
         // GET: /DesempenioPORTERO/Create
 
         public ActionResult Create()
@@ -54,8 +41,9 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.DESEMPENIO_PORTERO.Add(desempenio_portero);
-                db.SaveChanges();
+                db.SP_DESEMPENIO_PORTERO_INSERT(desempenio_portero.ID_JUGADOR, desempenio_portero.ID_RESULTADO,
+                    desempenio_portero.CAPACIDAD_ATAJAR, desempenio_portero.LUCHA1_1, desempenio_portero.ANTICIPACION,
+                    desempenio_portero.REFLEJOS);
                 return RedirectToAction("Index");
             }
 
@@ -88,8 +76,9 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(desempenio_portero).State = EntityState.Modified;
-                db.SaveChanges();
+                db.SP_DESEMPENIO_PORTERO_UPDATE(desempenio_portero.ID_JUGADOR, desempenio_portero.ID_RESULTADO,
+                    desempenio_portero.CAPACIDAD_ATAJAR, desempenio_portero.LUCHA1_1, desempenio_portero.ANTICIPACION,
+                    desempenio_portero.REFLEJOS);
                 return RedirectToAction("Index");
             }
             ViewBag.ID_RESULTADO = new SelectList(db.RESULTADO, "ID_RESULTADO", "ID_RESULTADO", desempenio_portero.ID_RESULTADO);
@@ -118,8 +107,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             DESEMPENIO_PORTERO desempenio_portero = db.DESEMPENIO_PORTERO.Find(id);
-            db.DESEMPENIO_PORTERO.Remove(desempenio_portero);
-            db.SaveChanges();
+            db.SP_DESEMPENIO_PORTERO_DELETE(desempenio_portero.ID_JUGADOR, desempenio_portero.ID_RESULTADO);
             return RedirectToAction("Index");
         }
 

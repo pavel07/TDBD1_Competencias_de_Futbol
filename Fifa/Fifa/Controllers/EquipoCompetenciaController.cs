@@ -23,19 +23,6 @@ namespace Fifa.Controllers
         }
 
         //
-        // GET: /EquipoCompetencia/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            EQUIPO_COMPETENCIA equipo_competencia = db.EQUIPO_COMPETENCIA.Find(id);
-            if (equipo_competencia == null)
-            {
-                return HttpNotFound();
-            }
-            return View(equipo_competencia);
-        }
-
-        //
         // GET: /EquipoCompetencia/Create
 
         public ActionResult Create()
@@ -54,8 +41,9 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.EQUIPO_COMPETENCIA.Add(equipo_competencia);
-                db.SaveChanges();
+                db.SP_EQUIPO_COMPETENCIA_INSERT(equipo_competencia.ID_EQUIPO,
+                    equipo_competencia.ID_COMPETENCIA, equipo_competencia.PUNTOS,
+                    equipo_competencia.POSICION);
                 return RedirectToAction("Index");
             }
 
@@ -118,8 +106,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             EQUIPO_COMPETENCIA equipo_competencia = db.EQUIPO_COMPETENCIA.Find(id);
-            db.EQUIPO_COMPETENCIA.Remove(equipo_competencia);
-            db.SaveChanges();
+            db.SP_EQUIPO_COMPETENCIA_DELETE(equipo_competencia.ID_EQUIPO, equipo_competencia.ID_COMPETENCIA);
             return RedirectToAction("Index");
         }
 

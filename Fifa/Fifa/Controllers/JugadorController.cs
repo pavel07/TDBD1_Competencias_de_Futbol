@@ -22,30 +22,12 @@ namespace Fifa.Controllers
             return View(jugador.ToList());
         }
 
-        //
-        // GET: /Jugador/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            JUGADOR jugador = db.JUGADOR.Find(id);
-            if (jugador == null)
-            {
-                return HttpNotFound();
-            }
-            return View(jugador);
-        }
-
-        //
-        // GET: /Jugador/Create
-
         public ActionResult Create()
         {
             ViewBag.ID_PAIS = new SelectList(db.PAIS, "ID_PAIS", "NOMBRE");
             return View();
         }
 
-        //
-        // POST: /Jugador/Create
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -53,8 +35,8 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.JUGADOR.Add(jugador);
-                db.SaveChanges();
+                db.SP_JUGADOR_INSERT(jugador.ID_PAIS, jugador.NOMBRE, jugador.EDAD, jugador.PESO, jugador.POSICION,
+                    jugador.CEDULA_IDENTIDAD, jugador.BIOGRAFIA, jugador.FOTO);
                 return RedirectToAction("Index");
             }
 
@@ -85,8 +67,8 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(jugador).State = EntityState.Modified;
-                db.SaveChanges();
+                db.SP_JUGADOR_UPDATE(jugador.ID_PAIS, jugador.NOMBRE, jugador.EDAD, jugador.PESO, jugador.POSICION,
+                    jugador.CEDULA_IDENTIDAD, jugador.BIOGRAFIA, jugador.FOTO, jugador.ID_JUGADOR);
                 return RedirectToAction("Index");
             }
             ViewBag.ID_PAIS = new SelectList(db.PAIS, "ID_PAIS", "NOMBRE", jugador.ID_PAIS);
@@ -114,8 +96,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             JUGADOR jugador = db.JUGADOR.Find(id);
-            db.JUGADOR.Remove(jugador);
-            db.SaveChanges();
+            db.SP_JUGADOR_DELETE(jugador.ID_JUGADOR);
             return RedirectToAction("Index");
         }
 

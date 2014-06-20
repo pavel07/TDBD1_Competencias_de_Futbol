@@ -23,19 +23,6 @@ namespace Fifa.Controllers
         }
 
         //
-        // GET: /Resultado/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            RESULTADO resultado = db.RESULTADO.Find(id);
-            if (resultado == null)
-            {
-                return HttpNotFound();
-            }
-            return View(resultado);
-        }
-
-        //
         // GET: /Resultado/Create
 
         public ActionResult Create()
@@ -53,8 +40,14 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.RESULTADO.Add(resultado);
-                db.SaveChanges();
+                db.SP_RESULTADO_INSERT(resultado.ID_PARTIDO, resultado.PRIMERT_GOLES_EQUIPO1,
+                    resultado.PRIMERT_GOLES_EQUIPO2,
+                    resultado.SEGUNDOT_GOLES_EQUIPO1, resultado.SEGUNDOT_GOLES_EQUIPO2,
+                    resultado.TIEMPOEXTRA_GOLES_EQUIPO1,
+                    resultado.TIEMPOEXTRA_GOLES_EQUIPO2, resultado.PENALES_GOLES_EQUIPO1,
+                    resultado.PENALES_GOLES_EQUIPO2,
+                    resultado.TARJETAS_A_EQUIPO1, resultado.TARJETAS_A_EQUIPO2, resultado.TARJETAS_R_EQUIPO1,
+                    resultado.TARJETAS_R_EQUIPO2);
                 return RedirectToAction("Index");
             }
 
@@ -85,8 +78,14 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(resultado).State = EntityState.Modified;
-                db.SaveChanges();
+                db.SP_RESULTADO_UPDATE(resultado.ID_PARTIDO, resultado.PRIMERT_GOLES_EQUIPO1,
+                    resultado.PRIMERT_GOLES_EQUIPO2,
+                    resultado.SEGUNDOT_GOLES_EQUIPO1, resultado.SEGUNDOT_GOLES_EQUIPO2,
+                    resultado.TIEMPOEXTRA_GOLES_EQUIPO1,
+                    resultado.TIEMPOEXTRA_GOLES_EQUIPO2, resultado.PENALES_GOLES_EQUIPO1,
+                    resultado.PENALES_GOLES_EQUIPO2,
+                    resultado.TARJETAS_A_EQUIPO1, resultado.TARJETAS_A_EQUIPO2, resultado.TARJETAS_R_EQUIPO1,
+                    resultado.TARJETAS_R_EQUIPO2, resultado.ID_RESULTADO);
                 return RedirectToAction("Index");
             }
             ViewBag.ID_PARTIDO = new SelectList(db.PARTIDO, "ID_PARTIDO", "ID_PARTIDO", resultado.ID_PARTIDO);
@@ -114,8 +113,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             RESULTADO resultado = db.RESULTADO.Find(id);
-            db.RESULTADO.Remove(resultado);
-            db.SaveChanges();
+            db.SP_RESULTADO_DELETE(resultado.ID_RESULTADO);
             return RedirectToAction("Index");
         }
 

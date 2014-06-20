@@ -12,16 +12,9 @@ namespace Fifa.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class DESEMPENIO_DMD
+    public partial class COMPETENCIA_ESTADIO
     {
-        public int ID_JUGADOR { get; set; }
-        public int ID_RESULTADO { get; set; }
-        public Nullable<int> VELOCIDAD { get; set; }
-        public Nullable<int> CAPACIDAD_PASE { get; set; }
-        public Nullable<int> CAPACIDAD_MARCA { get; set; }
-        public Nullable<int> TIRO_GOL { get; set; }
-    
-        public virtual RESULTADO RESULTADO { get; set; }
-        public virtual JUGADOR JUGADOR { get; set; }
+        public int ID_COMPETENCIA { get; set; }
+        public int ID_ESTADIO { get; set; }
     }
 }

@@ -22,7 +22,7 @@ namespace Fifa.Models
             this.PAIS = new HashSet<PAIS>();
         }
     
-        public decimal ID_COMPETENCIA { get; set; }
+        public int ID_COMPETENCIA { get; set; }
         public string NOMBRE { get; set; }
         public Nullable<System.DateTime> FECHA_INICIO { get; set; }
         public Nullable<System.DateTime> FECHA_FIN { get; set; }

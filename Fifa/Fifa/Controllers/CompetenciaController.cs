@@ -21,18 +21,6 @@ namespace Fifa.Controllers
             return View(db.COMPETENCIA.ToList());
         }
 
-        //
-        // GET: /Competencia/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            COMPETENCIA competencia = db.COMPETENCIA.Find(id);
-            if (competencia == null)
-            {
-                return HttpNotFound();
-            }
-            return View(competencia);
-        }
 
         //
         // GET: /Competencia/Create
@@ -51,8 +39,8 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.COMPETENCIA.Add(competencia);
-                db.SaveChanges();
+                db.SP_COMPETENCIA_INSERT(competencia.NOMBRE, competencia.FECHA_INICIO, competencia.FECHA_FIN,
+                    competencia.ESTADO_ACTUAL);
                 return RedirectToAction("Index");
             }
 
@@ -81,8 +69,8 @@ namespace Fifa.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(competencia).State = EntityState.Modified;
-                db.SaveChanges();
+                db.SP_COMPETENCIA_UPDATE(competencia.NOMBRE, competencia.FECHA_INICIO, competencia.FECHA_FIN,
+                    competencia.ESTADO_ACTUAL, competencia.ID_COMPETENCIA);
                 return RedirectToAction("Index");
             }
             return View(competencia);
@@ -109,8 +97,7 @@ namespace Fifa.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             COMPETENCIA competencia = db.COMPETENCIA.Find(id);
-            db.COMPETENCIA.Remove(competencia);
-            db.SaveChanges();
+            db.SP_COMPETENCIA_DELETE(competencia.ID_COMPETENCIA);
             return RedirectToAction("Index");
         }
 
